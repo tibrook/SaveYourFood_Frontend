@@ -42,7 +42,7 @@
 									<!--begin:Menu link-->
 									<span class="menu-link menu-center">
 										<span class="menu-icon me-0">
-											<i class="ki-duotone ki-abstract-35 fs-2x">
+											<i class="ki-duotone ki-basket fs-2x">
 												<span class="path1"></span>
 												<span class="path2"></span>
 											</i>
@@ -55,7 +55,31 @@
 									<!--begin:Menu link-->
 									<span class="menu-link menu-center">
 										<span class="menu-icon me-0">
-											<i class="ki-duotone ki-abstract-35 fs-2x">
+											<i class="ki-duotone ki-scroll fs-2x">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i>
+										</span>
+									</span>
+								</div>
+								<!--begin:Menu item-->
+								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
+									<!--begin:Menu link-->
+									<span class="menu-link menu-center">
+										<span class="menu-icon me-0">
+											<i class="ki-duotone ki-calendar fs-2x">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i>
+										</span>
+									</span>
+								</div>
+								<!--begin:Menu item-->
+								<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
+									<!--begin:Menu link-->
+									<span class="menu-link menu-center">
+										<span class="menu-icon me-0">
+											<i class="ki-duotone ki-handcart fs-2x">
 												<span class="path1"></span>
 												<span class="path2"></span>
 											</i>
@@ -99,13 +123,13 @@
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<div class=" container-xxl " id="kt_content_container">
 							<!--begin::Row-->
-							<div class="row g-5 g-xl-8">
+							<div class="row g-5 g-xl-10 mb-5 mb-xl-10">
 								<!--begin::Col-->
-								<div class="col-xl-4">
+								<div class="col-xxl-12">
 									<!--begin::Misc Widget 1-->
 									<div class="row mb-5 mb-xl-8 g-5 g-xl-8">
 										<!--begin::Col-->
-										<div class="col-6">
+										<div class="col-3">
 											<!--begin::Card-->
 											<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/metronic8/demo9/../demo9/account/overview.html">
 												<i class="ki-duotone ki-basket fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>												<span class="fs-4 fw-bold">
@@ -116,7 +140,7 @@
 										<!--end::Col-->
 											
 										<!--begin::Col-->
-										<div class="col-6">
+										<div class="col-3">
 											<!--begin::Card-->
 											<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/metronic8/demo9/../demo9/account/statements.html">
 												<i class="ki-duotone ki-scroll fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>												<span class="fs-4 fw-bold">
@@ -127,7 +151,7 @@
 										<!--end::Col-->
 											
 										<!--begin::Col-->
-										<div class="col-6">
+										<div class="col-3">
 											<!--begin::Card-->
 											<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/metronic8/demo9/../demo9/account/referrals.html">
 												<i class="ki-duotone ki-calendar fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span></i>												<span class="fs-4 fw-bold">
@@ -138,7 +162,7 @@
 										<!--end::Col-->
 											
 										<!--begin::Col-->
-										<div class="col-6">
+										<div class="col-3">
 											<!--begin::Card-->
 											<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/metronic8/demo9/../demo9/apps/customers/view.html">
 												<i class="ki-duotone ki-handcart  fs-2tx mb-5 ms-n1 text-gray-500"></i><span class="fs-4 fw-bold">
@@ -154,16 +178,9 @@
 								<!--begin::Header-->
 								<div class="card-header align-items-center border-0 mt-4">
 									<h3 class="card-title align-items-start flex-column">
-										<span class="fw-bold mb-2 text-gray-900">Ingredients to consume quickly</span>            
-										<span class="text-muted fw-semibold fs-7">4 Ingrédients to consume this week</span>
+										<span class="fw-bold mb-2 text-gray-900">{{$t('ingredients_consume_quickly')}}</span>            
+										<span class="text-muted fw-semibold fs-7">3 {{ $t('ingredients_consume_week') }}</span>
 									</h3>
-
-									<div class="card-toolbar">
-										<!--begin::Menu-->
-										<button type="button" class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-											<i class="ki-duotone ki-category fs-6"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>            
-										</button>
-									</div>
 								</div>
 								<!--end::Header-->
 
@@ -214,7 +231,7 @@
 											<!--begin::Content-->
 											<div class="timeline-content d-flex">
 												<span class="fw-mormal text-muted ps-3">
-													Chicken Thighs
+													Cuisses de poulet
 													<a href="#">
 														<i class="ki-duotone ki-note-2 text-success fs-3"
 															data-bs-toggle="tooltip" 
@@ -430,7 +447,7 @@
 										<!--begin::Symbol-->
 										<div class="symbol symbol-50px me-5">
 											<span class="symbol-label">
-												<img src="/metronic8/demo9/assets/media/svg/brand-logos/plurk.svg" class="h-50 align-self-center" alt="">                         
+												<i class="fa-solid fa-plate-wheat fs-2qx"></i>
 											</span>
 										</div>
 										<!--end::Symbol-->
@@ -454,7 +471,7 @@
 										<!--begin::Symbol-->
 										<div class="symbol symbol-50px me-5">
 											<span class="symbol-label">
-												<img src="/metronic8/demo9/assets/media/svg/brand-logos/telegram.svg" class="h-50 align-self-center" alt="">                         
+												<i class="fa-solid fa-carrot fs-2qx"></i>
 											</span>
 										</div>
 										<!--end::Symbol-->
@@ -478,7 +495,7 @@
 										<!--begin::Symbol-->
 										<div class="symbol symbol-50px me-5">
 											<span class="symbol-label">
-												<img src="/metronic8/demo9/assets/media/svg/brand-logos/vimeo.svg" class="h-50 align-self-center" alt="">                         
+												<i class="fa-solid fa-utensils fs-2qx"></i>
 											</span>
 										</div>
 										<!--end::Symbol-->
@@ -502,7 +519,7 @@
 										<!--begin::Symbol-->
 										<div class="symbol symbol-50px me-5">
 											<span class="symbol-label">
-												<img src="/metronic8/demo9/assets/media/svg/brand-logos/bebo.svg" class="h-50 align-self-center" alt="">                         
+												<i class="fa-solid fa-cake-candles fs-2qx"></i>
 											</span>
 										</div>
 										<!--end::Symbol-->
@@ -526,7 +543,7 @@
 										<!--begin::Symbol-->
 										<div class="symbol symbol-50px me-5">
 											<span class="symbol-label">
-												<img src="/metronic8/demo9/assets/media/svg/brand-logos/kickstarter.svg" class="h-50 align-self-center" alt="">                         
+												<i class="fa-solid fa-champagne-glasses fs-2qx"></i>
 											</span>
 										</div>
 										<!--end::Symbol-->
@@ -552,48 +569,30 @@
 						<!--end::Col-->
 						<!--begin::Col-->
 						<div class="col-xl-8 ps-xl-12">
-							<!--begin::Engage widget 1-->
-							<div class="card bgi-position-y-bottom bgi-position-x-end bgi-no-repeat bgi-size-cover min-h-250px bg-primary mb-5 mb-xl-8 border-0" style="background-position: 100% 50px;background-size: 500px auto;background-image:url('@/assets/media/misc/city.png')" dir="ltr">
-								<!--begin::Body-->
+							<!-- <div class="card bgi-position-y-bottom bgi-position-x-end bgi-no-repeat bgi-size-cover min-h-250px bg-primary mb-5 mb-xl-8 border-0 card-background"  dir="ltr">
 								<div class="card-body d-flex flex-column justify-content-center ps-lg-12">  
-									<!--begin::Title-->      
 									<h3 class="text-white fs-2qx fw-bold mb-7">
 										{{$t('generate_recipe')}} <br>
 										{{$t('preferences_based')}}
 									</h3>
-									<!--end::Title--> 
-
-									<!--begin::Action--> 
 									<div class="m-0">
 										<a href="#" class="btn btn-success fw-semibold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Generate</a> 
 									</div>
-									<!--begin::Action--> 
 								</div>
-								<!--end::Body-->
-							</div>
-							<!--end::Engage widget 1-->
-							<!--begin::Row-->
+							</div> -->
 							<div class="row g-5 g-xl-8">
-								<!--begin::Col-->
 								<div class="col-xl-6">
-									<!--begin::Mixed Widget 5-->
 									<div class="card card-xl-stretch mb-xl-8">
-										<!--begin::Beader-->
 										<div class="card-header border-0 py-5">
 											<h3 class="card-title align-items-start flex-column">
-												<span class="card-label fw-bold fs-3 mb-1">Recipes</span>
+												<span class="card-label fw-bold fs-3 mb-1">{{$t('recipes')}}</span>
 
-												<span class="text-muted fw-semibold fs-7">Next recipes</span>
+												<span class="text-muted fw-semibold fs-7">{{$t('next_recipes')}}</span>
 											</h3>
 										</div>
-
-										<!--begin::Body-->
 										<div class="card-body d-flex flex-column">
-											<!--begin::Items-->
-											<div class="mt-5">
-												<!--begin::Item-->
+											<div class="">
 												<div class="d-flex flex-stack mb-5">
-													<!--begin::Section-->
 													<div class="d-flex align-items-center me-2 full-width">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-50px me-3 full-width">
@@ -646,7 +645,7 @@
 												<!--end::Item-->
 
 												<!--begin::Item-->
-												<div class="d-flex flex-stack">
+												<div class="d-flex flex-stack mb-5">
 													<!--begin::Section-->
 													<div class="d-flex align-items-center me-2">
 														<!--begin::Symbol-->
@@ -670,6 +669,82 @@
 													<!--end::Label-->
 												</div>
 												<!--end::Item-->
+												<!--begin::Item-->
+												<div class="d-flex flex-stack mb-5">
+													<!--begin::Section-->
+													<div class="d-flex align-items-center me-2">
+														<!--begin::Symbol-->
+														<div class="symbol symbol-50px me-3">
+															<div class="symbol-label bg-light">
+																<img src="@/assets/lasagna.jpg" alt="" class="full-height-img">
+															</div>
+														</div>
+														<!--end::Symbol-->
+
+														<!--begin::Title-->
+														<div class="py-1">
+															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Lasagnes</a>
+														</div>
+														<!--end::Title-->
+													</div>
+													<!--end::Section-->
+
+													<!--begin::Label-->
+													<div class="badge badge-light fw-semibold py-4 px-3">jeudi soir</div>
+													<!--end::Label-->
+												</div>
+												<!--end::Item-->
+												<!--begin::Item-->
+												<div class="d-flex flex-stack mb-5">
+													<!--begin::Section-->
+													<div class="d-flex align-items-center me-2">
+														<!--begin::Symbol-->
+														<div class="symbol symbol-50px me-3">
+															<div class="symbol-label bg-light">
+																<img src="@/assets/patessaumon.jpg" alt="" class="full-height-img">
+															</div>
+														</div>
+														<!--end::Symbol-->
+
+														<!--begin::Title-->
+														<div class="py-1">
+															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Pâtes au saumon</a>
+														</div>
+														<!--end::Title-->
+													</div>
+													<!--end::Section-->
+
+													<!--begin::Label-->
+													<div class="badge badge-light fw-semibold py-4 px-3">vendredi soir</div>
+													<!--end::Label-->
+												</div>
+												<!--end::Item-->
+												<!--begin::Item-->
+												<div class="d-flex flex-stack mb-5">
+													<!--begin::Section-->
+													<div class="d-flex align-items-center me-2">
+														<!--begin::Symbol-->
+														<div class="symbol symbol-50px me-3">
+															<div class="symbol-label bg-light">
+																<img src="@/assets/burger.jpg" alt="" class="full-height-img">
+															</div>
+														</div>
+														<!--end::Symbol-->
+
+														<!--begin::Title-->
+														<div class="py-1">
+															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Burgers</a>
+														</div>
+														<!--end::Title-->
+													</div>
+													<!--end::Section-->
+
+													<!--begin::Label-->
+													<div class="badge badge-light fw-semibold py-4 px-3">samedi midi</div>
+													<!--end::Label-->
+												</div>
+												<!--end::Item-->
+												
 											</div>
 											<!--end::Items-->
 										</div>
@@ -691,7 +766,7 @@
 											<!--begin::Item-->
 											<div class="d-flex align-items-center mb-8">
 												<!--begin::Bullet-->
-												<span class="bullet bullet-vertical h-40px bg-warning"></span>
+												<span class="bullet bullet-vertical h-40px bg-danger"></span>
 												<!--end::Bullet-->
 
 												<!--begin::Checkbox-->
@@ -712,7 +787,7 @@
 											</div>
 											<div class="d-flex align-items-center mb-8">
 												<!--begin::Bullet-->
-												<span class="bullet bullet-vertical h-40px bg-primary"></span>
+												<span class="bullet bullet-vertical h-40px bg-danger"></span>
 												<!--end::Bullet-->
 
 												<!--begin::Checkbox-->
@@ -735,7 +810,7 @@
 														<!--begin::Item-->
 											<div class="d-flex align-items-center mb-8">
 												<!--begin::Bullet-->
-												<span class="bullet bullet-vertical h-40px bg-success"></span>
+												<span class="bullet bullet-vertical h-40px bg-warning"></span>
 												<div class="form-check form-check-custom form-check-solid mx-5">
 													<input class="form-check-input" type="checkbox" value="">
 												</div>
@@ -758,7 +833,7 @@
 											</div>
 											<div class="d-flex align-items-center mb-8">
 												<!--begin::Bullet-->
-												<span class="bullet bullet-vertical h-40px bg-danger"></span>
+												<span class="bullet bullet-vertical h-40px bg-warning"></span>
 												<!--end::Bullet-->
 
 												<!--begin::Checkbox-->
@@ -950,4 +1025,10 @@ export default defineComponent({
     object-fit: cover; /* S'assure que l'image couvre toute la zone sans déformer son ratio */
     border-radius: inherit; /* Hérite le border-radius de son parent direct */
   }
+  .card-background {
+	background-image: url('@/assets/fridge.png');
+	background-position: 100% -80px;
+	background-size: 375px auto;
+	background-repeat: no-repeat;
+	}
 </style>
