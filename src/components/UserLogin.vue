@@ -6,9 +6,7 @@
 					<!--begin::Aside-->
 					<div class="d-flex flex-center flex-lg-start flex-column">
 						<!--begin::Logo-->
-						<a href="index.html" class="mb-7">
-							<img alt="Logo" src="@/assets/logo1Trspr.png" />
-						</a>
+            <chiefHatVue :className="'h-450px'"/>
 						<!--end::Logo-->
 						<!--begin::Title-->
 						<h2 class="text-white fw-normal m-0">Manage your kitchen from your phone</h2>
@@ -132,8 +130,9 @@
 </template>
   <script>
   import { ref } from 'vue';
+  import chiefHatVue from './icons/chiefHat.vue'
   import leftImage from '@/assets/loginBackground.png';
-  import imageLogo from "@/assets/logo1.png"
+  import imageLogo from "@/assets/chiefHat.svg"
   import { useVuelidate } from '@vuelidate/core'; 
   import { required ,email  } from '@vuelidate/validators'
   import { validatePassword } from '@/utils/validations';
@@ -144,6 +143,7 @@
 
   export default {
     name: 'UserLogin',
+    components:{chiefHatVue},
     data() {
       return {  
         form: {

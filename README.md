@@ -1,4 +1,4 @@
-# FriSave
+# SaveYourFood
 
 This project addresses two common issues:
 

@@ -17,7 +17,7 @@
                     <form @submit.prevent="handleRegister" class="w-100">
                       <div class="d-flex align-items-center pb-1 pe- ps-4">
                         <img :src="imageLogoUrl" alt="Sample image" class="imgLogo me-2" style="border-radius: 1rem 0 0 1rem;">
-                        <h1 class="fw-bold mb-2 titlePage">FriSave</h1>
+                        <h1 class="fw-bold mb-2 titlePage">SaveYourFood</h1>
                       </div>
                       <h5 class="fw-normal pb-3" style="letter-spacing: 1px;">{{$t('register_new_account')}}</h5>
                       <div class="form-outline">
@@ -124,7 +124,7 @@
   
   <script>
   import { useVuelidate } from '@vuelidate/core'; 
-  import imageLogo from "@/assets/logo1.png"
+  import imageLogo from "@/assets/chiefHat.svg"
   import leftImage from '@/assets/loginBackground.png';
   import { register } from "@/api/register.js";
   import LangageSwitcher from './LangageSwitcher.vue';
