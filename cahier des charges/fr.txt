@@ -1,0 +1,64 @@
+Project Specification Document: Meal Planning and Management Application
+Overview
+Purpose
+The primary objectives of this application are twofold: to enhance my programming skills and to address a personal daily need for finding varied daily meals. The application aims to prevent food wastage and simplify weekly meal management. Initially, it will be used by me and my family.
+
+Target Audience
+The application is primarily designed for personal and family use, catering to individuals looking for efficient meal planning and waste reduction solutions.
+
+Application Structure
+User Access and Authentication
+Users must create an account and authenticate to access the application.
+Authentication tokens will be stored in the browser.
+Main Features
+Home Page: A landing page describing all the application steps with navigation buttons to different pages.
+Inventory Page (/inventory): Displays a list of recorded ingredients, sortable by location (fridge/cupboards) or type (starch, etc.). Features include ingredient search, addition of new items via a form, and sorting by expiration date.
+Recipe Page (/recipes): Suggests recipes based on user preferences and available ingredients. Allows adding recipes to the weekly menu and annotating or creating new recipes. User-created recipes will be stored in a 'my recipes' section.
+Weekly Meals Page: Manages the weekly menu with a calendar, prioritizing recipes using ingredients that need to be consumed first. Features meal rescheduling and deletion, with a future version (version 2) planning to adjust the quantity for different numbers of people and viewing past weekly menus.
+User Settings Page: Manages user settings and preferences, including household size (to tailor recipe generation), storage types, profile photo change, food preferences (favorites/banned foods), and preferred cuisines. These settings will influence recipe suggestions.
+Development Approach
+Phase 1: Web Development
+Technologies: Vue3, Bootstrap 5, Metronic template (Bootstrap Metronic, version 8), JavaScript (with plans to transition to TypeScript).
+User Interface: Initial simple UI design, focusing on simplicity, modernity, and intuitiveness. Use icons and illustrations (to be enhanced by a professional designer in future versions).
+Internationalization: Support for French and English using vue-i18n.
+Form Validation: Implemented using Vuelidate.
+Image Generation: All images in the first version will be AI-generated.
+Responsive Design: Compatibility with tablet and mobile formats.
+Code Quality Tools: ESLint and Vue Store.
+Phase 2: Mobile Application Development
+Planned transition to React Native for enhanced mobile experience.
+Additional features: Recipe generation via AI, ingredient addition through QR code scanning or photo recognition AI, potential partnerships, and professional application design.
+Timeframe
+Estimated completion of the first functional version in two months, subject to availability around full-time employment.
+Backend Development
+Technologies
+Framework: NestJS.
+Language: TypeScript.
+Database: MongoDB Cloud.
+Database Schema
+Users: id, name, firstName, email, role, validate.
+Ingredients: id, name, quantity, location, type, peremption.
+Recipes: id, name, description, note, quantityPeople, price, favorites.
+Weekly Recipes: id, weekNumber, weekMenu.
+Shopping List: id, shoppingList.
+External APIs
+Ingredient name suggestions via APIs like Spoonacular or Edamam.
+Translation services for multilingual support.
+Email management library (possibly Maildev).
+Security
+Password hashing, helmet for security, endpoint guards, HTTPS, email verification.
+Database security: validation and constraints on user data.
+Endpoints
+User authentication, ingredient and recipe management, shopping list and weekly recipe operations.
+Questions and Considerations
+Database Management
+Debating between a clustered database with a separate base per user or a shared database. If shared, considering either an entry for each item (e.g., ingredients with userId) or an entry for each person (userId: {entry1, entry2...}).
+
+Budget and Resources
+Budget: €45 for the Metronic license.
+Human Resources: Solely developed by me.
+Compliance
+The project will be GDPR compliant.
+Testing and Development Strategy
+A testing strategy will be established, with technology choices pending.
+Frontend and backend developed in parallel to facilitate continuous testing and iterative development.
