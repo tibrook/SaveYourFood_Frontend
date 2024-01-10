@@ -47,12 +47,12 @@
               <!--end::Menu separator-->
               <!--begin::Menu item-->
               <div class="menu-item px-5">
-                <a href="account/overview.html" class="menu-link px-5">My Profile</a>
+                <a href="account/overview.html" class="menu-link px-5">{{$t('my_preferences')}}</a>
               </div>
               <!--end::Menu item-->
               <!--begin::Menu item-->
               <div class="menu-item px-5">
-                <a href="account/statements.html" class="menu-link px-5">My Recipes</a>
+                <a href="account/statements.html" class="menu-link px-5">{{$t('my_recipes')}}</a>
               </div>
               <!--end::Menu item-->
               <!--begin::Menu separator-->
@@ -61,7 +61,7 @@
               <!--begin::Menu item-->
               <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" data-kt-menu-offset="-15px, 0">
                 <a href="#" class="menu-link px-5">
-                  <span class="menu-title position-relative">Language 
+                  <span class="menu-title position-relative">{{$t('language')}} 
                   <img class="w-15px h-15px rounded-1 ms-2" :src="currentFlag" alt="" /></span>
                 </a>
                 <!--begin::Menu sub-->
@@ -79,7 +79,7 @@
                     <a href="#" class="menu-link d-flex px-5" @click="changeLanguage('fr')">
                     <span class="symbol symbol-20px me-4">
                       <img class="rounded-1" src="@/assets/media/flags/france.svg" alt="" />
-                    </span>French</a>
+                    </span>Français</a>
                   </div>
                   <!--end::Menu item-->
                 </div>
@@ -88,12 +88,12 @@
               <!--end::Menu item-->
               <!--begin::Menu item-->
               <div class="menu-item px-5 my-1">
-                <a href="account/settings.html" class="menu-link px-5">Account Settings</a>
+                <a href="account/settings.html" class="menu-link px-5">{{$t('account_settings')}}</a>
               </div>
               <!--end::Menu item-->
               <!--begin::Menu item-->
               <div class="menu-item px-5">
-                <a href="authentication/layouts/corporate/sign-in.html" class="menu-link px-5">Sign Out</a>
+                <a href="authentication/layouts/corporate/sign-in.html" class="menu-link px-5">{{$t('sign_out')}}</a>
               </div>
               <!--end::Menu item-->
             </div>

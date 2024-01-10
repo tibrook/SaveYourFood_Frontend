@@ -4,9 +4,9 @@
 			<div class="d-flex flex-column flex-column-fluid flex-lg-row">
         <div class="d-flex flex-center w-lg-50 pt-15 pt-lg-0 px-10">
 					<!--begin::Aside-->
-					<div class="d-flex flex-center flex-lg-start flex-column">
+					<div class="d-flex flex-center flex-lg-start flex-column align-items-center">
 						<!--begin::Logo-->
-            <chiefHatVue :className="'h-450px'"/>
+            <chiefHatVue :className="'h-450px'" color="white"/>
 						<!--end::Logo-->
 						<!--begin::Title-->
 						<h2 class="text-white fw-normal m-0">Manage your kitchen from your phone</h2>
@@ -94,7 +94,7 @@
                 <div class="me-0">
                   <button class="btn btn-flex btn-link btn-color-gray-700 btn-active-color-primary rotate fs-base" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-offset="0px, 0px">
                     <img data-kt-element="current-lang-flag" class="w-20px h-20px rounded me-3" :src="currentFlag" alt="" />
-                    <span data-kt-element="current-lang-name" class="me-1" >{{currentLanguage}}</span>
+                    <span data-kt-element="current-lang-name" class="me-1" >{{currentLanguage === 'en' ? 'English' : 'Français'}}</span>
                     <i class="ki-duotone ki-down fs-5 text-muted rotate-180 m-0"></i>
                   </button>
                   <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-4 fs-7" data-kt-menu="true" id="kt_auth_lang_menu">
@@ -186,7 +186,7 @@
         const flagImage = lang === 'en' ? 'english.png' : 'french.jpg';
         i18n.locale.value = lang; 
         currentFlag.value = require(`@/assets/${flagImage}`);
-        currentLanguage.value = lang === 'en' ? 'English' : 'Français'
+        currentLanguage.value = lang;
         localStorage.setItem('language', lang);
       }
       return { v$ , router,changeLanguage,currentFlag, currentLanguage};
