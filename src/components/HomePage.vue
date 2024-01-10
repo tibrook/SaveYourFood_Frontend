@@ -102,7 +102,7 @@
 							<!--begin::Mobile logo-->
 							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
 								<a href="index.html">
-									<img alt="Logo" src="assets/media/logos/demo9.svg" class="h-35px" />
+									<img alt="Logo" src="assets/chiefHat.svg" class="h-35px" />
 								</a>
 							</div>
 							<!--end::Mobile logo-->
@@ -123,10 +123,9 @@
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<div class=" container-xxl " id="kt_content_container">
 							<!--begin::Row-->
-							<div class="row g-5 g-xl-10 mb-5 mb-xl-10">
+							<div class="row g-5 g-xl-10 mb-5 mb-xl-12">
 								<!--begin::Col-->
 								<div class="col-xxl-12">
-									<!--begin::Misc Widget 1-->
 									<div class="row mb-5 mb-xl-8 g-5 g-xl-8">
 										<!--begin::Col-->
 										<div class="col-3">
@@ -172,711 +171,685 @@
 										</div>
 										<!--end::Col-->
 									</div>
-							<!--end::Misc Widget 1-->
-									<!--begin::List Widget 5-->
-							<div class="card mb-5 mb-xl-8">
-								<!--begin::Header-->
-								<div class="card-header align-items-center border-0 mt-4">
-									<h3 class="card-title align-items-start flex-column">
-										<span class="fw-bold mb-2 text-gray-900">{{$t('ingredients_consume_quickly')}}</span>            
-										<span class="text-muted fw-semibold fs-7">3 {{ $t('ingredients_consume_week') }}</span>
-									</h3>
-								</div>
-								<!--end::Header-->
-
-								<!--begin::Body-->
-								<div class="card-body pt-5">
-									<!--begin::Timeline-->
-									<div class="timeline-label">
-										<!--begin::Item-->
-										<div class="timeline-item">
-											<!--begin::Label-->
-											<div class="timeline-label fw-bold text-gray-800 fs-6 ">1 day</div>
-											<!--end::Label-->
-
-											<!--begin::Badge-->
-											<div class="timeline-badge">
-												<i class="fa fa-genderless text-danger fs-1"></i>
-											</div>
-											<!--end::Badge-->
-
-											<!--begin::Text-->
-											<div class="fw-mormal timeline-content text-muted ps-3">
-												Saint-Nectaire
-												<a href="#">
-													<i class="ki-duotone ki-note fs-3 text-danger " 
-														data-bs-toggle="tooltip" 
-														data-bs-custom-class="tooltip-inverse" 
-														data-bs-title='Choose a recipe'>
-														<span class="path1"></span><span class="path2"></span>
-													</i>
-												</a>
-											</div>
-											<!--end::Text-->
-										</div>
-										<!--end::Item-->
-
-										<!--begin::Item-->
-										<div class="timeline-item">
-											<!--begin::Label-->
-											<div class="timeline-label fw-bold text-gray-800 fs-6">1 day</div>
-											<!--end::Label-->
-
-											<!--begin::Badge-->
-											<div class="timeline-badge">
-												<i class="fa fa-genderless text-danger fs-1"></i>
-											</div>
-											<!--end::Badge-->
-
-											<!--begin::Content-->
-											<div class="timeline-content d-flex">
-												<span class="fw-mormal text-muted ps-3">
-													Cuisses de poulet
-													<a href="#">
-														<i class="ki-duotone ki-note-2 text-success fs-3"
-															data-bs-toggle="tooltip" 
-															data-bs-custom-class="tooltip-inverse" 
-															data-bs-title='View Recipe'>
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-															<span class="path4"></span>
-														</i>
-													</a>
-												</span>
-											</div>
-											<!--end::Content-->
-										</div>
-										<!--end::Item-->
-
-										<!--begin::Item-->
-										<div class="timeline-item">
-											<!--begin::Label-->
-											<div class="timeline-label fw-bold text-gray-800 fs-6">2 days </div>
-											<!--end::Label-->
-
-											<!--begin::Badge-->
-											<div class="timeline-badge">
-												<i class="fa fa-genderless text-danger fs-1"></i>
-											</div>
-											<!--end::Badge-->
-
-											<!--begin::Desc-->
-											<div class="timeline-content fw-mormal text-muted ps-3">
-												Cabillaud
-												<a href="#">
-													<i class="ki-duotone ki-note fs-3 text-danger " 
-														data-bs-toggle="tooltip" 
-														data-bs-custom-class="tooltip-inverse" 
-														data-bs-title='Choose a recipe'>
-														<span class="path1"></span><span class="path2"></span>
-													</i>
-												</a>
-											</div>
-											<!--end::Desc-->
-										</div>
-										<!--end::Item-->
-
-										<!--begin::Item-->
-										<div class="timeline-item">
-											<!--begin::Label-->
-											<div class="timeline-label fw-bold text-gray-800 fs-6">4 days</div>
-											<!--end::Label-->
-
-											<!--begin::Badge-->
-											<div class="timeline-badge">
-												<i class="fa fa-genderless text-warning fs-1"></i>
-											</div>
-											<!--end::Badge-->
-
-											<!--begin::Text-->
-											<div class="timeline-content fw-mormal text-muted ps-3">
-												Pate à tartiner
-												<a href="#">
-													<i class="ki-duotone ki-note fs-3 text-danger " 
-														data-bs-toggle="tooltip" 
-														data-bs-custom-class="tooltip-inverse" 
-														data-bs-title='Choose a recipe'>
-														<span class="path1"></span><span class="path2"></span>
-													</i>
-												</a>
-											</div>
-											<!--end::Text-->
-										</div>
-										<!--end::Item-->
-
-										<!--begin::Item-->
-										<div class="timeline-item">
-											<!--begin::Label-->
-											<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
-											<!--end::Label-->
-
-											<!--begin::Badge-->
-											<div class="timeline-badge">
-												<i class="fa fa-genderless text-warning fs-1"></i>
-											</div>
-											<!--end::Badge-->
-
-											<!--begin::Desc-->
-											<div class="timeline-content fw-mormal text-muted ps-3">
-												Steak 
-												<a href="#">
-														<i class="ki-duotone ki-note-2 text-success fs-3"
-															data-bs-toggle="tooltip" 
-															data-bs-custom-class="tooltip-inverse" 
-															data-bs-title='View Recipe'>
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-															<span class="path4"></span>
-														</i>
-													</a>
-											</div>
-											<!--end::Desc-->
-										</div>
-										<!--end::Item-->
-
-										<!--begin::Item-->
-										<div class="timeline-item">
-											<!--begin::Label-->
-											<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
-											<!--end::Label-->
-
-											<!--begin::Badge-->
-											<div class="timeline-badge">
-												<i class="fa fa-genderless text-warning fs-1"></i>
-											</div>
-											<!--end::Badge-->
-
-											<!--begin::Text-->
-											<div class="timeline-content fw-mormal text-muted ps-3">
-												Sauce soja
-												<a href="#">
-														<i class="ki-duotone ki-note-2 text-success fs-3"
-															data-bs-toggle="tooltip" 
-															data-bs-custom-class="tooltip-inverse" 
-															data-bs-title='View Recipe'>
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-															<span class="path4"></span>
-														</i>
-													</a>
-											</div>
-											<!--end::Text-->
-										</div>
-										<!--end::Item-->
-
-										<!--begin::Item-->
-										<div class="timeline-item">
-											<!--begin::Label-->
-											<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
-											<!--end::Label-->
-
-											<!--begin::Badge-->
-											<div class="timeline-badge">
-												<i class="fa fa-genderless text-warning fs-1"></i>
-											</div>
-											<!--end::Badge-->
-
-											<!--begin::Desc-->
-											<div class="timeline-content fw-mormal text-muted ps-3">
-												Lait
-												<a href="#">
-														<i class="ki-duotone ki-note-2 text-success fs-3"
-															data-bs-toggle="tooltip" 
-															data-bs-custom-class="tooltip-inverse" 
-															data-bs-title='View Recipe'>
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-															<span class="path4"></span>
-														</i>
-													</a>
-											</div>
-											<!--end::Desc-->
-										</div>
-										<!--end::Item-->
-
-										<!--begin::Item-->
-										<div class="timeline-item">
-											<!--begin::Label-->
-											<div class="timeline-label fw-bold text-gray-800 fs-6">1 week</div>
-											<!--end::Label-->
-
-											<!--begin::Badge-->
-											<div class="timeline-badge">
-												<i class="fa fa-genderless text-success fs-1"></i>
-											</div>
-											<!--end::Badge-->
-
-											<!--begin::Text-->
-											<div class="timeline-content fw-mormal text-muted ps-3">
-												Cidre
-												<a href="#">
-												<i class="ki-duotone ki-note fs-3 text-danger " 
-													data-bs-toggle="tooltip" 
-													data-bs-custom-class="tooltip-inverse" 
-													data-bs-title='Choose a recipe'>
-													<span class="path1"></span><span class="path2"></span>
-												</i>
-											</a>
-											</div>
-											<!--end::Text-->
-										</div>
-											<!--end::Item-->
 									</div>
-									<!--end::Timeline-->
-								</div>
-								<!--end: Card Body-->
-							</div>
-							<!--end: List Widget 5-->
-							<!--begin::List Widget 4-->
-							<div class="card   mb-xl-8">
-								<!--begin::Header-->
-								<div class="card-header border-0 pt-5">
-									<h3 class="card-title align-items-start flex-column">
-										<span class="card-label fw-bold text-gray-900">Preferences</span>
-									</h3>
-								</div>
-								<!--end::Header-->
-								<!--begin::Body-->
-								<div class="card-body pt-5">
-									<!--begin::Item-->
-									<div class="d-flex align-items-sm-center mb-7">
-										<!--begin::Symbol-->
-										<div class="symbol symbol-50px me-5">
-											<span class="symbol-label">
-												<i class="fa-solid fa-plate-wheat fs-2qx"></i>
-											</span>
-										</div>
-										<!--end::Symbol-->
+								<div class="col-xl-12 ps-xl-12">
+									<div class="row mb-5 mb-xl-8 g-5 g-xl-12">
+										<div class="card mb-5 mb-xl-8 col-3 me-8 ">
+											<div class="card-header align-items-center border-0 mt-4">
+												<h3 class="card-title align-items-start flex-column">
+													<span class="fw-bold mb-2 text-gray-900">{{$t('ingredients_consume_quickly')}}</span>            
+													<span class="text-muted fw-semibold fs-7">3 {{ $t('ingredients_consume_week') }}</span>
+												</h3>
+											</div>
+											<div class="card-body pt-5">
+												<!--begin::Timeline-->
+												<div class="timeline-label">
+													<!--begin::Item-->
+													<div class="timeline-item">
+														<!--begin::Label-->
+														<div class="timeline-label fw-bold text-gray-800 fs-6 ">1 day</div>
+														<!--end::Label-->
 
-										<!--begin::Section-->
-										<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
-											<div class="flex-grow-1 me-2">
-												<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Top food</a>
-												
-												<span class="text-muted fw-semibold d-block fs-7">Rice</span>
-											</div>                     
+														<!--begin::Badge-->
+														<div class="timeline-badge">
+															<i class="fa fa-genderless text-danger fs-1"></i>
+														</div>
+														<!--end::Badge-->
 
-											<span class="badge badge-light fw-bold my-2">19 meals</span>
+														<!--begin::Text-->
+														<div class="fw-mormal timeline-content text-muted ps-3">
+															Saint-Nectaire
+															<a href="#">
+																<i class="ki-duotone ki-note fs-3 text-danger " 
+																	data-bs-toggle="tooltip" 
+																	data-bs-custom-class="tooltip-inverse" 
+																	data-bs-title='Choose a recipe'>
+																	<span class="path1"></span><span class="path2"></span>
+																</i>
+															</a>
+														</div>
+														<!--end::Text-->
+													</div>
+													<!--end::Item-->
+
+													<!--begin::Item-->
+													<div class="timeline-item">
+														<!--begin::Label-->
+														<div class="timeline-label fw-bold text-gray-800 fs-6">1 day</div>
+														<!--end::Label-->
+
+														<!--begin::Badge-->
+														<div class="timeline-badge">
+															<i class="fa fa-genderless text-danger fs-1"></i>
+														</div>
+														<!--end::Badge-->
+
+														<!--begin::Content-->
+														<div class="timeline-content d-flex">
+															<span class="fw-mormal text-muted ps-3">
+																Cuisses de poulet
+																<a href="#">
+																	<i class="ki-duotone ki-note-2 text-success fs-3"
+																		data-bs-toggle="tooltip" 
+																		data-bs-custom-class="tooltip-inverse" 
+																		data-bs-title='View Recipe'>
+																		<span class="path1"></span>
+																		<span class="path2"></span>
+																		<span class="path3"></span>
+																		<span class="path4"></span>
+																	</i>
+																</a>
+															</span>
+														</div>
+														<!--end::Content-->
+													</div>
+													<!--end::Item-->
+
+													<!--begin::Item-->
+													<div class="timeline-item">
+														<!--begin::Label-->
+														<div class="timeline-label fw-bold text-gray-800 fs-6">2 days </div>
+														<!--end::Label-->
+
+														<!--begin::Badge-->
+														<div class="timeline-badge">
+															<i class="fa fa-genderless text-danger fs-1"></i>
+														</div>
+														<!--end::Badge-->
+
+														<!--begin::Desc-->
+														<div class="timeline-content fw-mormal text-muted ps-3">
+															Cabillaud
+															<a href="#">
+																<i class="ki-duotone ki-note fs-3 text-danger " 
+																	data-bs-toggle="tooltip" 
+																	data-bs-custom-class="tooltip-inverse" 
+																	data-bs-title='Choose a recipe'>
+																	<span class="path1"></span><span class="path2"></span>
+																</i>
+															</a>
+														</div>
+														<!--end::Desc-->
+													</div>
+													<!--end::Item-->
+
+													<!--begin::Item-->
+													<div class="timeline-item">
+														<!--begin::Label-->
+														<div class="timeline-label fw-bold text-gray-800 fs-6">4 days</div>
+														<!--end::Label-->
+
+														<!--begin::Badge-->
+														<div class="timeline-badge">
+															<i class="fa fa-genderless text-warning fs-1"></i>
+														</div>
+														<!--end::Badge-->
+
+														<!--begin::Text-->
+														<div class="timeline-content fw-mormal text-muted ps-3">
+															Pate à tartiner
+															<a href="#">
+																<i class="ki-duotone ki-note fs-3 text-danger " 
+																	data-bs-toggle="tooltip" 
+																	data-bs-custom-class="tooltip-inverse" 
+																	data-bs-title='Choose a recipe'>
+																	<span class="path1"></span><span class="path2"></span>
+																</i>
+															</a>
+														</div>
+														<!--end::Text-->
+													</div>
+													<!--end::Item-->
+
+													<!--begin::Item-->
+													<div class="timeline-item">
+														<!--begin::Label-->
+														<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
+														<!--end::Label-->
+
+														<!--begin::Badge-->
+														<div class="timeline-badge">
+															<i class="fa fa-genderless text-warning fs-1"></i>
+														</div>
+														<!--end::Badge-->
+
+														<!--begin::Desc-->
+														<div class="timeline-content fw-mormal text-muted ps-3">
+															Steak 
+															<a href="#">
+																	<i class="ki-duotone ki-note-2 text-success fs-3"
+																		data-bs-toggle="tooltip" 
+																		data-bs-custom-class="tooltip-inverse" 
+																		data-bs-title='View Recipe'>
+																		<span class="path1"></span>
+																		<span class="path2"></span>
+																		<span class="path3"></span>
+																		<span class="path4"></span>
+																	</i>
+																</a>
+														</div>
+														<!--end::Desc-->
+													</div>
+													<!--end::Item-->
+
+													<!--begin::Item-->
+													<div class="timeline-item">
+														<!--begin::Label-->
+														<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
+														<!--end::Label-->
+
+														<!--begin::Badge-->
+														<div class="timeline-badge">
+															<i class="fa fa-genderless text-warning fs-1"></i>
+														</div>
+														<!--end::Badge-->
+
+														<!--begin::Text-->
+														<div class="timeline-content fw-mormal text-muted ps-3">
+															Sauce soja
+															<a href="#">
+																	<i class="ki-duotone ki-note-2 text-success fs-3"
+																		data-bs-toggle="tooltip" 
+																		data-bs-custom-class="tooltip-inverse" 
+																		data-bs-title='View Recipe'>
+																		<span class="path1"></span>
+																		<span class="path2"></span>
+																		<span class="path3"></span>
+																		<span class="path4"></span>
+																	</i>
+																</a>
+														</div>
+														<!--end::Text-->
+													</div>
+													<!--end::Item-->
+
+													<!--begin::Item-->
+													<div class="timeline-item">
+														<!--begin::Label-->
+														<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
+														<!--end::Label-->
+
+														<!--begin::Badge-->
+														<div class="timeline-badge">
+															<i class="fa fa-genderless text-warning fs-1"></i>
+														</div>
+														<!--end::Badge-->
+
+														<!--begin::Desc-->
+														<div class="timeline-content fw-mormal text-muted ps-3">
+															Lait
+															<a href="#">
+																	<i class="ki-duotone ki-note-2 text-success fs-3"
+																		data-bs-toggle="tooltip" 
+																		data-bs-custom-class="tooltip-inverse" 
+																		data-bs-title='View Recipe'>
+																		<span class="path1"></span>
+																		<span class="path2"></span>
+																		<span class="path3"></span>
+																		<span class="path4"></span>
+																	</i>
+																</a>
+														</div>
+														<!--end::Desc-->
+													</div>
+													<!--end::Item-->
+
+													<!--begin::Item-->
+													<div class="timeline-item">
+														<!--begin::Label-->
+														<div class="timeline-label fw-bold text-gray-800 fs-6">1 week</div>
+														<!--end::Label-->
+
+														<!--begin::Badge-->
+														<div class="timeline-badge">
+															<i class="fa fa-genderless text-success fs-1"></i>
+														</div>
+														<!--end::Badge-->
+
+														<!--begin::Text-->
+														<div class="timeline-content fw-mormal text-muted ps-3">
+															Cidre
+															<a href="#">
+															<i class="ki-duotone ki-note fs-3 text-danger " 
+																data-bs-toggle="tooltip" 
+																data-bs-custom-class="tooltip-inverse" 
+																data-bs-title='Choose a recipe'>
+																<span class="path1"></span><span class="path2"></span>
+															</i>
+														</a>
+														</div>
+														<!--end::Text-->
+													</div>
+														<!--end::Item-->
+												</div>
+												<!--end::Timeline-->
+											</div>
 										</div>
-										<!--end::Section-->                
+										<div class="card card-xl-stretch mb-xl-8 col-4 me-8">
+											<div class="card-header border-0 py-5">
+												<h3 class="card-title align-items-start flex-column">
+													<span class="card-label fw-bold fs-3 mb-1">{{$t('recipes')}}</span>
+
+													<span class="text-muted fw-semibold fs-7">{{$t('next_recipes')}}</span>
+												</h3>
+											</div>
+											<div class="card-body d-flex flex-column">
+												<div class="">
+													<div class="d-flex flex-stack mb-5">
+														<div class="d-flex align-items-center me-2 full-width">
+															<!--begin::Symbol-->
+															<div class="symbol symbol-50px me-3 full-width">
+																<div class="symbol-label bg-light full-width">
+																	<img src="@/assets/pouletprovencale.jpg" alt="" class="full-height-img">
+																</div>
+															</div>
+															<!--end::Symbol-->
+
+															<!--begin::Title-->
+															<div class="full-width">
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Cuisse de poulet à la provençale</a>
+																<div class="fs-7 text-muted fw-semibold mt-1">Sortir les cuisses du congélateur</div>
+															</div>
+															<!--end::Title-->
+														</div>
+														<!--end::Section-->
+
+														<!--begin::Label-->
+														<div class="badge badge-light fw-semibold py-4 px-3">aujourd'hui</div>
+														<!--end::Label-->
+													</div>
+													<!--end::Item-->
+
+													<!--begin::Item-->
+													<div class="d-flex flex-stack mb-5">
+														<!--begin::Section-->
+														<div class="d-flex align-items-center me-2">
+															<!--begin::Symbol-->
+															<div class="symbol symbol-50px me-3">
+																<div class="symbol-label bg-light">
+																	<img src="@/assets/magretsoja.jpg" alt="" class="full-height-img">
+																</div>
+															</div>
+															<!--end::Symbol-->
+
+															<!--begin::Title-->
+															<div>
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Magret à la sauce soja</a>
+																<div class="fs-7 text-muted fw-semibold mt-1">Faire mariner le magret</div>
+															</div>
+															<!--end::Title-->
+														</div>
+														<!--end::Section-->
+
+														<!--begin::Label-->
+														<div class="badge badge-light fw-semibold py-4 px-3">demain midi</div>
+														<!--end::Label-->
+													</div>
+													<!--end::Item-->
+
+													<!--begin::Item-->
+													<div class="d-flex flex-stack mb-5">
+														<!--begin::Section-->
+														<div class="d-flex align-items-center me-2">
+															<!--begin::Symbol-->
+															<div class="symbol symbol-50px me-3">
+																<div class="symbol-label bg-light">
+																	<img src="@/assets/steakharicot.jpg" alt="" class="full-height-img">
+																</div>
+															</div>
+															<!--end::Symbol-->
+
+															<!--begin::Title-->
+															<div class="py-1">
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Steak haricots verts</a>
+															</div>
+															<!--end::Title-->
+														</div>
+														<!--end::Section-->
+
+														<!--begin::Label-->
+														<div class="badge badge-light fw-semibold py-4 px-3">demain soir</div>
+														<!--end::Label-->
+													</div>
+													<!--end::Item-->
+													<!--begin::Item-->
+													<div class="d-flex flex-stack mb-5">
+														<!--begin::Section-->
+														<div class="d-flex align-items-center me-2">
+															<!--begin::Symbol-->
+															<div class="symbol symbol-50px me-3">
+																<div class="symbol-label bg-light">
+																	<img src="@/assets/lasagna.jpg" alt="" class="full-height-img">
+																</div>
+															</div>
+															<!--end::Symbol-->
+
+															<!--begin::Title-->
+															<div class="py-1">
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Lasagnes</a>
+															</div>
+															<!--end::Title-->
+														</div>
+														<!--end::Section-->
+
+														<!--begin::Label-->
+														<div class="badge badge-light fw-semibold py-4 px-3">jeudi soir</div>
+														<!--end::Label-->
+													</div>
+													<!--end::Item-->
+													<!--begin::Item-->
+													<div class="d-flex flex-stack mb-5">
+														<!--begin::Section-->
+														<div class="d-flex align-items-center me-2">
+															<!--begin::Symbol-->
+															<div class="symbol symbol-50px me-3">
+																<div class="symbol-label bg-light">
+																	<img src="@/assets/patessaumon.jpg" alt="" class="full-height-img">
+																</div>
+															</div>
+															<!--end::Symbol-->
+
+															<!--begin::Title-->
+															<div class="py-1">
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Pâtes au saumon</a>
+															</div>
+															<!--end::Title-->
+														</div>
+														<!--end::Section-->
+
+														<!--begin::Label-->
+														<div class="badge badge-light fw-semibold py-4 px-3">vendredi soir</div>
+														<!--end::Label-->
+													</div>
+													<!--end::Item-->
+													<!--begin::Item-->
+													<div class="d-flex flex-stack mb-5">
+														<!--begin::Section-->
+														<div class="d-flex align-items-center me-2">
+															<!--begin::Symbol-->
+															<div class="symbol symbol-50px me-3">
+																<div class="symbol-label bg-light">
+																	<img src="@/assets/burger.jpg" alt="" class="full-height-img">
+																</div>
+															</div>
+															<!--end::Symbol-->
+
+															<!--begin::Title-->
+															<div class="py-1">
+																<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Burgers</a>
+															</div>
+															<!--end::Title-->
+														</div>
+														<!--end::Section-->
+
+														<!--begin::Label-->
+														<div class="badge badge-light fw-semibold py-4 px-3">samedi midi</div>
+														<!--end::Label-->
+													</div>
+													<!--end::Item-->
+													
+												</div>
+												<!--end::Items-->
+											</div>
+											<!--end::Body-->
+										</div>
+										<div class="card card-xl-stretch mb-5 mb-xl-8 col-4">
+											<!--begin::Header-->
+											<div class="card-header border-0">
+												<h3 class="card-title fw-bold text-gray-900">{{$t('shopping_list')}}</h3>
+											</div>
+											<!--begin::Body-->
+											<div class="card-body pt-2">
+												<!--begin::Item-->
+												<div class="d-flex align-items-center mb-8">
+													<!--begin::Bullet-->
+													<span class="bullet bullet-vertical h-40px bg-danger"></span>
+													<!--end::Bullet-->
+
+													<!--begin::Checkbox-->
+													<div class="form-check form-check-custom form-check-solid mx-5">
+														<input class="form-check-input" type="checkbox" value="">
+													</div>
+													<!--end::Checkbox-->
+
+													<!--begin::Description-->
+													<div class="flex-grow-1">
+														<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Magrêt de canard</a>
+
+														<span class="text-muted fw-semibold d-block">1 magret (300g)</span>
+													</div>
+													<!--end::Description-->
+
+													<span class="badge badge-light-warning fs-8 fw-bold">Boucher</span>
+												</div>
+												<div class="d-flex align-items-center mb-8">
+													<!--begin::Bullet-->
+													<span class="bullet bullet-vertical h-40px bg-danger"></span>
+													<!--end::Bullet-->
+
+													<!--begin::Checkbox-->
+													<div class="form-check form-check-custom form-check-solid mx-5">
+														<input class="form-check-input" type="checkbox" value="">
+													</div>
+													<!--end::Checkbox-->
+
+													<!--begin::Description-->
+													<div class="flex-grow-1">
+														<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pâtes</a>
+
+														<span class="text-muted fw-semibold d-block">500g</span>
+													</div>
+													<!--end::Description-->
+
+													<span class="badge badge-light-primary fs-8 fw-bold">Supermarché</span>
+												</div>
+													<!--end:Item-->
+															<!--begin::Item-->
+												<div class="d-flex align-items-center mb-8">
+													<!--begin::Bullet-->
+													<span class="bullet bullet-vertical h-40px bg-warning"></span>
+													<div class="form-check form-check-custom form-check-solid mx-5">
+														<input class="form-check-input" type="checkbox" value="">
+													</div>
+													<div class="flex-grow-1">
+														<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pommes de terre</a>
+														<span class="text-muted fw-semibold d-block">3 Kgs</span>
+													</div>
+													<span class="badge badge-light-success fs-8 fw-bold">Producteur</span>
+												</div>
+												<div class="d-flex align-items-center mb-8">
+													<span class="bullet bullet-vertical h-40px bg-success"></span>
+													<div class="form-check form-check-custom form-check-solid mx-5">
+														<input class="form-check-input" type="checkbox" value="">
+													</div>
+													<div class="flex-grow-1">
+														<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Haricots verts</a>
+														<span class="text-muted fw-semibold d-block">500g</span>
+													</div>
+													<span class="badge badge-light-success fs-8 fw-bold">Producteur</span>
+												</div>
+												<div class="d-flex align-items-center mb-8">
+													<!--begin::Bullet-->
+													<span class="bullet bullet-vertical h-40px bg-warning"></span>
+													<!--end::Bullet-->
+
+													<!--begin::Checkbox-->
+													<div class="form-check form-check-custom form-check-solid mx-5">
+														<input class="form-check-input" type="checkbox" value="">
+													</div>
+													<!--end::Checkbox-->
+
+													<!--begin::Description-->
+													<div class="flex-grow-1">
+														<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pâte à pizza</a>
+
+														<span class="text-muted fw-semibold d-block">For 3 pizza</span>
+													</div>
+													<!--end::Description-->
+
+													<span class="badge badge-light-danger fs-8 fw-bold">Boulangerie</span>
+												</div>
+												<div class="d-flex align-items-center ">
+													<!--begin::Bullet-->
+													<span class="bullet bullet-vertical h-40px bg-success"></span>
+													<!--end::Bullet-->
+
+													<!--begin::Checkbox-->
+													<div class="form-check form-check-custom form-check-solid mx-5">
+														<input class="form-check-input" type="checkbox" value="">
+													</div>
+													<!--end::Checkbox-->
+
+													<!--begin::Description-->
+													<div class="flex-grow-1">
+														<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pommes</a>
+
+														<span class="text-muted fw-semibold d-block">400g</span>
+													</div>
+													<!--end::Description-->
+
+													<span class="badge badge-light-success fs-8 fw-bold">Producteur</span>
+												</div>
+											</div>
+											<!--end::Body-->
+										</div>
 									</div>
-									<!--end::Item-->
-											
-									<!--begin::Item-->
-									<div class="d-flex align-items-sm-center mb-7">
-										<!--begin::Symbol-->
-										<div class="symbol symbol-50px me-5">
-											<span class="symbol-label">
-												<i class="fa-solid fa-carrot fs-2qx"></i>
-											</span>
-										</div>
-										<!--end::Symbol-->
-
-										<!--begin::Section-->
-										<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
-											<div class="flex-grow-1 me-2">
-												<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Top Vegetable</a>
-												
-												<span class="text-muted fw-semibold d-block fs-7">Zucchini</span>
-											</div>                     
-
-											<span class="badge badge-light fw-bold my-2">6 meals</span>
-										</div>
-										<!--end::Section-->                
-									</div>
-									<!--end::Item-->
-											
-									<!--begin::Item-->
-									<div class="d-flex align-items-sm-center mb-7">
-										<!--begin::Symbol-->
-										<div class="symbol symbol-50px me-5">
-											<span class="symbol-label">
-												<i class="fa-solid fa-utensils fs-2qx"></i>
-											</span>
-										</div>
-										<!--end::Symbol-->
-
-										<!--begin::Section-->
-										<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
-											<div class="flex-grow-1 me-2">
-												<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorise cuisine</a>
-												
-												<span class="text-muted fw-semibold d-block fs-7">Indian</span>
-											</div>                     
-
-											<span class="badge badge-light fw-bold my-2">3 meals</span>
-										</div>
-										<!--end::Section-->                
-									</div>
-									<!--end::Item-->
-											
-									<!--begin::Item-->
-									<div class="d-flex align-items-sm-center mb-7">
-										<!--begin::Symbol-->
-										<div class="symbol symbol-50px me-5">
-											<span class="symbol-label">
-												<i class="fa-solid fa-cake-candles fs-2qx"></i>
-											</span>
-										</div>
-										<!--end::Symbol-->
-
-										<!--begin::Section-->
-										<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
-											<div class="flex-grow-1 me-2">
-												<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorite dessert</a>
-												
-												<span class="text-muted fw-semibold d-block fs-7">Fondant au chocolat</span>
-											</div>                     
-
-											<span class="badge badge-light fw-bold my-2">3 meals</span>
-										</div>
-										<!--end::Section-->                
-									</div>
-									<!--end::Item-->
-											
-									<!--begin::Item-->
-									<div class="d-flex align-items-sm-center mb-7">
-										<!--begin::Symbol-->
-										<div class="symbol symbol-50px me-5">
-											<span class="symbol-label">
-												<i class="fa-solid fa-champagne-glasses fs-2qx"></i>
-											</span>
-										</div>
-										<!--end::Symbol-->
-
-										<!--begin::Section-->
-										<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
-											<div class="flex-grow-1 me-2">
-												<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorite appetizer</a>
-												
-												<span class="text-muted fw-semibold d-block fs-7">Wraps Saumon</span>
-											</div>                     
-
-											<span class="badge badge-light fw-bold my-2">5 meals</span>
-										</div>
-										<!--end::Section-->                
-									</div>
-									<!--end::Item-->
-								</div>
-								<!--end::Body-->
-							</div>
-						<!--end::List Widget 4-->
-						</div>
-						<!--end::Col-->
-						<!--begin::Col-->
-						<div class="col-xl-8 ps-xl-12">
-							<!-- <div class="card bgi-position-y-bottom bgi-position-x-end bgi-no-repeat bgi-size-cover min-h-250px bg-primary mb-5 mb-xl-8 border-0 card-background"  dir="ltr">
-								<div class="card-body d-flex flex-column justify-content-center ps-lg-12">  
-									<h3 class="text-white fs-2qx fw-bold mb-7">
-										{{$t('generate_recipe')}} <br>
-										{{$t('preferences_based')}}
-									</h3>
-									<div class="m-0">
-										<a href="#" class="btn btn-success fw-semibold px-6 py-3" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Generate</a> 
-									</div>
-								</div>
-							</div> -->
-							<div class="row g-5 g-xl-8">
-								<div class="col-xl-6">
-									<div class="card card-xl-stretch mb-xl-8">
-										<div class="card-header border-0 py-5">
+									<div class="card   mb-xl-8">
+										<!--begin::Header-->
+										<div class="card-header border-0 pt-5">
 											<h3 class="card-title align-items-start flex-column">
-												<span class="card-label fw-bold fs-3 mb-1">{{$t('recipes')}}</span>
-
-												<span class="text-muted fw-semibold fs-7">{{$t('next_recipes')}}</span>
+												<span class="card-label fw-bold text-gray-900">Preferences</span>
 											</h3>
 										</div>
-										<div class="card-body d-flex flex-column">
-											<div class="">
-												<div class="d-flex flex-stack mb-5">
-													<div class="d-flex align-items-center me-2 full-width">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50px me-3 full-width">
-															<div class="symbol-label bg-light full-width">
-																<img src="@/assets/pouletprovencale.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
-														<div class="full-width">
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Cuisse de poulet à la provençale</a>
-															<div class="fs-7 text-muted fw-semibold mt-1">Sortir les cuisses du congélateur</div>
-														</div>
-														<!--end::Title-->
-													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
-													<div class="badge badge-light fw-semibold py-4 px-3">aujourd'hui</div>
-													<!--end::Label-->
-												</div>
-												<!--end::Item-->
-
-												<!--begin::Item-->
-												<div class="d-flex flex-stack mb-5">
-													<!--begin::Section-->
-													<div class="d-flex align-items-center me-2">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50px me-3">
-															<div class="symbol-label bg-light">
-																<img src="@/assets/magretsoja.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
-														<div>
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Magret à la sauce soja</a>
-															<div class="fs-7 text-muted fw-semibold mt-1">Faire mariner le magret</div>
-														</div>
-														<!--end::Title-->
-													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
-													<div class="badge badge-light fw-semibold py-4 px-3">demain midi</div>
-													<!--end::Label-->
-												</div>
-												<!--end::Item-->
-
-												<!--begin::Item-->
-												<div class="d-flex flex-stack mb-5">
-													<!--begin::Section-->
-													<div class="d-flex align-items-center me-2">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50px me-3">
-															<div class="symbol-label bg-light">
-																<img src="@/assets/steakharicot.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
-														<div class="py-1">
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Steak haricots verts</a>
-														</div>
-														<!--end::Title-->
-													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
-													<div class="badge badge-light fw-semibold py-4 px-3">demain soir</div>
-													<!--end::Label-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack mb-5">
-													<!--begin::Section-->
-													<div class="d-flex align-items-center me-2">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50px me-3">
-															<div class="symbol-label bg-light">
-																<img src="@/assets/lasagna.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
-														<div class="py-1">
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Lasagnes</a>
-														</div>
-														<!--end::Title-->
-													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
-													<div class="badge badge-light fw-semibold py-4 px-3">jeudi soir</div>
-													<!--end::Label-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack mb-5">
-													<!--begin::Section-->
-													<div class="d-flex align-items-center me-2">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50px me-3">
-															<div class="symbol-label bg-light">
-																<img src="@/assets/patessaumon.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
-														<div class="py-1">
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Pâtes au saumon</a>
-														</div>
-														<!--end::Title-->
-													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
-													<div class="badge badge-light fw-semibold py-4 px-3">vendredi soir</div>
-													<!--end::Label-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack mb-5">
-													<!--begin::Section-->
-													<div class="d-flex align-items-center me-2">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50px me-3">
-															<div class="symbol-label bg-light">
-																<img src="@/assets/burger.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
-														<div class="py-1">
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Burgers</a>
-														</div>
-														<!--end::Title-->
-													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
-													<div class="badge badge-light fw-semibold py-4 px-3">samedi midi</div>
-													<!--end::Label-->
-												</div>
-												<!--end::Item-->
-												
-											</div>
-											<!--end::Items-->
-										</div>
-										<!--end::Body-->
-									</div>
-									<!--end::Mixed Widget 5-->
-								</div>
-								<!--end::Col-->
-
-								<!--begin::Col-->
-								<div class="col-xl-6">
-									<div class="card card-xl-stretch mb-5 mb-xl-8">
-										<!--begin::Header-->
-										<div class="card-header border-0">
-											<h3 class="card-title fw-bold text-gray-900">{{$t('shopping_list')}}</h3>
-										</div>
+										<!--end::Header-->
 										<!--begin::Body-->
-										<div class="card-body pt-2">
+										<div class="card-body pt-5">
 											<!--begin::Item-->
-											<div class="d-flex align-items-center mb-8">
-												<!--begin::Bullet-->
-												<span class="bullet bullet-vertical h-40px bg-danger"></span>
-												<!--end::Bullet-->
-
-												<!--begin::Checkbox-->
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
+											<div class="d-flex align-items-sm-center mb-7">
+												<!--begin::Symbol-->
+												<div class="symbol symbol-50px me-5">
+													<span class="symbol-label">
+														<i class="fa-solid fa-plate-wheat fs-2qx"></i>
+													</span>
 												</div>
-												<!--end::Checkbox-->
+												<!--end::Symbol-->
 
-												<!--begin::Description-->
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Magrêt de canard</a>
+												<!--begin::Section-->
+												<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
+													<div class="flex-grow-1 me-2">
+														<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Top food</a>
+														
+														<span class="text-muted fw-semibold d-block fs-7">Rice</span>
+													</div>                     
 
-													<span class="text-muted fw-semibold d-block">1 magret (300g)</span>
+													<span class="badge badge-light fw-bold my-2">19 meals</span>
 												</div>
-												<!--end::Description-->
-
-												<span class="badge badge-light-warning fs-8 fw-bold">Boucher</span>
+												<!--end::Section-->                
 											</div>
-											<div class="d-flex align-items-center mb-8">
-												<!--begin::Bullet-->
-												<span class="bullet bullet-vertical h-40px bg-danger"></span>
-												<!--end::Bullet-->
-
-												<!--begin::Checkbox-->
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
+											<!--end::Item-->
+													
+											<!--begin::Item-->
+											<div class="d-flex align-items-sm-center mb-7">
+												<!--begin::Symbol-->
+												<div class="symbol symbol-50px me-5">
+													<span class="symbol-label">
+														<i class="fa-solid fa-carrot fs-2qx"></i>
+													</span>
 												</div>
-												<!--end::Checkbox-->
+												<!--end::Symbol-->
 
-												<!--begin::Description-->
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pâtes</a>
+												<!--begin::Section-->
+												<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
+													<div class="flex-grow-1 me-2">
+														<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Top Vegetable</a>
+														
+														<span class="text-muted fw-semibold d-block fs-7">Zucchini</span>
+													</div>                     
 
-													<span class="text-muted fw-semibold d-block">500g</span>
+													<span class="badge badge-light fw-bold my-2">6 meals</span>
 												</div>
-												<!--end::Description-->
-
-												<span class="badge badge-light-primary fs-8 fw-bold">Supermarché</span>
+												<!--end::Section-->                
 											</div>
-												<!--end:Item-->
-														<!--begin::Item-->
-											<div class="d-flex align-items-center mb-8">
-												<!--begin::Bullet-->
-												<span class="bullet bullet-vertical h-40px bg-warning"></span>
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
+											<!--end::Item-->
+													
+											<!--begin::Item-->
+											<div class="d-flex align-items-sm-center mb-7">
+												<!--begin::Symbol-->
+												<div class="symbol symbol-50px me-5">
+													<span class="symbol-label">
+														<i class="fa-solid fa-utensils fs-2qx"></i>
+													</span>
 												</div>
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pommes de terre</a>
-													<span class="text-muted fw-semibold d-block">3 Kgs</span>
+												<!--end::Symbol-->
+
+												<!--begin::Section-->
+												<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
+													<div class="flex-grow-1 me-2">
+														<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorise cuisine</a>
+														
+														<span class="text-muted fw-semibold d-block fs-7">Indian</span>
+													</div>                     
+
+													<span class="badge badge-light fw-bold my-2">3 meals</span>
 												</div>
-												<span class="badge badge-light-success fs-8 fw-bold">Producteur</span>
+												<!--end::Section-->                
 											</div>
-											<div class="d-flex align-items-center mb-8">
-												<span class="bullet bullet-vertical h-40px bg-success"></span>
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
+											<!--end::Item-->
+													
+											<!--begin::Item-->
+											<div class="d-flex align-items-sm-center mb-7">
+												<!--begin::Symbol-->
+												<div class="symbol symbol-50px me-5">
+													<span class="symbol-label">
+														<i class="fa-solid fa-cake-candles fs-2qx"></i>
+													</span>
 												</div>
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Haricots verts</a>
-													<span class="text-muted fw-semibold d-block">500g</span>
+												<!--end::Symbol-->
+
+												<!--begin::Section-->
+												<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
+													<div class="flex-grow-1 me-2">
+														<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorite dessert</a>
+														
+														<span class="text-muted fw-semibold d-block fs-7">Fondant au chocolat</span>
+													</div>                     
+
+													<span class="badge badge-light fw-bold my-2">3 meals</span>
 												</div>
-												<span class="badge badge-light-success fs-8 fw-bold">Producteur</span>
+												<!--end::Section-->                
 											</div>
-											<div class="d-flex align-items-center mb-8">
-												<!--begin::Bullet-->
-												<span class="bullet bullet-vertical h-40px bg-warning"></span>
-												<!--end::Bullet-->
-
-												<!--begin::Checkbox-->
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
+											<!--end::Item-->
+													
+											<!--begin::Item-->
+											<div class="d-flex align-items-sm-center mb-7">
+												<!--begin::Symbol-->
+												<div class="symbol symbol-50px me-5">
+													<span class="symbol-label">
+														<i class="fa-solid fa-champagne-glasses fs-2qx"></i>
+													</span>
 												</div>
-												<!--end::Checkbox-->
+												<!--end::Symbol-->
 
-												<!--begin::Description-->
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pâte à pizza</a>
+												<!--begin::Section-->
+												<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
+													<div class="flex-grow-1 me-2">
+														<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorite appetizer</a>
+														
+														<span class="text-muted fw-semibold d-block fs-7">Wraps Saumon</span>
+													</div>                     
 
-													<span class="text-muted fw-semibold d-block">For 3 pizza</span>
+													<span class="badge badge-light fw-bold my-2">5 meals</span>
 												</div>
-												<!--end::Description-->
-
-												<span class="badge badge-light-danger fs-8 fw-bold">Boulangerie</span>
+												<!--end::Section-->                
 											</div>
-											<div class="d-flex align-items-center ">
-												<!--begin::Bullet-->
-												<span class="bullet bullet-vertical h-40px bg-success"></span>
-												<!--end::Bullet-->
-
-												<!--begin::Checkbox-->
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
-												</div>
-												<!--end::Checkbox-->
-
-												<!--begin::Description-->
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pommes</a>
-
-													<span class="text-muted fw-semibold d-block">400g</span>
-												</div>
-												<!--end::Description-->
-
-												<span class="badge badge-light-success fs-8 fw-bold">Producteur</span>
-											</div>
+											<!--end::Item-->
 										</div>
 										<!--end::Body-->
 									</div>
 								</div>
+						<div class="col-xl-8 ps-xl-12">
+							<div class="row g-5 g-xl-8">
+								
 							</div>
 					
 					<!--end::Tables Widget 5-->
