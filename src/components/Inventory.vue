@@ -64,7 +64,7 @@
             </template>
             <p v-else class="inventory-container">Aucun aliment enregistré.</p>
         </div>
-        <addIngredient />
+        <AddIngredient />
       
       </div>
  
@@ -74,7 +74,7 @@
   <script>
 import { defineComponent } from 'vue';
 import HeaderApp from "./header.vue";
-import addIngredient from './addIngredient.vue';
+import AddIngredient from './AddIngredient.vue';
 import FooterApp from "./FooterApp.vue";
 import _ from 'lodash';
   // ... your existing script
@@ -82,7 +82,7 @@ import _ from 'lodash';
     name: 'InventoryList', 
     components: {
         FooterApp,
-        HeaderApp,addIngredient
+        HeaderApp,AddIngredient
     },
     data() {
         return {

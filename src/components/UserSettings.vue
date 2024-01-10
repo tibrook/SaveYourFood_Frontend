@@ -40,7 +40,7 @@
 									<!--begin::Col-->
 									<div class="col-3">
 										<!--begin::Card-->
-										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/inventory">
+										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/metronic8/demo9/../demo9/account/overview.html">
 											<i class="ki-duotone ki-basket fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>												<span class="fs-4 fw-bold">
 												{{$t('inventory')}}                </span>
 										</a>
@@ -51,7 +51,7 @@
 									<!--begin::Col-->
 									<div class="col-3">
 										<!--begin::Card-->
-										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/recipes">
+										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/metronic8/demo9/../demo9/account/statements.html">
 											<i class="ki-duotone ki-scroll fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>												<span class="fs-4 fw-bold">
 												{{$t('recipes')}}                </span>
 										</a>
@@ -62,7 +62,7 @@
 									<!--begin::Col-->
 									<div class="col-3">
 										<!--begin::Card-->
-										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="weeklyMeals">
+										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/metronic8/demo9/../demo9/account/referrals.html">
 											<i class="ki-duotone ki-calendar fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span></i>												<span class="fs-4 fw-bold">
 												{{$t('weekly_meals')}}                  </span>
 										</a>
@@ -73,7 +73,7 @@
 									<!--begin::Col-->
 									<div class="col-3">
 										<!--begin::Card-->
-										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/shoppingList">
+										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/metronic8/demo9/../demo9/apps/customers/view.html">
 											<i class="ki-duotone ki-handcart  fs-2tx mb-5 ms-n1 text-gray-500"></i><span class="fs-4 fw-bold">
 												{{$t('shopping_list')}}                </span>
 										</a>
@@ -764,51 +764,37 @@
 		</div>
 	</div>
 </template>
-
 <script>
-import { defineComponent } from 'vue';
-import HeaderApp from "./header.vue"
-import MenuAside from './MenuAside.vue'
-export default defineComponent({
-  watch: {
-  },
-  name: 'HomePage',
-  components: {
-	HeaderApp,MenuAside
-  },
+import {  mapGetters } from 'vuex';
 
-  mounted(){
+export default {
+    name: 'UserLogin',
+    components:{chiefHatVue},
+    data() {
+        return {  
+        };
+    },
+    
+    computed: {
+      ...mapGetters(['currentLanguage'])
+    },
+    setup() {
+    
 
-  },
- 
-
-  methods:{
-  }
-})
-</script>
-<style>
-  .full-width {
-    flex-grow: 1!important; /* Permet à l'élément de remplir l'espace disponible */
-  }
-
-  .full-height-img {
-    height: 100%!important; /* Définit la hauteur de l'image à 100% de son parent */
-  }
-  .symbol-label {
-    overflow: hidden; /* Empêche le débordement de contenu */
-    border-radius: inherit; /* Hérite le border-radius de la classe symbol si défini */
-  }
+    },
+    methods: {
+    
+      },
+      triggerAnimations() {
+     
+      }
+}
+  </script>
+  <style scoped>
+  #kt_app_signin{
+    background-image: url('../assets/auth/bg4.jpg')
+  }    
+  </style>
   
-  .full-height-img {
-    height: 100%; /* Ajuste la hauteur de l'image pour remplir le conteneur */
-    width: 100%; /* Ajuste la largeur de l'image pour remplir le conteneur */
-    object-fit: cover; /* S'assure que l'image couvre toute la zone sans déformer son ratio */
-    border-radius: inherit; /* Hérite le border-radius de son parent direct */
-  }
-  .card-background {
-	background-image: url('@/assets/fridge.png');
-	background-position: 100% -80px;
-	background-size: 375px auto;
-	background-repeat: no-repeat;
-	}
-</style>
+  
+  

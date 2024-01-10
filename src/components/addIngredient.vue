@@ -31,7 +31,7 @@
 
 <script>
 export default ({
-    name: 'addIngredient',
+    name: 'AddIngredient',
     data() {
         return {
             newItem: {
