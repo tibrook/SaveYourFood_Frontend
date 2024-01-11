@@ -89,10 +89,13 @@
               </div>
               <!--end::Menu item-->
               <!--begin::Menu item-->
-              <div class="menu-item px-5 my-1">
-                <a href="account/account-settings.html" class="menu-link px-5">{{$t('account_settings')}}</a>
-              </div>
+              <div class="menu-item px-5">
+
+              <router-link id="usermenu_accountPreferencesLink" :to="{name: 'accountSettings'}" class="menu-link px-5">
+                    {{ $t("user_settings") }}
+                </router-link>
               <!--end::Menu item-->
+              </div>
               <!--begin::Menu item-->
               <div class="menu-item px-5">
                 <a href="#"  class="menu-link px-5" @click="logout">{{$t('sign_out')}}</a>

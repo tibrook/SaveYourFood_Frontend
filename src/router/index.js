@@ -34,9 +34,28 @@ const routes = [
         component: InventoryVue,
     },
     {
+        path: '/recipes',
+        name: 'Recipes',
+        component: () => import("@/components/Recipes.vue"),
+    },
+    {
+        path: '/weekly-meals',
+        name: 'WeeklyMeals',
+        component: () => import("@/components/WeeklyMeals.vue"),
+    },
+    {
         path: '/account/preferences',
         name: 'accountPreferences',
         component: () => import("@/components/Account.vue"),
+    },
+    {
+        path: '/account/settings',
+        name: 'accountSettings',
+        component: () => import("@/components/AccountSettings.vue"),
+    },{
+        path: '/shopping-list',
+        name: 'ShoppingList',
+        component: () => import("@/components/ShoppingList.vue"),
     },
 ]
 

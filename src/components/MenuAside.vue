@@ -14,7 +14,7 @@
             <div id="kt_aside_menu_wrapper" class="w-100 hover-scroll-y scroll-lg-ms d-flex" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: trur}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside, #kt_aside_menu" data-kt-scroll-offset="0">
                 <div id="kt_aside_menu" class="menu menu-column menu-title-gray-600 menu-state-primary menu-state-icon-primary menu-state-bullet-primary menu-icon-gray-500 menu-arrow-gray-500 fw-semibold fs-6 my-auto" data-kt-menu="true">
                     <!--begin:Menu item-->
-                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item here show py-2" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse" data-bs-title='inventory'>
+                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item here show py-2" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse" data-bs-title='Home'>
                         <!--begin:Menu link-->
                         <span class="menu-link menu-center">
                             <span class="menu-icon me-0">
@@ -27,51 +27,61 @@
                     </div>
                     <!--end:Menu item-->
                     <!--begin:Menu item-->
-                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
+                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse" data-bs-title='inventory'>
                         <!--begin:Menu link-->
                         <span class="menu-link menu-center">
                             <span class="menu-icon me-0">
-                                <i class="ki-duotone ki-basket fs-2x">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                </i>
+                                <router-link id="usermenu_accountPreferencesLink" :to="{name: 'Inventory'}" >
+                                    <i class="ki-duotone ki-basket fs-2x">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                </router-link>
+                               
                             </span>
                         </span>
                     </div>
                     <!--end:Menu item-->
                     <!--begin:Menu item-->
-                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
+                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse" data-bs-title='recipe'>
                         <!--begin:Menu link-->
                         <span class="menu-link menu-center">
                             <span class="menu-icon me-0">
-                                <i class="ki-duotone ki-scroll fs-2x">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                </i>
+                                <router-link id="usermenu_accountPreferencesLink" :to="{name: 'Recipes'}" >
+                                    <i class="ki-duotone ki-scroll fs-2x">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                </router-link>
                             </span>
                         </span>
                     </div>
                     <!--begin:Menu item-->
-                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
+                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse" data-bs-title='weekly meals'>
                         <!--begin:Menu link-->
                         <span class="menu-link menu-center">
                             <span class="menu-icon me-0">
-                                <i class="ki-duotone ki-calendar fs-2x">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                </i>
+                                <router-link id="usermenu_accountPreferencesLink" :to="{name: 'WeeklyMeals'}" class="text-decoration-none" >
+                                    <i class="ki-duotone ki-calendar fs-2x">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                </router-link>
                             </span>
                         </span>
                     </div>
                     <!--begin:Menu item-->
-                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2">
+                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" class="menu-item py-2" data-bs-toggle="tooltip" data-bs-custom-class="tooltip-inverse" data-bs-title='shopping list'>
                         <!--begin:Menu link-->
                         <span class="menu-link menu-center">
                             <span class="menu-icon me-0">
-                                <i class="ki-duotone ki-handcart fs-2x">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                </i>
+                                <router-link id="usermenu_accountPreferencesLink" :to="{name: 'ShoppingList'}" >
+                                    <i class="ki-duotone ki-handcart fs-2x">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                </router-link>
+                               
                             </span>
                         </span>
                     </div>

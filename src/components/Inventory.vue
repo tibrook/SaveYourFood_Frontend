@@ -114,9 +114,9 @@
                                                 <!--begin::Col-->
                                                 <div class="col-lg-8">
                                                     <!--begin::Image input-->
-                                                    <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image:url(selectedeIngredient ? selectedIngredient.image : defaultImage)">
+                                                    <div class="image-input image-input-outline" data-kt-image-input="true" :style="'background-image:url('+  selectedIngredient ? selectedIngredient?.image : 'blank' + ')'">
                                                         <!--begin::Preview existing avatar-->
-                                                        <div class="image-input-wrapper w-125px h-125px" style="background-image: url(imageUrl)"></div>
+                                                        <div class="image-input-wrapper w-125px h-125px" :style="'background-image: url(' + selectedIngredient ? selectedIngredient?.image : 'blank'+ ')'"></div>
                                                         <!--end::Preview existing avatar-->
                                                         <!--begin::Label-->
                                                         <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
