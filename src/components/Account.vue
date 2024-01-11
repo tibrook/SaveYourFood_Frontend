@@ -11,7 +11,7 @@
 						<!--begin::Mobile logo-->
 						<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
 							<a href="index.html">
-								<img alt="Logo" src="assets/chiefHat.svg" class="h-35px" />
+								<chiefHat />
 							</a>
 						</div>
 						<!--end::Mobile logo-->
@@ -153,17 +153,17 @@
 									<ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
 										<!--begin::Nav item-->
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="account/preferences">{{$t('preferences')}}</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5 active" data-bs-toggle="tab" href="#preferences_tab">{{$t('preferences')}}</a>
 										</li>
 										<!--end::Nav item-->
 										<!--begin::Nav item-->
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="account/settings">{{$t('account_settings')}}</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5" data-bs-toggle="tab" href="#accountSettings_tab">{{$t('account_settings')}}</a>
 										</li>
 										<!--end::Nav item-->
 										<!--begin::Nav item-->
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" href="account/my-recipes">{{ $t('my_recipes') }}</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5" data-bs-toggle="tab" href="#myRecipes_tab">{{ $t('my_recipes') }}</a>
 										</li>
 									</ul>
 									<!--begin::Navs-->
@@ -171,57 +171,15 @@
 							</div>
 							<!--end::Navbar-->
 							<!--begin::details View-->
-							<div class="card mb-5 mb-xl-10" id="kt_profile_details_view">
-								<!--begin::Card header-->
-								<div class="card-header cursor-pointer">
-									<!--begin::Card title-->
-									<div class="card-title m-0">
-										<h3 class="fw-bold m-0">{{$t('my_preferences')}}</h3>
-									</div>
-									<!--end::Card title-->
-									<!--begin::Action-->
-									<a href="account/settings.html" class="btn btn-sm btn-primary align-self-center">{{$t('edit_preferences')}}</a>
-									<!--end::Action-->
+							<div class="tab-content" id="kt_profile_details_view">
+								<div id="preferences_tab" class="tab-pane fade card active show" role="tabpanel">
+									<Preferences />
 								</div>
-								<!--begin::Card header-->
-								<!--begin::Card body-->
-								<div class="card-body p-9">
-									<!--begin::Row-->
-									<div class="row mb-7">
-										<!--begin::Label-->
-										<label class="col-lg-4 fw-semibold text-muted">Cuisine preferée</label>
-										<!--end::Label-->
-										<!--begin::Col-->
-										<div class="col-lg-8">
-											<span class="fw-bold fs-6 text-gray-800">Cuisine traditionnelle</span>
-										</div>
-										<!--end::Col-->
-									</div>
-									<!--end::Row-->
-									<!--begin::Input group-->
-									<div class="row mb-7">
-										<!--begin::Label-->
-										<label class="col-lg-4 fw-semibold text-muted">Aliments préférés</label>
-										<!--end::Label-->
-										<!--begin::Col-->
-										<div class="col-lg-8 fv-row">
-											<span class="fw-bold fs-6 text-gray-800 me-2">Pâtes, Crevettes, Saumon, Boeuf</span>
-										</div>
-										<!--end::Col-->
-									</div>
-									<!--end::Input group-->
-									<!--begin::Input group-->
-									<div class="row mb-7">
-										<!--begin::Label-->
-										<label class="col-lg-4 fw-semibold text-muted">Origine préférée
-										</label>
-										<!--end::Label-->
-										<!--begin::Col-->
-										<div class="col-lg-8 d-flex align-items-center">
-											<span class="fw-bold fs-6 text-gray-800 me-2">Cuisine Française, thailandaise</span>
-										</div>
-										<!--end::Col-->
-									</div>
+								<div id="accountSettings_tab" class="tab-pane fade card" role="tabpanel">
+									<AccountSettings />
+								</div>
+								<div id="myRecipes_tab" class="tab-pane fade card" role="tabpanel">
+									<MyRecipes />
 								</div>
 							</div>
 						</div>
@@ -233,27 +191,17 @@
 <script>
 import MenuAside from './MenuAside.vue'
 import HeaderApp from "./header.vue"
+import chiefHat from "./icons/chiefHat.vue"
+import Preferences from "./Preferences.vue"
+import AccountSettings from "./AccountSettings.vue"
+import MyRecipes from "./MyRecipes.vue";
 
 export default {
     name: 'UserAccount',
 	components: {
-		HeaderApp,MenuAside
-	},
-    data() {
-        return {  
-        };
-    },
-    
-    computed: {
-    },
-    setup() {
-    
-
-    },
-    methods: {
-    
-      },
-}
+		HeaderApp,MenuAside,Preferences, chiefHat, AccountSettings, MyRecipes
+		},
+	}
   </script>
   <style scoped>
   </style>

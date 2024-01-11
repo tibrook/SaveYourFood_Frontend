@@ -10,6 +10,8 @@
     "ingredients":"Ingrédients",
     "language":"Langage",
     "my_recipes":"Mes recettes",
+    "update_settings":"Modifier mes paramètres",
+    "add_recipe" : "Ajouter une recette",
     "my_preferences":"Mes préférences",
     "edit_preferences":"Modifier mes préférences",
     "preferences":"Préférences",

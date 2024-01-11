@@ -13,7 +13,6 @@ const i18n = createI18n({
     fallbackLocale: 'en',
     messages: { en, fr },
 })
-console.log('MOOOUNT')
 const app = createApp(App)
 app.use(i18n)
 app.use(store)

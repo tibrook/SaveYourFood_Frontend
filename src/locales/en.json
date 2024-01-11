@@ -17,6 +17,8 @@
     "recipes":"Recipes",
     "ingredients":"Ingredients",
     "explore":"Explore",
+    "add_recipe" : "Add Recipe",
+    "update_settings":"Update Settings",
     "my_preferences":"My preferences",
     "language":"Language",
     "my_recipes":"My Recipes",
