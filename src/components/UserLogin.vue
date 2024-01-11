@@ -6,7 +6,10 @@
 					<!--begin::Aside-->
 					<div class="d-flex flex-center flex-lg-start flex-column align-items-center">
 						<!--begin::Logo-->
-            <chiefHatVue :className="'h-450px'" color="white"/>
+            <a href="#" class="mb-7">
+              <chiefHatVue :className="'h-450px'" color="white"/>
+
+            </a>
 						<!--end::Logo-->
 						<!--begin::Title-->
 						<h2 class="text-white fw-normal m-0">Manage your kitchen from your phone</h2>
@@ -17,7 +20,7 @@
 				<div class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-end p-12 p-lg-20">
             <div class="bg-body d-flex flex-column align-items-stretch flex-center rounded-4 w-md-600px p-20">
               <div class="d-flex flex-center flex-column flex-column-fluid px-lg-10 pb-15 pb-lg-20">
-                <form class="form w-100" @submit.prevent="login" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="index.html" action="#">
+                <form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" @submit.prevent="login" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="index.html" action="#">
                   <div class="text-center mb-11">
                     <h1 class="text-gray-900 fw-bolder mb-3">Sign In</h1>
                     <div class="text-gray-500 fw-semibold fs-6">Your Social Campaigns</div>
@@ -44,26 +47,26 @@
                   <div class="separator separator-content my-14">
                     <span class="w-125px text-gray-500 fw-semibold fs-7">Or with email</span>
                   </div>
-                  <div class="fv-row mb-8">
+                  <div class="fv-row mb-8 fv-plugins-icon-container">
                     <!--begin::Email-->
                     <input type="text" :placeholder="$t('enter_email_address')" name="email" v-model="form.email" autocomplete="off" class="form-control bg-transparent" :class="{ 'is-invalid': v$.form.email.$error, 'is-valid': v$.form.email.$dirty && !v$.form.email.$error }"/>
-                    <div v-if="v$.form.email.$error" class="invalid-feedback" >
+                    <div v-if="v$.form.email.$error" class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback" >
                       {{$t('field_required')}}
                     </div>
                     <!--end::Email-->
                   </div>
-                  <div class="fv-row mb-3">
+                  <div class="fv-row mb-3 fv-plugins-icon-container">
                     <!--begin::Password-->
                     <input type="password" name="password" autocomplete="off" class="form-control bg-transparent" :placeholder="$t('enter_password')"
                             v-model="form.password" :class="{ 'is-invalid': v$.form.password.$error,'is-valid': v$.form.password.$dirty && !v$.form.password.$error}" />
                     <!--end::Password-->
-                    <div v-if="v$.form.password.required.$invalid" class="invalid-feedback">
+                    <div v-if="v$.form.password.required.$invalid" class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
                         {{$t('field_required')}}
                       </div>
-                      <div v-else-if="v$.form.password.validatePassword.$invalid" class="invalid-feedback">
+                      <div v-else-if="v$.form.password.validatePassword.$invalid" class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
                         {{$t('password_strength')}}
                       </div>
-                      <div v-else-if="loginError" class="error-message">
+                      <div v-else-if="loginError" class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
                         {{ loginError }}
                       </div>
                   </div>
@@ -81,7 +84,8 @@
                       <!--end::Indicator label-->
                       <!--begin::Indicator progress-->
                       <span class="indicator-progress">Please wait... 
-                      <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                      </span>
                       <!--end::Indicator progress-->
                     </button>
                   </div>
@@ -209,13 +213,8 @@
           }
         }
       },
-      triggerAnimations() {
-        this.animateCarrot = true
-        this.animateIngredient = true
-      }
     },
     mounted() {
-      this.triggerAnimations();
       this.v$.$touch()
     },
 

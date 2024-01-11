@@ -805,10 +805,5 @@ export default defineComponent({
     object-fit: cover; /* S'assure que l'image couvre toute la zone sans déformer son ratio */
     border-radius: inherit; /* Hérite le border-radius de son parent direct */
   }
-  .card-background {
-	background-image: url('@/assets/fridge.png');
-	background-position: 100% -80px;
-	background-size: 375px auto;
-	background-repeat: no-repeat;
-	}
+
 </style>

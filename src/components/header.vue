@@ -47,7 +47,9 @@
               <!--end::Menu separator-->
               <!--begin::Menu item-->
               <div class="menu-item px-5">
-                <a href="account/preferences" class="menu-link px-5">{{$t('my_preferences')}}</a>
+                <router-link id="usermenu_accountPreferencesLink" :to="{name: 'accountPreferences'}" class="menu-link px-5">
+                    {{ $t("my_preferences") }}
+                </router-link>
               </div>
               <!--end::Menu item-->
               <!--begin::Menu item-->
@@ -168,7 +170,7 @@ methods: {
   },
   logout (){
     auth.logout(); // Call the logout function from auth.js
-    this.router.push('/login'); // Redirect to login page after logout
+    this.$router.push('/login'); // Redirect to login page after logout
   }
 },
 computed: {

@@ -11,6 +11,8 @@
     "language":"Langage",
     "my_recipes":"Mes recettes",
     "my_preferences":"Mes préférences",
+    "edit_preferences":"Modifier mes préférences",
+    "preferences":"Préférences",
     "sign_into_account":"Renseignez vos informations",
     "enter_email_address":"Entrez votre adresse mail",
     "enter_password":"Entrez votre mot de passe",

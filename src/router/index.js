@@ -8,6 +8,11 @@ import auth from '@/api/auth'
 
 const routes = [
     {
+        path: '/',
+        name: 'default',
+        component: UserLogin,
+    },
+    {
         path: '/login',
         name: 'Login',
         component: UserLogin,
@@ -28,6 +33,11 @@ const routes = [
         name: 'Inventory',
         component: InventoryVue,
     },
+    {
+        path: '/account/preferences',
+        name: 'accountPreferences',
+        component: () => import("@/components/Account.vue"),
+    },
 ]
 
 const router = createRouter({
@@ -44,10 +54,8 @@ router.beforeEach((to, from, next) => {
         to.matched.some((record) => record.meta.requiresAuth) &&
         !isAuthenticated
     ) {
-        // Si l'utilisateur n'est pas authentifié et essaie d'accéder à une route nécessitant une authentification, rediriger vers la page de connexion
         next({ name: 'Login' })
     } else {
-        // Dans tous les autres cas, continuer normalement
         next()
     }
 })
