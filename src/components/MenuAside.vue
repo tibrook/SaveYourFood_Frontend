@@ -18,10 +18,13 @@
                         <!--begin:Menu link-->
                         <span class="menu-link menu-center">
                             <span class="menu-icon me-0">
-                                <i class="ki-duotone ki-home-2 fs-2x">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                </i>
+                                <router-link id="menuAside_home" :to="{name: 'default'}" >
+                                    <i class="ki-duotone ki-home-2 fs-2x">
+                                        <span class="path1"></span>
+                                        <span class="path2"></span>
+                                    </i>
+                                </router-link>
+                              
                             </span>
                         </span>
                     </div>
@@ -31,7 +34,7 @@
                         <!--begin:Menu link-->
                         <span class="menu-link menu-center">
                             <span class="menu-icon me-0">
-                                <router-link id="usermenu_accountPreferencesLink" :to="{name: 'Inventory'}" >
+                                <router-link id="menuAside_inventory" :to="{name: 'Inventory'}" >
                                     <i class="ki-duotone ki-basket fs-2x">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
@@ -47,7 +50,7 @@
                         <!--begin:Menu link-->
                         <span class="menu-link menu-center">
                             <span class="menu-icon me-0">
-                                <router-link id="usermenu_accountPreferencesLink" :to="{name: 'Recipes'}" >
+                                <router-link id="menuAside_recipe" :to="{name: 'Recipes'}" >
                                     <i class="ki-duotone ki-scroll fs-2x">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
@@ -61,7 +64,7 @@
                         <!--begin:Menu link-->
                         <span class="menu-link menu-center">
                             <span class="menu-icon me-0">
-                                <router-link id="usermenu_accountPreferencesLink" :to="{name: 'WeeklyMeals'}" class="text-decoration-none" >
+                                <router-link id="menuAside_weeklymeals" :to="{name: 'WeeklyMeals'}" class="text-decoration-none" >
                                     <i class="ki-duotone ki-calendar fs-2x">
                                         <span class="path1"></span>
                                         <span class="path2"></span>
@@ -75,7 +78,7 @@
                         <!--begin:Menu link-->
                         <span class="menu-link menu-center">
                             <span class="menu-icon me-0">
-                                <router-link id="usermenu_accountPreferencesLink" :to="{name: 'ShoppingList'}" >
+                                <router-link id="menuAside_shoppinglist" :to="{name: 'ShoppingList'}" >
                                     <i class="ki-duotone ki-handcart fs-2x">
                                         <span class="path1"></span>
                                         <span class="path2"></span>

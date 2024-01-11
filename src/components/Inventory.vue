@@ -1,7 +1,7 @@
 <template>
    <div class="d-flex flex-column flex-root">
         <div class="page d-flex flex-row flex-column-fluid">
-            <MenuAside />
+            <MenuAside  />
             <!--end::Aside-->
             <!--begin::Wrapper-->
             <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
@@ -27,7 +27,7 @@
                     </div>
                     <!--end::Container-->
                 </div>
-                <HeaderApp />
+                <HeaderApp :page="$t('inventory')" />
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
                     <div class="container-xxl" id="kt_content_container">
                         <ul class="nav nav-pills d-flex justify-content-between nav-pills-custom gap-3 mb-6">
@@ -114,9 +114,9 @@
                                                 <!--begin::Col-->
                                                 <div class="col-lg-8">
                                                     <!--begin::Image input-->
-                                                    <div class="image-input image-input-outline" data-kt-image-input="true" :style="'background-image:url('+  selectedIngredient ? selectedIngredient?.image : 'blank' + ')'">
+                                                    <div  class="image-input image-input-outline" data-kt-image-input="true" :style="selectedIngredient ? 'background-image:url('+ selectedIngredient.image +')' : 'blank'">
                                                         <!--begin::Preview existing avatar-->
-                                                        <div class="image-input-wrapper w-125px h-125px" :style="'background-image: url(' + selectedIngredient ? selectedIngredient?.image : 'blank'+ ')'"></div>
+                                                        <div class="image-input-wrapper w-125px h-125px"></div>
                                                         <!--end::Preview existing avatar-->
                                                         <!--begin::Label-->
                                                         <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
