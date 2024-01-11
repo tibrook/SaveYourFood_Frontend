@@ -95,7 +95,7 @@
               <!--end::Menu item-->
               <!--begin::Menu item-->
               <div class="menu-item px-5">
-                <button  class="menu-link px-5" @click="logout">{{$t('sign_out')}}</button>
+                <a href="#"  class="menu-link px-5" @click="logout">{{$t('sign_out')}}</a>
               </div>
               <!--end::Menu item-->
             </div>

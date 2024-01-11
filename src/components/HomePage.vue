@@ -791,9 +791,6 @@ export default defineComponent({
     flex-grow: 1!important; /* Permet à l'élément de remplir l'espace disponible */
   }
 
-  .full-height-img {
-    height: 100%!important; /* Définit la hauteur de l'image à 100% de son parent */
-  }
   .symbol-label {
     overflow: hidden; /* Empêche le débordement de contenu */
     border-radius: inherit; /* Hérite le border-radius de la classe symbol si défini */
