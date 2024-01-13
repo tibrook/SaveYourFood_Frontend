@@ -228,8 +228,9 @@
 import { defineComponent } from 'vue';
 import HeaderApp from "./header.vue";
 import MenuAside from "@/components/MenuAside.vue";
-import fruitVegetablesImage  from "@/assets/fruitelegumes.png";
+import fruitVegetablesImage  from "@/assets/fruitlegumes.jpg";
 import dairyImage from '@/assets/produitslaitiers.png';
+import meatFishImage from "@/assets/viandespoissons.jpg"
 import cerealsImage from '@/assets/cerealesfeculents.png';
 import condimentsImage from '@/assets/epicerie.png';
 import snacksImage from '@/assets/snackproduitssec.png';
@@ -248,11 +249,11 @@ import beveragesImage from '@/assets/boissons.png';
             selectedCategory: '',
             categories: [
                 { name: 'Fruits & Légumes', type: 'fruits', image: fruitVegetablesImage, options: 8 },
-                { name: 'Viandes, Poissons', type: 'meats', image: dairyImage, options: 8 },
-                { name: 'Produits Laitiers', type: 'dairy', image: cerealsImage, options: 8 },
-                { name: 'Céréales & Féculents', type: 'cereals', image: condimentsImage, options: 8 },
-                { name: 'Epices & Condiments', type: 'condiments', image: snacksImage, options: 8 },
-                { name: 'Produits Secs', type: 'condiments', image: preservesImage, options: 8 },
+                { name: 'Viandes, Poissons', type: 'meats', image: meatFishImage, options: 8 },
+                { name: 'Produits Laitiers', type: 'dairy', image: dairyImage, options: 8 },
+                { name: 'Céréales & Féculents', type: 'cereals', image: cerealsImage, options: 8 },
+                { name: 'Epices & Condiments', type: 'condiments', image: condimentsImage, options: 8 },
+                { name: 'Produits Secs', type: 'condiments', image: snacksImage, options: 8 },
                 { name: 'Conserves & Bocaux', type: 'condiments', image: preservesImage, options: 8 },
                 { name: 'Boissons', type: 'condiments', image: beveragesImage, options: 8 }
             ],

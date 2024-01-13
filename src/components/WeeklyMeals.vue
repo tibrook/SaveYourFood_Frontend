@@ -64,7 +64,7 @@ export default {
             headerToolbar: {
                 left: "prev,next today",
                 center: "title",
-                right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth"
+                right: "timeGridWeek,timeGridDay,listMonth"
             },
 
             height: 800,
@@ -74,9 +74,9 @@ export default {
             nowIndicator: true,
 
             views: {
-                dayGridMonth: { buttonText: "month" },
+                // dayGridMonth: { buttonText: "month" },
                 timeGridWeek: { buttonText: "week" },
-                timeGridDay: { buttonText: "day" }
+                // timeGridDay: { buttonText: "day" }
             },
 
             initialView: "dayGridMonth",

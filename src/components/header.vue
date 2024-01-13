@@ -106,7 +106,8 @@
           </div>
           <!--end::Item-->
           <!--begin::Item-->
-          <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">{{$t('import_aliment')}}</a>
+         <NewIngredientModal showModal="showModal"/>
+          <button href="#" class="btn btn-primary" data-bs-toggle="modal" @click="emitOpenModalEvent"  data-bs-target="#kt_modal_new_ingredient">{{$t('import_aliment')}}</button>
           <!--end::Item-->
         </div>
         <!--end::Action-->
@@ -122,65 +123,68 @@ import auth from '@/api/auth';
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n'; 
 import {  mapGetters } from 'vuex';
+import NewIngredientModal from './newIngredientModal.vue';
 
-export default{ 
-name: "HeaderApp",
-props:{
-  page: {
-    default:"Dashboard",
-    type: String
-  }
-},
-setup() {
-      const i18n = useI18n(); 
-      const router = useRouter();
-      const currentLanguage = ref(localStorage.getItem('language') || 'en');
-      const currentFlag = ref(require(`@/assets/media/flags/${currentLanguage.value === 'en' ? 'united-states.svg' : 'france.svg'}`));
-      const changeLanguage = (lang) => {
-        const flagImage = lang === 'en' ? 'english.png' : 'french.jpg';
-        i18n.locale.value = lang; 
-        currentFlag.value = require(`@/assets/${flagImage}`);
-        localStorage.setItem('language', lang);
-      }
-      return {  router,changeLanguage,currentFlag, currentLanguage};
-
+export default{
+    name: "HeaderApp",
+    props: {
+        page: {
+            default: "Dashboard",
+            type: String
+        }
     },
-data(){
-    return {
-        showDropdown: false,
-    }
-},
-mounted(){
-},
-
-methods: {
-  toggleDropdown(event) {
-    event.stopPropagation();
-    this.showDropdown = !this.showDropdown;
-    let dropdownMenu = document.querySelector('.menuLinks');
-    if(dropdownMenu) {
-      dropdownMenu.classList.toggle('open', this.showDropdown);
-    }
-  },
-  handleClickOutside(event) {
-    const menu = this.$refs.menu; 
-    if (menu && !menu.contains(event.target) && this.showDropdown) {
-      this.showDropdown = false;
-    }
-  },
-  goToInventory() {
-      this.$router.push('/inventory');
-  },
-  logout (){
-    auth.logout(); // Call the logout function from auth.js
-    this.$router.push('/login'); // Redirect to login page after logout
-  }
-},
-computed: {
-  ...mapGetters(['currentLanguage'])
-},
-watch:{
-}
+    setup() {
+        const i18n = useI18n();
+        const router = useRouter();
+        const currentLanguage = ref(localStorage.getItem('language') || 'en');
+        const currentFlag = ref(require(`@/assets/media/flags/${currentLanguage.value === 'en' ? 'united-states.svg' : 'france.svg'}`));
+        const changeLanguage = (lang) => {
+            const flagImage = lang === 'en' ? 'english.png' : 'french.jpg';
+            i18n.locale.value = lang;
+            currentFlag.value = require(`@/assets/${flagImage}`);
+            localStorage.setItem('language', lang);
+        };
+        return { router, changeLanguage, currentFlag, currentLanguage };
+    },
+    data() {
+        return {
+            showDropdown: false,
+            showModal : false
+        };
+    },
+    mounted() {
+    },
+    methods: {
+        toggleDropdown(event) {
+            event.stopPropagation();
+            this.showDropdown = !this.showDropdown;
+            let dropdownMenu = document.querySelector('.menuLinks');
+            if (dropdownMenu) {
+                dropdownMenu.classList.toggle('open', this.showDropdown);
+            }
+        },
+        emitOpenModalEvent() {
+          this.showModal = true
+        },
+        handleClickOutside(event) {
+            const menu = this.$refs.menu;
+            if (menu && !menu.contains(event.target) && this.showDropdown) {
+                this.showDropdown = false;
+            }
+        },
+        goToInventory() {
+            this.$router.push('/inventory');
+        },
+        logout() {
+            auth.logout(); // Call the logout function from auth.js
+            this.$router.push('/login'); // Redirect to login page after logout
+        }
+    },
+    computed: {
+        ...mapGetters(['currentLanguage'])
+    },
+    watch: {},
+    components: { NewIngredientModal }
 }
 </script>
 <style>
