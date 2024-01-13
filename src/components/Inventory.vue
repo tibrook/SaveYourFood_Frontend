@@ -12,7 +12,7 @@
                         <!--begin::Mobile logo-->
                         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
                             <a href="index.html">
-                                <img alt="Logo" src="assets/media/logos/demo9.svg" class="h-35px" />
+                                <img alt="Logo" src="@/assets/chiefHat.svg" class="h-35px" />
                             </a>
                         </div>
                         <!--end::Mobile logo-->
@@ -62,11 +62,11 @@
                                                 <!--begin::Row for grid system-->
                                                 <div class="row">
                                                     <!-- Use v-for to iterate over filteredItems -->
-                                                    <div class="col-md-3" v-for="(item, index) in filteredItems" :key="index" @click="selectItem(item)">
+                                                    <div class="col-md-2" v-for="(item, index) in filteredItems" :key="index" @click="selectItem(item)">
                                                         <!--begin::Card-->
                                                         <div class="card card-flush mb-4" :class="selectedIngredient === item ? 'border-primary border-4px' : ''" >
                                                             <!--begin::Body-->
-                                                            <div class="card-body text-center">
+                                                            <div class="card-body text-center  cursor-pointer">
                                                                 <!--begin::Food img-->
                                                                 <img :src="item.image" class="rounded-3 mb-2 mt-2" alt="" style="width: 100px; height: 100px;" />
                                                                 <!--end::Food img-->
@@ -97,12 +97,18 @@
                             </div>
                             <!--end::Content-->
                             <!--begin::Sidebar-->
-                            <div class="flex-row-auto w-xl-450px">
+                            <div class="flex-row-auto w-xl-450px" v-if="selectedIngredient">
                                 <!--begin::Pos order-->
                                 <div class="card card-flush bg-body " id="kt_pos_form"> 
                                     <!--begin::Header-->
                                     <div class="card-header pt-5">
-                                        <h3 class="card-title fw-bold text-gray-800 fs-2qx">{{ selectedIngredient ? selectedIngredient?.name : 'Ajouter aliment' }}</h3>
+                                        <div class="d-flex justify-content-between w-100">
+                                            <h3 class="card-title fw-bold text-gray-800 fs-2qx">{{ selectedIngredient.name }}</h3>
+                                            <div class="btn btn-sm btn-icon">
+                                                <i  class="ki-duotone ki-cross fs-2 "  @click="closeCard"><span class="path1"></span><span  class="path2"></span></i>
+                                            </div>
+                                        </div>
+                                       
                                         <form id="kt_account_profile_details_form" class="form">
                                         <!--begin::Card body-->
                                         <div class="card-body border-top p-9">
@@ -114,7 +120,7 @@
                                                 <!--begin::Col-->
                                                 <div class="col-lg-8">
                                                     <!--begin::Image input-->
-                                                    <div  class="image-input image-input-outline" data-kt-image-input="true" :style="selectedIngredient ? 'background-image:url('+ selectedIngredient.image +')' : 'blank'">
+                                                    <div  class="image-input image-input-outline image-input-empty" data-kt-image-input="true" :style="selectedIngredient ? 'background-image:url('+ selectedIngredient.image +')' : 'blank'">
                                                         <!--begin::Preview existing avatar-->
                                                         <div class="image-input-wrapper w-125px h-125px"></div>
                                                         <!--end::Preview existing avatar-->
@@ -204,7 +210,7 @@
                                         <!--end::Card body-->
                                         <!--begin::Actions-->
                                         <div class="card-footer d-flex justify-content-end py-6 px-9">
-                                            <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">{{ formMode === 'add' ? 'Ajouter' : 'Mettre à jour' }}</button>
+                                            <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">{{  'Mettre à jour' }}</button>
                                         </div>
                                         <!--end::Actions-->
                                         </form>
@@ -230,11 +236,11 @@ import HeaderApp from "./header.vue";
 import MenuAside from "@/components/MenuAside.vue";
 import fruitVegetablesImage  from "@/assets/fruitlegumes.jpg";
 import dairyImage from '@/assets/produitslaitiers.png';
-import meatFishImage from "@/assets/viandespoissons.jpg"
+import meatFishImage from "@/assets/viandespoissons.png"
 import cerealsImage from '@/assets/cerealesfeculents.png';
-import condimentsImage from '@/assets/epicerie.png';
-import snacksImage from '@/assets/snackproduitssec.png';
-import preservesImage from '@/assets/conserves.png';
+import condimentsImage from '@/assets/epicerie.jpg';
+import snacksImage from '@/assets/produitssec.png';
+import preservesImage from '@/assets/conserves.jpg';
 import beveragesImage from '@/assets/boissons.png';
 
   // ... your existing script
@@ -340,6 +346,9 @@ import beveragesImage from '@/assets/boissons.png';
             } else if (this.formMode === 'edit') {
                 this.updateItem();
             }
+        },
+        closeCard(){
+            this.selectedIngredient = null;
         },
         selectItem(item) {
             this.selectedIngredient = item;
