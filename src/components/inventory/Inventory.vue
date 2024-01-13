@@ -64,16 +64,9 @@
 import { defineComponent } from 'vue';
 import HeaderApp from "@/components/header.vue";
 import MenuAside from '@/components/menu/MenuAside.vue'
-import fruitVegetablesImage  from "@/assets/fruitlegumes.jpg";
-import dairyImage from '@/assets/produitslaitiers.png';
-import meatFishImage from "@/assets/viandespoissons.png"
-import cerealsImage from '@/assets/cerealesfeculents.png';
-import condimentsImage from '@/assets/epicerie.jpg';
-import snacksImage from '@/assets/produitssec.png';
-import preservesImage from '@/assets/conserves.jpg';
-import beveragesImage from '@/assets/boissons.png';
 import InventoryForm from '@/components/inventory/InventoryForm.vue'
 import InventoryCard from '@/components/inventory/InventoryCard.vue'
+import { mapGetters,mapActions } from 'vuex';
 
   export default defineComponent({
     name: 'InventoryList', 
@@ -85,16 +78,6 @@ import InventoryCard from '@/components/inventory/InventoryCard.vue'
         return {
             selectedCategory: '',
             isEditFormMode : false,
-            categories: [
-                { name: 'Fruits & Légumes', type: 'fruits', image: fruitVegetablesImage, options: 8 },
-                { name: 'Viandes, Poissons', type: 'meats', image: meatFishImage, options: 8 },
-                { name: 'Produits Laitiers', type: 'dairy', image: dairyImage, options: 8 },
-                { name: 'Céréales & Féculents', type: 'cereals', image: cerealsImage, options: 8 },
-                { name: 'Epices & Condiments', type: 'condiments', image: condimentsImage, options: 8 },
-                { name: 'Produits Secs', type: 'condiments', image: snacksImage, options: 8 },
-                { name: 'Conserves & Bocaux', type: 'condiments', image: preservesImage, options: 8 },
-                { name: 'Boissons', type: 'condiments', image: beveragesImage, options: 8 }
-            ],
             formMode: 'add',
             inventory:{
                 fruits:[
@@ -163,11 +146,17 @@ import InventoryCard from '@/components/inventory/InventoryCard.vue'
             defaultImage: '../assets/cereales.png',
         };
     },
+    computed: {
+        ...mapGetters(['allInventory', 'categoriesInventory']),
+    },
     mounted() {
         this.filterByCategory('fruits')
+        this.fetchInventory()
+        this.fetchInventoryCategories()
     },
  
     methods: {
+        ...mapActions(['fetchInventory', 'fetchInventoryCategories']),
         filterByCategory(categoryType) {
             this.selectedCategory = categoryType
             this.filteredItems = this.inventory[categoryType];
