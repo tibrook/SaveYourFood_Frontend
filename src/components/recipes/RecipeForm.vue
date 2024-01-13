@@ -80,60 +80,47 @@
             <div class="row mb-6">
                 <label class="col-lg-4 col-form-label required fw-semibold fs-6">Etapes de préparation</label>
                 <div class="col-lg-8 fv-row">
-                    <input type="text" name="fname" class="form-control" :value="selectedRecipe ?selectedRecipe?.preparationSteps : 'type'" />
+                    <placeholder type="text" name="fname" class="form-control" placeholder='type'>
+                    {{   selectedRecipe ?selectedRecipe?.preparationSteps  : undefined }}
+                    </placeholder>
                 </div>
             </div>
             <div class="row mb-6">
                 <label class="col-lg-4 col-form-label required fw-semibold fs-6">Conseils et astuces</label>
                 <div class="col-lg-8 fv-row">
-                    <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" :value="selectedRecipe ?selectedRecipe?.tips : 'conseils'" />
+                    <placeholder type="text" name="fname" class="form-control  mb-3 mb-lg-0" placeholder="Conseils" >
+                        {{ selectedRecipe ?selectedRecipe?.tips : undefined }}
+                    </placeholder>
                 </div>
             </div>
             <div class="row mb-6">
-                <!--begin::Label-->
-                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Portions</label>
-                <!--end::Label-->
-                <!--begin::Col-->
-                <div class="col-lg-8 fv-row">
-                    <!--begin::Input-->
-                    <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" :value="selectedRecipe ?selectedRecipe.type : 'type'" />
-                    <!--end::Hint-->
+                <div class="col-lg-8 fv-row d-flex justify-content-between w-100">
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6 w-auto me-2">Portions</label>
+                    <div class="input-group mb-5 ms4">
+                        <input type="text" name="fname" class="form-control mb-3 mb-lg-0" placeholder="Portions"  />
+                        <span class="input-group-text" id="basic-addon2">Personnes</span>
+                    </div>  
                 </div>
-                <!--end::Col-->
             </div>
             <div class="row mb-6">
-                <!--begin::Label-->
                 <label class="col-lg-4 col-form-label fw-semibold fs-6">Description</label>
-                <!--end::Label-->
-                <!--begin::Col-->
                 <div class="col-lg-8 fv-row">
-                    <!--begin::Input-->
-                    <input type="text" name="fname" class="form-control" placeholder="Description" :value="selectedRecipe ?selectedRecipe.description : undefined" />
-                    <!--end::Hint-->
+                    <placeholder  name="fname" class="form-control" placeholder="Description"  >
+                        {{ selectedRecipe ?selectedRecipe.description : undefined }}
+                    </placeholder>
                 </div>
-                <!--end::Col-->
             </div>
             <div class="row mb-6">
-                <!--begin::Label-->
                 <label class="col-lg-4 col-form-label required fw-semibold fs-6">Suggestionde plats complémentaires (vins..)</label>
-                <!--end::Label-->
-                <!--begin::Col-->
                 <div class="col-lg-8 fv-row">
-                    <!--begin::Input-->
-                    <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" :value="selectedRecipe ?selectedRecipe.type : 'type'" />
-                    <!--end::Hint-->
+                    <input type="text" name="fname" class="form-control  mb-3 mb-lg-0" placeholder="Suggestion" :value="selectedRecipe ?selectedRecipe.type : 'type'" />
                 </div>
-                <!--end::Col-->
             </div>
         </div>
-        <!--end::Card body-->
-        <!--begin::Actions-->
         <div class="card-footer d-flex justify-content-end py-6 px-9">
             <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">{{  'Mettre à jour' }}</button>
         </div>
-        <!--end::Actions-->
         </form>
-        <!--end: Card Body-->
     </div>
   </template>
   <script>

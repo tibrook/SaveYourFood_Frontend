@@ -63,7 +63,7 @@
   <script>
 import { defineComponent } from 'vue';
 import HeaderApp from "@/components/header.vue";
-import MenuAside from "@/components/MenuAside.vue";
+import MenuAside from '@/components/menu/MenuAside.vue'
 import fruitVegetablesImage  from "@/assets/fruitlegumes.jpg";
 import dairyImage from '@/assets/produitslaitiers.png';
 import meatFishImage from "@/assets/viandespoissons.png"

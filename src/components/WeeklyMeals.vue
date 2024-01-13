@@ -50,7 +50,7 @@
 </template>
 .
 <script>
-import MenuAside from "@/components/MenuAside.vue"
+import MenuAside from '@/components/menu/MenuAside.vue'
 import HeaderApp from "@/components/header.vue"
 
 export default {

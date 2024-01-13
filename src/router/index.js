@@ -51,7 +51,7 @@ const routes = [
     {
         path: "/account/preferences",
         name: "accountPreferences",
-        component: () => import("@/components/Account.vue")
+        component: () => import("@/components/account/Account.vue")
     },
     {
         path: "/account/settings",

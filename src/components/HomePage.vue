@@ -768,7 +768,7 @@
 <script>
 import { defineComponent } from 'vue';
 import HeaderApp from "./header.vue";
-import MenuAside from "./MenuAside.vue";
+import MenuAside from '@/components/menu/MenuAside.vue';
 export default defineComponent({
   watch: {
   },

@@ -27,7 +27,7 @@
 										<div class="card-body">
 											<ul class="nav nav-pills d-flex justify-content-between nav-pills-custom gap-3 mb-2" >
 												<li class="nav-item mb-3 me-0" v-for="category in categories" :key="category.name" >
-													<a class="nav-link nav-link-border-solid btn btn-outline btn-flex btn-active-color-primary flex-column flex-stack pt-9 pb-7 page-bg " data-bs-toggle="pill" href="#kt_pos_food_content_1" style="width: 138px;height: 180px">
+													<a class="nav-link nav-link-border-solid btn btn-outline btn-flex btn-active-color-primary flex-column flex-stack pt-9 pb-7 page-bg " :class="selectedCategory === category.name ? 'active' : undefined" data-bs-toggle="pill" href="#kt_pos_food_content_1" style="width: 138px;height: 180px">
 														<div class="nav-icon mb-3">
 															<img :src="category.image" class="w-50px" alt="" />
 														</div>
@@ -40,13 +40,13 @@
 											</ul>
                                             <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold mb-6">
                                                 <li class="nav-item mt-2">
-                                                    <a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="/metronic8/demo9/../demo9/account/overview.html">
+                                                    <a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="#">
                                                         Recettes générées                    
                                                     </a>
                                                 </li>
                                         
                                                 <li class="nav-item mt-2">
-                                                    <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="/metronic8/demo9/../demo9/account/settings.html">
+                                                    <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="#">
                                                         Mes recettes                    
                                                     </a>
                                                 </li>
@@ -70,7 +70,7 @@
    <script>
  import { defineComponent } from 'vue';
  import HeaderApp from "@/components/header.vue";
- import MenuAside from "@/components/MenuAside.vue";
+ import MenuAside from '@/components/menu/MenuAside.vue'
  import RecipeForm from "@/components/recipes/RecipeForm.vue"
  import RecipeCard from "@/components/recipes/RecipeCard.vue"
 
@@ -86,6 +86,7 @@
          return {
              selectedCategory: 'Plât',
              isFormVisible: true,
+             activeCategory : false,
              isEditFormMode: false,
              categories: [
                  { name: 'Aperitif', type: 'fruits', image: require('@/assets/aperitif.png'), options: 8 },

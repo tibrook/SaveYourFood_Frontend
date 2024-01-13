@@ -189,12 +189,12 @@
 	</div>
 </template>
 <script>
-import MenuAside from './MenuAside.vue'
-import HeaderApp from "./header.vue"
-import chiefHat from "./icons/chiefHat.vue"
-import Preferences from "./Preferences.vue"
-import AccountSettings from "./AccountSettings.vue"
-import MyRecipes from "./MyRecipes.vue";
+import MenuAside from '@/components/menu/MenuAside.vue'
+import HeaderApp from "@/components/header.vue"
+import chiefHat from "@/components/icons/chiefHat.vue"
+import Preferences from "@/components/Preferences.vue"
+import AccountSettings from "@/components/AccountSettings.vue"
+import MyRecipes from "@/components/MyRecipes.vue";
 
 export default {
     name: 'UserAccount',

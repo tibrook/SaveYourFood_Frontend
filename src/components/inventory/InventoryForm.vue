@@ -43,7 +43,7 @@
                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">Nom</label>
                     <div class="col-lg-8">
                         <div class="row">
-                            <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" :value="selectedIngredient ?selectedIngredient.name : 'nom' " />
+                            <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Nom" :value="selectedIngredient ?selectedIngredient.name : 'nom' " />
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
                 <div class="row mb-6">
                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">Type</label>
                     <div class="col-lg-8 fv-row">
-                        <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" :value="selectedIngredient ?selectedIngredient.type : 'type'" />
+                        <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Type" :value="selectedIngredient ?selectedIngredient.type : 'type'" />
                     </div>
                 </div>
             </div>
