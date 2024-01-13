@@ -40,7 +40,7 @@ export default{
     },
     methods: {
         onRecipeClick() {
-        this.$emit('recipe-clicked', this.recipe);
+            this.$emit('recipe-clicked', this.recipe);
         }
     }
 }

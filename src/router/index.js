@@ -3,7 +3,6 @@ import {createRouter, createWebHistory} from "vue-router";
 import UserLogin from "@/components/UserLogin.vue";
 import HomePage from "@/components/HomePage.vue";
 import RegisterUser from "@/components/RegisterUser.vue";
-import InventoryVue from "@/components/Inventory.vue";
 import auth from "@/api/auth";
 import newIngredientModalVue from "@/components/newIngredientModal.vue";
 
@@ -37,7 +36,7 @@ const routes = [
     {
         path: "/inventory",
         name: "Inventory",
-        component: InventoryVue
+        component: () => import("@/components/inventory/Inventory.vue")
     },
     {
         path: "/recipes",

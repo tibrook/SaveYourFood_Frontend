@@ -2,30 +2,21 @@
    <div class="d-flex flex-column flex-root">
         <div class="page d-flex flex-row flex-column-fluid">
             <MenuAside  />
-            <!--end::Aside-->
-            <!--begin::Wrapper-->
             <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
-                <!--begin::Header tablet and mobile-->
                 <div class="header-mobile py-3">
-                    <!--begin::Container-->
                     <div class="container d-flex flex-stack">
-                        <!--begin::Mobile logo-->
                         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
                             <a href="index.html">
                                 <img alt="Logo" src="@/assets/chiefHat.svg" class="h-35px" />
                             </a>
                         </div>
-                        <!--end::Mobile logo-->
-                        <!--begin::Aside toggle-->
                         <button class="btn btn-icon btn-active-color-primary me-n4" id="kt_aside_toggle">
                             <i class="ki-duotone ki-abstract-14 fs-2x">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                             </i>
                         </button>
-                        <!--end::Aside toggle-->
                     </div>
-                    <!--end::Container-->
                 </div>
                 <HeaderApp :page="$t('inventory')" />
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -37,7 +28,6 @@
                                         <img :src="category.image" class="w-80px h-80px" alt="" />
                                     </div>
                                     <div class="">
-                                        <!-- Tous les fruits et légumes frais, congelés ou préparés. -->
                                         <span class="text-gray-800 fw-bold fs-2 d-block">{{ category.name }}</span>
                                         <span class="text-gray-500 fw-semibold fs-7">{{ category.options }}</span>
 
@@ -46,193 +36,33 @@
                             </li>
                         </ul>
                         <div class="d-flex flex-column flex-xl-row">
-                            <!--begin::Content-->
                             <div class="d-flex flex-row-fluid me-xl-9 mb-10 mb-xl-0" >
-                                <!--begin::Pos food-->
                                 <div class="card card-flush card-p-0 bg-transparent border-0">
-                                    <!--begin::Body-->
                                     <div class="card-body">
-                                        <!--begin::Nav-->
-                                      
-                                        <!--end::Nav-->
-                                        <!--begin::Tab Content-->
                                         <div class="tab-content">
-                                            <!--begin::Tap pane-->
                                             <div class="tab-pane fade show active" id="kt_pos_food_content_1">
-                                                <!--begin::Row for grid system-->
-                                                <div class="row">
-                                                    <!-- Use v-for to iterate over filteredItems -->
-                                                    <div class="col-md-2" v-for="(item, index) in filteredItems" :key="index" @click="selectItem(item)">
-                                                        <!--begin::Card-->
-                                                        <div class="card card-flush mb-4" :class="selectedIngredient === item ? 'border-primary border-4px' : ''" >
-                                                            <!--begin::Body-->
-                                                            <div class="card-body text-center  cursor-pointer">
-                                                                <!--begin::Food img-->
-                                                                <img :src="item.image" class="rounded-3 mb-2 mt-2" alt="" style="width: 100px; height: 100px;" />
-                                                                <!--end::Food img-->
-                                                                <!--begin::Info-->
-                                                                <div class="mb-2">
-                                                                    <!--begin::Title-->
-                                                                    <div class="text-center">
-                                                                        <span class="fw-bold text-gray-800 cursor-pointer text-hover-primary fs-6">{{ item.name }}</span>
-                                                                        <span class="text-gray-500 fw-semibold d-block fs-7">Quantité : {{ item.quantity }}</span>
-                                                                        <span class="text-gray-500 fw-semibold d-block fs-7">{{ item.location }}</span>
-                                                                    </div>
-                                                                    <!--end::Title-->
-                                                                </div>
-                                                            </div>
-                                                            <!--end::Body-->
-                                                        </div>
-                                                        <!--end::Card-->
-                                                    </div>
+                                                <div class="row" v-if="filteredItems">
+                                                    <InventoryCard class="col-md-2" v-for="(item, index) in filteredItems"  :item="item" :key="index" @click="selectItem(item)"/>
                                                 </div>
-                                                <!--end::Row-->
                                             </div>
                                         </div>
-                                        <!--end::Tab Content-->
                                     </div>
-                                    <!--end: Card Body-->
                                 </div>
-                                <!--end::Pos food-->
                             </div>
-                            <!--end::Content-->
-                            <!--begin::Sidebar-->
                             <div class="flex-row-auto w-xl-450px" v-if="selectedIngredient">
-                                <!--begin::Pos order-->
-                                <div class="card card-flush bg-body " id="kt_pos_form"> 
-                                    <!--begin::Header-->
-                                    <div class="card-header pt-5">
-                                        <div class="d-flex justify-content-between w-100">
-                                            <h3 class="card-title fw-bold text-gray-800 fs-2qx">{{ selectedIngredient.name }}</h3>
-                                            <div class="btn btn-sm btn-icon">
-                                                <i  class="ki-duotone ki-cross fs-2 "  @click="closeCard"><span class="path1"></span><span  class="path2"></span></i>
-                                            </div>
-                                        </div>
-                                       
-                                        <form id="kt_account_profile_details_form" class="form">
-                                        <!--begin::Card body-->
-                                        <div class="card-body border-top p-9">
-                                            <!--begin::Input group-->
-                                            <div class="row mb-6">
-                                                <!--begin::Label-->
-                                                <label class="col-lg-4 col-form-label fw-semibold fs-6">Image</label>
-                                                <!--end::Label-->
-                                                <!--begin::Col-->
-                                                <div class="col-lg-8">
-                                                    <!--begin::Image input-->
-                                                    <div  class="image-input image-input-outline image-input-empty" data-kt-image-input="true" :style="selectedIngredient ? 'background-image:url('+ selectedIngredient.image +')' : 'blank'">
-                                                        <!--begin::Preview existing avatar-->
-                                                        <div class="image-input-wrapper w-125px h-125px"></div>
-                                                        <!--end::Preview existing avatar-->
-                                                        <!--begin::Label-->
-                                                        <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
-                                                            <i class="ki-duotone ki-pencil fs-7">
-                                                                <span class="path1"></span>
-                                                                <span class="path2"></span>
-                                                            </i>
-                                                            <!--begin::Inputs-->
-                                                            <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
-                                                            <input type="hidden" name="avatar_remove" />
-                                                            <!--end::Inputs-->
-                                                        </label>
-                                                        <!--end::Label-->
-                                                        <!--begin::Cancel-->
-                                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
-                                                            <i class="ki-duotone ki-cross fs-2">
-                                                                <span class="path1"></span>
-                                                                <span class="path2"></span>
-                                                            </i>
-                                                        </span>
-                                                        <!--end::Cancel-->
-                                                        <!--begin::Remove-->
-                                                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
-                                                            <i class="ki-duotone ki-cross fs-2">
-                                                                <span class="path1"></span>
-                                                                <span class="path2"></span>
-                                                            </i>
-                                                        </span>
-                                                        <!--end::Remove-->
-                                                    </div>
-                                                    <!--end::Image input-->
-                                                    <!--begin::Hint-->
-                                                    <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
-                                                    <!--end::Hint-->
-                                                </div>
-                                                <!--end::Col-->
-                                            </div>
-                                            <!--end::Input group-->
-                                            <!--begin::Input group-->
-                                            <div class="row mb-6">
-                                                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Nom</label>
-                                                <div class="col-lg-8">
-                                                    <div class="row">
-                                                        <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" :value="selectedIngredient ?selectedIngredient.name : 'nom' " />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-6">
-                                                <!--begin::Label-->
-                                                <label class="col-lg-4 col-form-label fw-semibold fs-6">Description</label>
-                                                <!--end::Label-->
-                                                <!--begin::Col-->
-                                                <div class="col-lg-8 fv-row">
-                                                    <!--begin::Input-->
-                                                    <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" :value="selectedIngredient ?selectedIngredient.description : 'description'" />
-                                                    <!--end::Hint-->
-                                                </div>
-                                                <!--end::Col-->
-                                            </div>
-                                            <div class="row mb-6">
-                                                <!--begin::Label-->
-                                                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Emplacement</label>
-                                                <!--end::Label-->
-                                                <!--begin::Col-->
-                                                <div class="col-lg-8 fv-row">
-                                                    <!--begin::Input-->
-                                                    <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" :value="selectedIngredient ?selectedIngredient.location : 'emplacement'" />
-                                                    <!--end::Hint-->
-                                                </div>
-                                                <!--end::Col-->
-                                            </div>
-                                            <div class="row mb-6">
-                                                <!--begin::Label-->
-                                                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Type</label>
-                                                <!--end::Label-->
-                                                <!--begin::Col-->
-                                                <div class="col-lg-8 fv-row">
-                                                    <!--begin::Input-->
-                                                    <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" :value="selectedIngredient ?selectedIngredient.type : 'type'" />
-                                                    <!--end::Hint-->
-                                                </div>
-                                                <!--end::Col-->
-                                            </div>
-                                        </div>
-                                        <!--end::Card body-->
-                                        <!--begin::Actions-->
-                                        <div class="card-footer d-flex justify-content-end py-6 px-9">
-                                            <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">{{  'Mettre à jour' }}</button>
-                                        </div>
-                                        <!--end::Actions-->
-                                        </form>
-                                    </div>
-                                </div>
-                                <!--end::Pos order-->
+
+                               <InventoryForm v-if="selectedIngredient" :selectedIngredient="selectedIngredient" @submit="handleFormSubmit" @closeIngredientForm='handleCloseForm' />
                             </div>
-                            <!--end::Sidebar-->
                         </div>
-                        <!--end::Layout-->
                     </div>
-                    <!--end::Container-->
                 </div>
             </div>
-            <!--end::Wrapper-->
         </div>
-        <!--end::Page-->
     </div>
 </template>
   <script>
 import { defineComponent } from 'vue';
-import HeaderApp from "./header.vue";
+import HeaderApp from "@/components/header.vue";
 import MenuAside from "@/components/MenuAside.vue";
 import fruitVegetablesImage  from "@/assets/fruitlegumes.jpg";
 import dairyImage from '@/assets/produitslaitiers.png';
@@ -242,17 +72,19 @@ import condimentsImage from '@/assets/epicerie.jpg';
 import snacksImage from '@/assets/produitssec.png';
 import preservesImage from '@/assets/conserves.jpg';
 import beveragesImage from '@/assets/boissons.png';
+import InventoryForm from '@/components/inventory/InventoryForm.vue'
+import InventoryCard from '@/components/inventory/InventoryCard.vue'
 
-  // ... your existing script
   export default defineComponent({
     name: 'InventoryList', 
     components: {
-        MenuAside,
-        HeaderApp
+        MenuAside,InventoryCard,
+        HeaderApp,InventoryForm
     },
     data() {
         return {
             selectedCategory: '',
+            isEditFormMode : false,
             categories: [
                 { name: 'Fruits & Légumes', type: 'fruits', image: fruitVegetablesImage, options: 8 },
                 { name: 'Viandes, Poissons', type: 'meats', image: meatFishImage, options: 8 },
@@ -347,11 +179,12 @@ import beveragesImage from '@/assets/boissons.png';
                 this.updateItem();
             }
         },
-        closeCard(){
-            this.selectedIngredient = null;
+        handleCloseForm(){
+            this.selectedIngredient = null
         },
         selectItem(item) {
             this.selectedIngredient = item;
+            console.log(item)
         },
         addItem() {
             this.newItem.id = Date.now().toString();
