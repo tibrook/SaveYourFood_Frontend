@@ -42,7 +42,7 @@ const routes = [
     {
         path: "/recipes",
         name: "Recipes",
-        component: () => import("@/components/Recipes.vue")
+        component: () => import("@/components/recipes/Recipes.vue")
     },
     {
         path: "/weekly-meals",
