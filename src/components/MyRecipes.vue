@@ -1,11 +1,11 @@
 <template>
     <div class="card-header cursor-pointer">
         <div class="card-title m-0">
-            <h3 class="fw-bold m-0">{{$t('my_recipes')}}</h3>
+            <h3 class="fw-bold m-0">{{$t('Recipes_MyRecipes')}}</h3>
         </div>
         <!--end::Heading-->
         <!--begin::Actions-->
-        <a href="account/settings.html" class="btn btn-sm btn-primary align-self-center">{{$t('add_recipe')}}</a>
+        <a href="account/settings.html" class="btn btn-sm btn-primary align-self-center">{{$t('Recipes_AddNew')}}</a>
 
     </div>
     <div class="card-body p-9">

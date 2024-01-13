@@ -4,8 +4,8 @@
         <LangageSwitcher />
         <router-link to="/contact" class="footer-link">Contact us</router-link>
         <router-link to="/feedback" class="footer-link">Feedback</router-link>
-        <a href="#!" class="footer-link">{{$t('terms_of_used')}}</a>
-        <a href="#!" class="footer-link">{{$t('privacy_policy')}}</a>
+        <a href="#!" class="footer-link">{{$t('Legal_TermsOfUse')}}</a>
+        <a href="#!" class="footer-link">{{$t('Legal_TermsOfUse')}}</a>
       </div>
     </footer>
 </template>

@@ -17,7 +17,7 @@ export default {
         }
     },
     mutations: {
-        ADD_RECIPE(state, recipe) {
+        Recipes_AddNew(state, recipe) {
             state.recipes.push(recipe);
         },
         SET_RECIPES(state, recipes) {

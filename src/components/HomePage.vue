@@ -64,7 +64,7 @@
 										<!--begin::Card-->
 										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="weeklyMeals">
 											<i class="ki-duotone ki-calendar fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span></i>												<span class="fs-4 fw-bold">
-												{{$t('weekly_meals')}}                  </span>
+												{{$t('Meals_Weekly')}}                  </span>
 										</a>
 										<!--end::Card-->
 									</div>
@@ -75,7 +75,7 @@
 										<!--begin::Card-->
 										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/shoppingList">
 											<i class="ki-duotone ki-handcart  fs-2tx mb-5 ms-n1 text-gray-500"></i><span class="fs-4 fw-bold">
-												{{$t('shopping_list')}}                </span>
+												{{$t('ShoppingList_Main')}}                </span>
 										</a>
 										<!--end::Card-->
 									</div>
@@ -87,8 +87,8 @@
 									<div class="card mb-5 mb-xl-8 col-3 me-8 ">
 										<div class="card-header align-items-center border-0 mt-4">
 											<h3 class="card-title align-items-start flex-column">
-												<span class="fw-bold mb-2 text-gray-900">{{$t('ingredients_consume_quickly')}}</span>            
-												<span class="text-muted fw-semibold fs-7">3 {{ $t('ingredients_consume_week') }}</span>
+												<span class="fw-bold mb-2 text-gray-900">{{$t('Inventory_QuickConsume')}}</span>            
+												<span class="text-muted fw-semibold fs-7">3 {{ $t('Inventory_ThisWeekConsume') }}</span>
 											</h3>
 										</div>
 										<div class="card-body pt-5">
@@ -340,7 +340,7 @@
 											<h3 class="card-title align-items-start flex-column">
 												<span class="card-label fw-bold fs-3 mb-1">{{$t('recipes')}}</span>
 
-												<span class="text-muted fw-semibold fs-7">{{$t('next_recipes')}}</span>
+												<span class="text-muted fw-semibold fs-7">{{$t('Recipes_Next')}}</span>
 											</h3>
 										</div>
 										<div class="card-body d-flex flex-column">
@@ -506,7 +506,7 @@
 									<div class="card card-xl-stretch mb-5 mb-xl-8 col-4">
 										<!--begin::Header-->
 										<div class="card-header border-0">
-											<h3 class="card-title fw-bold text-gray-900">{{$t('shopping_list')}}</h3>
+											<h3 class="card-title fw-bold text-gray-900">{{$t('ShoppingList_Main')}}</h3>
 										</div>
 										<!--begin::Body-->
 										<div class="card-body pt-2">

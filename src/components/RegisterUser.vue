@@ -19,16 +19,16 @@
                         <img :src="imageLogoUrl" alt="Sample image" class="imgLogo me-2" style="border-radius: 1rem 0 0 1rem;">
                         <h1 class="fw-bold mb-2 titlePage">SaveYourFood</h1>
                       </div>
-                      <h5 class="fw-normal pb-3" style="letter-spacing: 1px;">{{$t('register_new_account')}}</h5>
+                      <h5 class="fw-normal pb-3" style="letter-spacing: 1px;">{{$t('Auth_RegisterNewAccount')}}</h5>
                       <div class="form-outline">
                         <input type="text"
                               class="form-control form-control-md"
-                              :placeholder="$t('enter_lastName')" 
+                              :placeholder="$t('Auth_EnterLastName')" 
                               :class="{ 'is-invalid': v$.form.lastName.$error, 'is-valid': v$.form.lastName.$dirty && !v$.form.lastName.$error }"
                               v-model="form.lastName">
                           <div v-if="v$.form.lastName.$error" class="invalid-feedback">
-                            <div v-if="v$.form.lastName.required.$invalid">{{$t('field_required')}}</div>
-                            <div v-else-if="v$.form.lastName.noSpecialChars.$invalid">{{$t('field_noSpecCar')}}</div>
+                            <div v-if="v$.form.lastName.required.$invalid">{{$t('Form_FieldRequired')}}</div>
+                            <div v-else-if="v$.form.lastName.noSpecialChars.$invalid">{{$t('Form_NoSpecialCharacters')}}</div>
                           </div>
                       </div>
                      
@@ -36,12 +36,12 @@
                       <div class="form-outline ">
                         <input type="text"
                               class="form-control form-control-md"
-                              :placeholder="$t('enter_firstName')" 
+                              :placeholder="$t('Auth_EnterFirstName')" 
                               :class="{ 'is-invalid': v$.form.firstName.$error, 'is-valid': v$.form.firstName.$dirty && !v$.form.firstName.$error }"
                               v-model="form.firstName">
                           <div v-if="v$.form.firstName.$error" class="invalid-feedback">
-                            <div v-if="v$.form.firstName.required.$invalid">{{$t('field_required')}}</div>
-                            <div v-else-if="v$.form.firstName.noSpecialChars.$invalid">{{$t('field_noSpecCar')}}</div>
+                            <div v-if="v$.form.firstName.required.$invalid">{{$t('Form_FieldRequired')}}</div>
+                            <div v-else-if="v$.form.firstName.noSpecialChars.$invalid">{{$t('Form_NoSpecialCharacters')}}</div>
                           </div>
                       </div>
                      
@@ -50,10 +50,10 @@
                         <input type="text"
                               class="form-control form-control-md"
                               :class="{ 'is-invalid': v$.form.username.$error, 'is-valid': v$.form.username.$dirty && !v$.form.username.$error }"
-                              :placeholder="$t('enter_username')" 
+                              :placeholder="$t('Auth_EnterUsername')" 
                               v-model="form.username">
                           <div v-if="v$.form.username.$error" class="invalid-feedback">
-                            <div v-if="v$.form.username.required.$invalid">{{$t('field_required')}}</div>
+                            <div v-if="v$.form.username.required.$invalid">{{$t('Form_FieldRequired')}}</div>
                           </div>
                       </div>
                    
@@ -61,14 +61,14 @@
                       <div class="form-outline ">
                         <input type="email" 
                                 class="form-control form-control-md"
-                                :placeholder="$t('enter_email_address')" 
+                                :placeholder="$t('Auth_EnterEmailAddress')" 
                                 :class="{ 'is-invalid': v$.form.email.$error || emailError, 'is-valid': v$.form.email.$dirty && !v$.form.email.$error }"
                                 id="email" 
                                 v-model="form.email"
                         >
                         <div v-if="v$.form.email.$error" class="invalid-feedback">
-                          <div v-if="v$.form.email.required.$invalid">{{$t('field_required')}}</div>
-                          <div v-else-if="v$.form.email.email.$invalid">{{$t('field_email')}}</div>
+                          <div v-if="v$.form.email.required.$invalid">{{$t('Form_FieldRequired')}}</div>
+                          <div v-else-if="v$.form.email.email.$invalid">{{$t('Auth_EmailFormatPrompt')}}</div>
                         </div>
                         <div>
                           {{ emailError }}
@@ -79,7 +79,7 @@
                         <input 
                           type="password" 
                           class="form-control form-control-md mb-2" 
-                          :placeholder="$t('enter_password')"
+                          :placeholder="$t('Auth_EnterPassword')"
                           v-model="form.password"
                           :class="{ 'is-invalid': v$.form.password.$error, 'is-valid': v$.form.password.$dirty && !v$.form.password.$error }"
                         >
@@ -105,9 +105,9 @@
   
                       <!-- Register Button -->
                       <div class="pt-1 d-flex justify-content-between align-items-center mb-3">
-                          <a class="small text-muted" href="/login">{{$t('already_have_account')}}</a>
+                          <a class="small text-muted" href="/login">{{$t('Auth_AlreadyHaveAccount')}}</a>
                         <button :disabled="v$.$invalid" type="submit" class="btn btn-primary btn-lg"
-                                style="padding-left: 2.5rem; padding-right: 2.5rem;">{{$t('register')}}</button>
+                                style="padding-left: 2.5rem; padding-right: 2.5rem;">{{$t(Auth_RegisterButton)}}</button>
                        </div>
                        <LangageSwitcher />
 
@@ -187,13 +187,13 @@
       computed: {
         missingPasswordCriteria() {
           const criteria = [];
-          if (!this.passwordCriteria.minLength) criteria.push(this.$t("password_criteria.min_length"));
-          if (!this.passwordCriteria.specialChar) criteria.push(this.$t("password_criteria.special_char"));
+          if (!this.passwordCriteria.minLength) criteria.push(this.$t("password_criteria.Password_MinLength"));
+          if (!this.passwordCriteria.specialChar) criteria.push(this.$t("password_criteria.Password_SpecialChar"));
           if (!this.passwordCriteria.upperCase) criteria.push(this.$t("password_criteria.uppercase"));
           if (!this.passwordCriteria.lowerCase) criteria.push(this.$t("password_criteria.lowercase"));
           if (!this.passwordCriteria.number) criteria.push(this.$t("password_criteria.number"));
 
-          return criteria.length > 0 ? this.$t("missing_criteria") + criteria.join(", ") : "";
+          return criteria.length > 0 ? this.$t("Form_MissingCriteria") + criteria.join(", ") : "";
         },
         passwordStrength() {
           let strength = 0;
@@ -225,7 +225,7 @@
            console.log(response)
            if (response) {
               if (response.statusCode === 409) {
-                this.emailError = this.$t('email_in_use');
+                this.emailError = this.$t('Auth_EmailInUse');
               }else if (response.status === 201) {
                 this.$router.push('/home');
             }

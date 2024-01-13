@@ -30,16 +30,16 @@
               <div class="separator my-2"></div>
               <div class="menu-item px-5">
                 <router-link id="usermenu_accountPreferencesLink" :to="{name: 'accountPreferences'}" class="menu-link px-5">
-                    {{ $t("my_preferences") }}
+                    {{ $t("Settings_MyPreferences") }}
                 </router-link>
               </div>
               <div class="menu-item px-5">
-                <a href="account/my-recipes" class="menu-link px-5">{{$t('my_recipes')}}</a>
+                <a href="account/my-recipes" class="menu-link px-5">{{$t('Recipes_MyRecipes')}}</a>
               </div>
               <div class="separator my-2"></div>
               <div class="menu-item px-5" data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start" data-kt-menu-offset="-15px, 0">
                 <a href="#" class="menu-link px-5">
-                  <span class="menu-title position-relative">{{$t('language')}} 
+                  <span class="menu-title position-relative">{{$t('Settings_Language')}} 
                   <img class="w-15px h-15px rounded-1 ms-2" :src="currentFlag" alt="" /></span>
                 </a>
                 <div class="menu-sub menu-sub-dropdown w-175px py-4">
@@ -60,17 +60,17 @@
               <div class="menu-item px-5">
 
               <router-link id="usermenu_accountPreferencesLink" :to="{name: 'accountSettings'}" class="menu-link px-5">
-                    {{ $t("user_settings") }}
+                    {{ $t("Settings_User") }}
                 </router-link>
               </div>
               <div class="menu-item px-5">
-                <a href="#"  class="menu-link px-5" @click="logout">{{$t('sign_out')}}</a>
+                <a href="#"  class="menu-link px-5" @click="logout">{{$t('Auth_SignOut')}}</a>
               </div>
             </div>
           </div>
           <input type="text" class="form-control custom-form-control ps-13 me-4" name="search" value="" placeholder="Rechercher" data-kt-search-element="input" />
          <NewIngredientModal showModal="showModal"/>
-          <button href="#" class="btn btn-primary w-100" data-bs-toggle="modal" @click="emitOpenModalEvent"  data-bs-target="#kt_modal_new_ingredient">{{$t('import_aliment')}}</button>
+          <button href="#" class="btn btn-primary w-100" data-bs-toggle="modal" @click="emitOpenModalEvent"  data-bs-target="#kt_modal_new_ingredient">{{$t('Inventory_ImportAliment')}}</button>
         </div>
       </div>
     </div>

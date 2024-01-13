@@ -2,13 +2,13 @@
     <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
             <!--begin::Card title-->
             <div class="card-title m-0">
-                <h3 class="fw-bold m-0">{{$t('user_settings')}}</h3>
+                <h3 class="fw-bold m-0">{{$t('Settings_User')}}</h3>
             </div>
             <!--end::Card title-->
     </div>
     <!--begin::Card header-->
     <!--begin::Content-->
-    <div id="kt_account_settings_profile_details" class="collapse show">
+    <div id="kt_Settings_Account_profile_details" class="collapse show">
         <!--begin::Form-->
         <form id="kt_account_profile_details_form" class="form">
             <!--begin::Card body-->

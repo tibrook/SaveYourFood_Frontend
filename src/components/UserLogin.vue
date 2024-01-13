@@ -49,22 +49,22 @@
                   </div>
                   <div class="fv-row mb-8 fv-plugins-icon-container">
                     <!--begin::Email-->
-                    <input type="text" :placeholder="$t('enter_email_address')" name="email" v-model="form.email" autocomplete="off" class="form-control bg-transparent" :class="{ 'is-invalid': v$.form.email.$error, 'is-valid': v$.form.email.$dirty && !v$.form.email.$error }"/>
+                    <input type="text" :placeholder="$t('Auth_EnterEmailAddress')" name="email" v-model="form.email" autocomplete="off" class="form-control bg-transparent" :class="{ 'is-invalid': v$.form.email.$error, 'is-valid': v$.form.email.$dirty && !v$.form.email.$error }"/>
                     <div v-if="v$.form.email.$error" class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback" >
-                      {{$t('field_required')}}
+                      {{$t('Form_FieldRequired')}}
                     </div>
                     <!--end::Email-->
                   </div>
                   <div class="fv-row mb-3 fv-plugins-icon-container">
                     <!--begin::Password-->
-                    <input type="password" name="password" autocomplete="off" class="form-control bg-transparent" :placeholder="$t('enter_password')"
+                    <input type="password" name="password" autocomplete="off" class="form-control bg-transparent" :placeholder="$t('Auth_EnterPassword')"
                             v-model="form.password" :class="{ 'is-invalid': v$.form.password.$error,'is-valid': v$.form.password.$dirty && !v$.form.password.$error}" />
                     <!--end::Password-->
                     <div v-if="v$.form.password.required.$invalid" class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
-                        {{$t('field_required')}}
+                        {{$t('Form_FieldRequired')}}
                       </div>
                       <div v-else-if="v$.form.password.validatePassword.$invalid" class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
-                        {{$t('password_strength')}}
+                        {{$t('Password_Strength')}}
                       </div>
                       <div v-else-if="loginError" class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
                         {{ loginError }}
@@ -80,7 +80,7 @@
                   <div class="d-grid mb-10">
                     <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
                       <!--begin::Indicator label-->
-                      <span class="indicator-label">{{$t('sign_into_account')}}</span>
+                      <span class="indicator-label">{{$t('Auth_SignIntoAccount')}}</span>
                       <!--end::Indicator label-->
                       <!--begin::Indicator progress-->
                       <span class="indicator-progress">Please wait... 

@@ -103,10 +103,10 @@
 											<a class="nav-link text-active-primary ms-0 me-10 py-5 active" data-bs-toggle="tab" href="#preferences_tab">{{$t('preferences')}}</a>
 										</li>
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" data-bs-toggle="tab" href="#accountSettings_tab">{{$t('account_settings')}}</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5" data-bs-toggle="tab" href="#accountSettings_tab">{{$t('Settings_Account')}}</a>
 										</li>
 										<li class="nav-item mt-2">
-											<a class="nav-link text-active-primary ms-0 me-10 py-5" data-bs-toggle="tab" href="#myRecipes_tab">{{ $t('my_recipes') }}</a>
+											<a class="nav-link text-active-primary ms-0 me-10 py-5" data-bs-toggle="tab" href="#myRecipes_tab">{{ $t('Recipes_MyRecipes') }}</a>
 										</li>
 									</ul>
 								</div>

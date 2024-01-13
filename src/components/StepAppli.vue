@@ -13,9 +13,9 @@ export default {
   data() {
     return {
       steps: [
-        this.$t('list_all_ingredients'),
-        this.$t('enter_your_preferences'),
-        this.$t('select_favorite_recipes'),
+        this.$t('Recipes_IngredientList'),
+        this.$t('Preferences_Enter'),
+        this.$t('Preferences_SelectFavorites'),
       ]
     }
   }

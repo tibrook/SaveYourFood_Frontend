@@ -13,7 +13,7 @@
 				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
 					<!--begin::Header tablet and mobile-->
 					<!--end::Header tablet and mobile-->
-					<HeaderApp :page="$t('weekly_meals')"/>
+					<HeaderApp :page="$t('Meals_Weekly')"/>
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<!--begin::Container-->
 						<div class="container-xxl" id="kt_content_container">

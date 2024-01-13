@@ -11,29 +11,29 @@
                 <div class="widget widget-green">
                     <div class="widget-title">{{ $t('recipes') }}</div>
                     <div class="widget-value">85</div>
-                    <div class="widget-subtext">{{ $t('recipes_available') }}</div>
+                    <div class="widget-subtext">{{ $t('Recipes_Available') }}</div>
                 </div>
                 <!-- Weekly Meals Widget -->
                 <div class="widget widget-red">
-                    <div class="widget-title">{{ $t('weekly_meals') }}</div>
+                    <div class="widget-title">{{ $t('Meals_Weekly') }}</div>
                     <div class="widget-value small">2</div>
-                    <div class="widget-subtext">{{ $t('planned_meals') }}</div>
+                    <div class="widget-subtext">{{ $t('Meals_Planned') }}</div>
                 </div>
                 <div class="widget widget-green">
                     <div class="widget-title">{{ $t('inventory') }}</div>
                     <div class="widget-value large">320</div>
-                    <div class="widget-subtext">{{ $t('planned_meals') }}Items stocked</div>
+                    <div class="widget-subtext">{{ $t('Meals_Planned') }}Items stocked</div>
                 </div>
                 <!-- Shopping List Widget -->
                 <div class="widget">
-                    <div class="widget-title">{{ $t('shopping_list') }}</div>
+                    <div class="widget-title">{{ $t('ShoppingList_Main') }}</div>
                     <div class="widget-value valuegreen">15</div>
                     <div class="widget-subtext">Items to buy</div>
                 </div>
 
                 <!-- User Settings Widget -->
                 <div class="widget widget-yellow">
-                    <div class="widget-title">{{ $t('user_settings') }}</div>
+                    <div class="widget-title">{{ $t('Settings_User') }}</div>
                     <div class="widget-value small">4</div>
                     <div class="widget-subtext">Configurations set</div>
                 </div>
