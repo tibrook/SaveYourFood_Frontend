@@ -1,10 +1,9 @@
-// router/index.js
 import {createRouter, createWebHistory} from "vue-router";
 import UserLogin from "@/components/login/UserLogin.vue";
 import HomePage from "@/components/homepage/HomePage.vue";
 import RegisterUser from "@/components/register/RegisterUser.vue";
 import auth from "@/api/auth";
-import newIngredientModalVue from "@/components/newIngredientModal.vue";
+import newIngredientModalVue from "@/components/header/newIngredientModal.vue";
 
 const routes = [
     {
@@ -46,7 +45,7 @@ const routes = [
     {
         path: "/weekly-meals",
         name: "WeeklyMeals",
-        component: () => import("@/components/WeeklyMeals.vue")
+        component: () => import("@/components/weeklyMeals/WeeklyMeals.vue")
     },
     {
         path: "/account/preferences",
@@ -56,12 +55,12 @@ const routes = [
     {
         path: "/account/settings",
         name: "accountSettings",
-        component: () => import("@/components/AccountSettings.vue")
+        component: () => import("@/components/account/AccountSettings.vue")
     },
     {
         path: "/shopping-list",
         name: "ShoppingList",
-        component: () => import("@/components/ShoppingList.vue")
+        component: () => import("@/components/shoppingList/ShoppingList.vue")
     }
 ];
 
@@ -73,7 +72,6 @@ router.beforeEach((to, from, next) => {
     const isAuthenticated = auth.isAuthenticated();
 
     if (isAuthenticated && (to.path === "/" || to.name === "Login")) {
-        // Si l'utilisateur est authentifié et essaie d'accéder à la racine ou à la page de connexion, rediriger vers "/home"
         next({path: "/home"});
     } else if (to.matched.some((record) => record.meta.requiresAuth) && !isAuthenticated) {
         next({name: "Login"});

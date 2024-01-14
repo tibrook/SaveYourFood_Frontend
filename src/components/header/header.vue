@@ -82,7 +82,7 @@ import auth from '@/api/auth';
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n'; 
 import {  mapGetters } from 'vuex';
-import NewIngredientModal from './newIngredientModal.vue';
+import NewIngredientModal from './header/newIngredientModal.vue';
 
 export default{
     name: "HeaderApp",

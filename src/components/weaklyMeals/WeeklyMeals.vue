@@ -1,52 +1,28 @@
 <template>
-  <!--begin::Theme mode setup on page load-->
-		<!--end::Theme mode setup on page load-->
-		<!--begin::Main-->
-		<!--begin::Root-->
-		<div class="d-flex flex-column flex-root">
-			<!--begin::Page-->
-			<div class="page d-flex flex-row flex-column-fluid">
-				<!--begin::Aside-->
-                <MenuAside />
-				<!--end::Aside-->
-				<!--begin::Wrapper-->
-				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
-					<!--begin::Header tablet and mobile-->
-					<!--end::Header tablet and mobile-->
-					<HeaderApp :page="$t('Meals_Weekly')"/>
-					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-						<!--begin::Container-->
-						<div class="container-xxl" id="kt_content_container">
-							<!--begin::Card-->
-							<div class="card">
-								<!--begin::Card header-->
-								<div class="card-header">
-									<h2 class="card-title fw-bold">Calendar</h2>
-									<div class="card-toolbar">
-										<button class="btn btn-flex btn-primary" data-kt-calendar="add">
-										<i class="ki-duotone ki-plus fs-2"></i>Add Event</button>
-									</div>
-								</div>
-								<!--end::Card header-->
-								<!--begin::Card body-->
-								<div class="card-body">
-									<!--begin::Calendar-->
-									<div id="kt_calendar_app"></div>
-									<!--end::Calendar-->
-								</div>
-								<!--end::Card body-->
-							</div>
-							<!--end::Card-->
-						</div>
-						<!--end::Container-->
-					</div>
-					
-				</div>
-				<!--end::Wrapper-->
-			</div>
-			<!--end::Page-->
-		</div>
-	
+    <div class="d-flex flex-column flex-root">
+        <div class="page d-flex flex-row flex-column-fluid">
+            <MenuAside />
+            <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
+                <HeaderApp :page="$t('Meals_Weekly')"/>
+                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <div class="container-xxl" id="kt_content_container">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 class="card-title fw-bold">Calendar</h2>
+                                <div class="card-toolbar">
+                                    <button class="btn btn-flex btn-primary" data-kt-calendar="add">
+                                    <i class="ki-duotone ki-plus fs-2"></i>Add Event</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="kt_calendar_app"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 .
 <script>
@@ -54,8 +30,8 @@ import MenuAside from '@/components/menu/MenuAside.vue'
 import HeaderApp from "@/components/header/header.vue"
 
 export default {
-  methods: {
-  },
+    methods: {
+    },
     components:{
         MenuAside, HeaderApp
     },
@@ -66,7 +42,7 @@ export default {
             headerToolbar: {
                 left: "prev,next today",
                 center: "title",
-                right: "timeGridWeek,timeGridDay,listMonth"
+                right: "timeGridWeek,timeGridDay"
             },
 
             height: 800,

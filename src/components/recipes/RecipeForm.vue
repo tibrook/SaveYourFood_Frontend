@@ -52,16 +52,16 @@
             </div>
             
             <div class="row mb-6">
-                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Catégorie</label>
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_Category')}}</label>
                 <div class="col-lg-8">
                     <div class="row">
-                        <input class="form-control" :value="selectedRecipe ?selectedRecipe?.category : undefined" placeholder="Ajoutez une ou plusieurs catégories" id="kt_tagify_1"/>
+                        <input class="form-control" :value="selectedRecipe ?selectedRecipe?.category : undefined" :placeholder="$t('Input_CategoryPlaceholder')" id="kt_tagify_1"/>
                     </div>                                                 
                 </div>
             </div>
             <div class="row mb-6">
                 <div class="col-lg-8 fv-row d-flex justify-content-between w-100">
-                    <label class="col-lg-4 col-form-label required fw-semibold fs-6 w-auto me-2">Préparation</label>
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6 w-auto me-2">{{$t('Label_PreparationTime')}}</label>
                     <div class="input-group mb-5 ms2">
                         <input type="text" name="fname" class="form-control "  :value="selectedRecipe ?selectedRecipe?.preparationTime : undefined" />
                         <span class="input-group-text" id="basic-addon2">min</span>
@@ -70,7 +70,7 @@
             </div>
             <div class="row mb-6">
                 <div class="col-lg-8 fv-row d-flex justify-content-between w-100">
-                    <label class="col-lg-4 col-form-label required fw-semibold fs-6 w-auto me-2">Cuisson</label>
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6 w-auto me-2">{{$t('Label_CookingTime')}}</label>
                     <div class="input-group mb-5 ms4">
                         <input type="text" name="fname" class="form-control "  :value="selectedRecipe ?selectedRecipe?.cookingTime : undefined" />
                         <span class="input-group-text" id="basic-addon2">min</span>
@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="row mb-6">
-                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Etapes de préparation</label>
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_PreparationSteps')}}</label>
                 <div class="col-lg-8 fv-row">
                     <placeholder type="text" name="fname" class="form-control" placeholder='type'>
                     {{   selectedRecipe ?selectedRecipe?.preparationSteps  : undefined }}
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="row mb-6">
-                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Conseils et astuces</label>
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_TipsAndTricks')}}</label>
                 <div class="col-lg-8 fv-row">
                     <placeholder type="text" name="fname" class="form-control  mb-3 mb-lg-0" placeholder="Conseils" >
                         {{ selectedRecipe ?selectedRecipe?.tips : undefined }}
@@ -95,9 +95,9 @@
             </div>
             <div class="row mb-6">
                 <div class="col-lg-8 fv-row d-flex justify-content-between w-100">
-                    <label class="col-lg-4 col-form-label required fw-semibold fs-6 w-auto me-2">Portions</label>
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6 w-auto me-2">{{$t('Label_Portions')}}</label>
                     <div class="input-group mb-5 ms4">
-                        <input type="text" name="fname" class="form-control mb-3 mb-lg-0" placeholder="Portions"  />
+                        <input type="text" name="fname" class="form-control mb-3 mb-lg-0" :placeholder="$t('Label_Portions')"  />
                         <span class="input-group-text" id="basic-addon2">Personnes</span>
                     </div>  
                 </div>
@@ -111,14 +111,14 @@
                 </div>
             </div>
             <div class="row mb-6">
-                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Suggestionde plats complémentaires (vins..)</label>
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_SuggestedPairings')}}</label>
                 <div class="col-lg-8 fv-row">
                     <input type="text" name="fname" class="form-control  mb-3 mb-lg-0" placeholder="Suggestion" :value="selectedRecipe ?selectedRecipe.type : 'type'" />
                 </div>
             </div>
         </div>
         <div class="card-footer d-flex justify-content-end py-6 px-9">
-            <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">{{  'Mettre à jour' }}</button>
+            <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">{{$t('Button_Update')}}</button>
         </div>
         </form>
     </div>

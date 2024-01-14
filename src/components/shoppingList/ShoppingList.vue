@@ -1,4 +1,4 @@
 <template>
     
-    <div></div>
+    <div>Coming Soon</div>
 </template>

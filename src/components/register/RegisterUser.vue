@@ -127,7 +127,7 @@
   import imageLogo from "@/assets/chiefHat.svg"
   import leftImage from '@/assets/loginBackground.png';
   import { register } from "@/api/register.js";
-  import LangageSwitcher from './LangageSwitcher.vue';
+  import LangageSwitcher from './utils/LangageSwitcher.vue';
   import { required ,email  } from '@vuelidate/validators'; 
   import { useRouter } from 'vue-router';
   import { noSpecialChars, validatePassword } from '@/utils/validations';
