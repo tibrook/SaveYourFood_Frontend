@@ -127,8 +127,20 @@
     </div>
 </template>
 <script>
-
-export default {
-   
+export default{
+    props:{
+        selectedIngredient:{
+            type: Object, 
+            default: null        
+        }
+    },
+    mounted(){
+        console.log(this.item)
+    },
+    methods: {
+        onItemClick() {
+            this.$emit('item-clicked', this.recipe);
+        }
+    }
 }
 </script>

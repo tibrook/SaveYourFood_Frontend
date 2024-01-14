@@ -42,7 +42,7 @@
                                         <div class="tab-content">
                                             <div class="tab-pane fade show active" id="kt_pos_food_content_1">
                                                 <div class="row" v-if="filteredItems">
-                                                    <InventoryCard class="col-md-2" v-for="(item, index) in filteredItems"  :item="item" :key="index" @click="selectItem(item)"/>
+                                                    <InventoryCard class="col-md-2" v-for="(item, index) in filteredItems"  :selectedIngredient="selectedIngredient" :item="item" :key="index" @click="selectItem(item)"/>
                                                 </div>
                                             </div>
                                         </div>

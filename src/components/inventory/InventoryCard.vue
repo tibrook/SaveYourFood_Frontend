@@ -19,6 +19,10 @@ export default{
         item:{
             type: Object, 
             required: true        
+        },
+        selectedIngredient:{
+            type: Object, 
+            default: null        
         }
     },
     mounted(){

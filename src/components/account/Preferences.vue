@@ -9,68 +9,68 @@
         <div class="row mb-7">
             <label class="col-lg-4 fw-semibold text-muted">{{$t('Preferences_cuisineFavorite')}}</label>
             <div class="col-lg-8">
-                <span class="fw-bold fs-6 text-gray-800">{{userPreferences?.cuisineFavorite}}</span>
+                <input type="text" :value="userPreferences?.cuisineFavorite" data-role="tagify" class="tagify-input">
             </div>
         </div>
         <div class="row mb-7">
             <label class="col-lg-4 fw-semibold text-muted">{{$t('Preferences_favoriteFoods')}}</label>
             <div class="col-lg-8 fv-row">
-                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences?.favoriteFoods}}</span>
+                <input type="text" :value="userPreferences?.favoriteFoods" data-role="tagify" class="tagify-input">
             </div>
         </div>
         <div class="row mb-7">
             <label class="col-lg-4 fw-semibold text-muted">{{$t('Preferences_preferredOrigin')}}</label>
             <div class="col-lg-8 fv-row">
-                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences?.preferredOrigin}}</span>
+                <input type="text" :value="userPreferences?.preferredOrigin" data-role="tagify" class="tagify-input">
             </div>
         </div>
         <div class="row mb-7">
             <label class="col-lg-4 fw-semibold text-muted">{{$t('Preferences_allergies')}}
             </label>
             <div class="col-lg-8 d-flex align-items-center">
-                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences?.allergies}}</span>
+                <input type="text" :value="userPreferences?.allergies" data-role="tagify" class="tagify-input">
             </div>
         </div>
         <div class="row mb-7">
             <label class="col-lg-4 fw-semibold text-muted">{{$t('Preferences_dislikedFoods')}}
             </label>
             <div class="col-lg-8 d-flex align-items-center">
-                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences?.dislikedFoods}}</span>
+                <input type="text" :value="userPreferences?.dislikedFoods" data-role="tagify" class="tagify-input">
             </div>
         </div>
         <div class="row mb-7">
             <label class="col-lg-4 fw-semibold text-muted">{{$t('Preferences_dietaryRestrictions')}}
             </label>
             <div class="col-lg-8 d-flex align-items-center">
-                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences?.dietaryRestrictions}}</span>
+                <input type="text" :value="userPreferences?.dietaryRestrictions" data-role="tagify" class="tagify-input">
             </div>
         </div>
         <div class="row mb-7">
             <label class="col-lg-4 fw-semibold text-muted">{{$t('Preferences_mealTypePreference')}}
             </label>
             <div class="col-lg-8 d-flex align-items-center">
-                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences?.mealTypePreference}}</span>
+                <input type="text" :value="userPreferences?.mealTypePreference" data-role="tagify" class="tagify-input">
             </div>
         </div>
         <div class="row mb-7">
             <label class="col-lg-4 fw-semibold text-muted">{{$t('Preferences_cookingSkillLevel')}}
             </label>
             <div class="col-lg-8 d-flex align-items-center">
-                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences?.cookingSkillLevel}}</span>
+                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences.cookingSkillLevel}}</span>
             </div>
         </div>
         <div class="row mb-7">
             <label class="col-lg-4 fw-semibold text-muted">{{$t('Preferences_favoriteIngredients')}}
             </label>
             <div class="col-lg-8 d-flex align-items-center">
-                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences?.favoriteIngredients}}</span>
+                <input type="text" :value="userPreferences?.favoriteIngredients" data-role="tagify" class="tagify-input">
             </div>
         </div>
         <div class="row mb-7">
             <label class="col-lg-4 fw-semibold text-muted">{{$t('Preferences_healthFocus')}}
             </label>
             <div class="col-lg-8 d-flex align-items-center">
-                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences?.healthFocus}}</span>
+                <input type="text" :value="userPreferences?.healthFocus" data-role="tagify" class="tagify-input">
             </div>
         </div>
         <div class="row mb-7">
@@ -102,11 +102,18 @@ export default {
     },
     mounted(){
         this.getUserPreferences()
+        this.initializeTagify();
     },
     methods:{
         ...mapActions(['fetchUserPreferences']),
         getUserPreferences(){
             this.fetchUserPreferences()
+        },
+        initializeTagify() {
+            document.querySelectorAll('.tagify-input').forEach(input => {
+                //eslint-disable-next-line
+                new Tagify(input);
+            });
         }
 
     }
