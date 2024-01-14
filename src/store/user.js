@@ -62,7 +62,9 @@ export default {
 
                         //Mockups to removed
                         name: "Alexandre",
-                        email: "Alexandre.guillouet@gmail.com"
+                        email: "Alexandre.guillouet@gmail.com",
+                        firstName: "Guillouet",
+                        lastName: "Alexandre"
                     };
                     commit("SET_TOKEN", token);
                     commit("SET_USER_SETTINGS", userSettings);

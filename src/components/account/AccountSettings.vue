@@ -41,10 +41,10 @@
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-6 fv-row">
-                                <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" value="" />
+                                <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" :placeholder="$t('Auth_EnterFirstName')" :value="userSettings.firstName"/>
                             </div>
                             <div class="col-lg-6 fv-row">
-                                <input type="text" name="lname" class="form-control form-control-lg form-control-solid" placeholder="Last name" value="Guillouet" />
+                                <input type="text" name="lname" class="form-control form-control-lg form-control-solid" :placeholder="$t('Auth_EnterLastName')" :value="userSettings.lastName" />
                             </div>
                         </div>
                     </div>
@@ -53,19 +53,8 @@
                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">Emplacements alimentaires</label>
                     <div class="col-lg-8">
                         <div class="row">
-                            <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Frigidaire" value="" />
+                            <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Emplacements alimentaires" value="Frigidaire, placards, garage" />
                         </div>
-                    </div>
-                </div>
-                <div class="row mb-6">
-                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Settings_Language')}}</label>
-                    <div class="col-lg-8 fv-row">
-                        <select name="language" aria-label="Select a Language" data-control="select2" data-placeholder="Select a language..." class="form-select form-select-solid form-select-lg">
-                            <option value="">Select a Language...</option>
-                            <option data-kt-flag="flags/united-kingdom.svg" value="en">English</option>
-                            <option data-kt-flag="flags/france.svg" value="fr">Français - French</option>
-                        </select>
-                        <div class="form-text">Please select a preferred language, including date, time, and number formatting.</div>
                     </div>
                 </div>
             </div>

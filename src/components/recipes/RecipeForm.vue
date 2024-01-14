@@ -6,7 +6,7 @@
         <form id="kt_account_profile_details_form" class="form">
         <div class="card-body border-top p-9">
             <div class="row mb-6">
-                <label class="col-lg-4 col-form-label fw-semibold fs-6">{{$t('Label_Image')}}</label>
+                <label class="col-lg-4 col-form-label fw-semibold fs-6">Image</label>
                 <div class="col-lg-8">
                     <div  class="image-input image-input-outline image-input-empty" data-kt-image-input="true" :style="selectedRecipe ? 'background-image:url('+ selectedRecipe.image +')' : 'blank'">
                         <div class="image-input-wrapper w-125px h-125px"></div>
@@ -31,19 +31,19 @@
                             </i>
                         </span>
                     </div>
-                    <div class="form-text">{{$t('FormText_AllowedFileTypes')}}</div>
+                    <div class="form-text">{{$t('Image_FormText')}}</div>
                 </div>
             </div>
             <div class="row mb-6">
                 <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_Name')}}</label>
                 <div class="col-lg-8">
                     <div class="row">
-                        <input type="text" name="fname" class="form-control" :placeholder="$t('Input_NamePlaceholder')" :value="selectedRecipe ?selectedRecipe.name : undefined " />
+                        <input type="text" name="fname" class="form-control" :placeholder="$t('Recipes_Name')" :value="selectedRecipe ?selectedRecipe.name : undefined " />
                     </div>
                 </div>
             </div>
             <div class="row mb-6">
-                <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_Ingredients')}}</label>
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Recipes_Ingredients')}}</label>
                 <div class="col-lg-8 ">
                     <div class="row">
                         <input class="form-control" :value="selectedRecipe ?selectedRecipe?.ingredients : undefined" placeholder="Ajoutez les ingrédients" id="kt_tagify_1"/>
@@ -52,10 +52,10 @@
             </div>
             
             <div class="row mb-6">
-                <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_Category')}}</label>
+                <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('NewIngredient_CategoryLabel')}}</label>
                 <div class="col-lg-8">
                     <div class="row">
-                        <input class="form-control" :value="selectedRecipe ?selectedRecipe?.category : undefined" :placeholder="$t('Input_CategoryPlaceholder')" id="kt_tagify_1"/>
+                        <input class="form-control" :value="selectedRecipe ?selectedRecipe?.category : undefined" :placeholder="$t('Recipes_Category')" id="kt_tagify_1"/>
                     </div>                                                 
                 </div>
             </div>

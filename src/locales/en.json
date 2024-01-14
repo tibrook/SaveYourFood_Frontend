@@ -29,10 +29,14 @@
     "Auth_SignOut": "Sign Out",
 
     "Recipes_List": "Recipes",
+    "Recipes_Name": "Recipe Name",
+    "Recipes_Category":"Recipe Category",
     "Recipes_Ingredients": "Ingredients",
     "Recipes_Explore": "Explore",
     "Recipes_AddNew": "Add Recipe",
     "Recipes_MyRecipes": "My Recipes",
+    "Recipes_GeneratedRecipes": "Generated Recipes",
+
     "Recipes_Next": "Next recipes",
     "Recipes_Message": "Retrieve a complete list of recipes based on your ingredients.",
     "Recipes_IngredientList": "List all ingredients",
@@ -110,6 +114,7 @@
     "Password_MinLength": "At least 8 characters",
     "Password_SpecialChar": "1 special character (e.g., \\!@#\\$%\\^&\\*)",
     "Password_Strength": "The password must have at least 8 characters 1 maj, 1 min, 1 spec. char & 1 number",
+    "Form_Title_AddRecipe":"Add Recipe",
     "Form_FieldRequired": "This field is required",
     "Form_NoSpecialCharacters": "Special characters are not admitted",
     "Form_MissingCriteria": "Missing: ",
@@ -129,10 +134,19 @@
     "Image_CancelAvatarTooltip": "Cancel avatar",
     "Image_RemoveAvatarTooltip": "Remove avatar",
     "Image_FormText": "Allowed file types: png, jpg, jpeg.",
+
     "Label_Name": "Name",
     "Label_Description": "Description",
     "Label_Location": "Location",
     "Label_Type": "Type",
+    "Label_PreparationTime":"Preparation Time",
+    "Label_CookingTime":"Cooking Time",
+    "Label_PreparationSteps":"Preparation Steps",
+    "Label_TipsAndTricks":"Tips and Tricks",
+    "Label_Portions":"Portions",
+    "Label_SuggestedPairings":"Suggested Pairings",
+
+
     "Button_Update": "Update",
     "Button_SignIn": "Sign Into Account",
     "Legal_TermsOfUse": "Terms of Use",

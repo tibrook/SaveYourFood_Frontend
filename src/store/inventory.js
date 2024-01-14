@@ -46,28 +46,218 @@ export default {
         fetchInventory({commit}) {
             const mockInventory = {
                 fruits: [
-                    {name: "Apple", image: require("@/assets/apple.png"), description: "Crisp and juicy fruit", type: "fruit", quantity: 5, location: "fridge", favorite: true},
-                    {name: "Carrot", image: require("@/assets/carrot.png"), description: "Orange root vegetable rich in beta-carotene", type: "vegetable", quantity: 10, location: "fridge", favorite: false},
-                    {name: "Banana", image: require("@/assets/banana.jpg"), description: "Sweet fruit rich in potassium", type: "fruit", quantity: 7, location: "fruit basket", favorite: true},
-                    {name: "Spinach", image: require("@/assets/spinach.jpg"), description: "Green leafy vegetable rich in iron", type: "vegetable", quantity: 2, location: "fridge", favorite: false},
-                    {name: "Tomato", image: require("@/assets/tomato.jpg"), description: "Versatile red fruit", type: "fruit", quantity: 8, location: "fridge", favorite: true},
-                    {name: "Broccoli", image: require("@/assets/broccoli.jpg"), description: "Green vegetable rich in vitamins", type: "vegetable", quantity: 3, location: "fridge", favorite: false},
-                    {name: "Strawberry", image: require("@/assets/strawberry.jpg"), description: "Sweet red summer fruit", type: "fruit", quantity: 6, location: "fridge", favorite: true},
-                    {name: "Bell Pepper", image: require("@/assets/bellpaper.jpg"), description: "Colorful and crunchy vegetable", type: "vegetable", quantity: 5, location: "fridge", favorite: false},
-                    {name: "Orange", image: require("@/assets/orange.jpg"), description: "Citrus fruit rich in Vitamin C", type: "fruit", quantity: 9, location: "fruit basket", favorite: false},
-                    {name: "Zucchini", image: require("@/assets/zucchini.jpg"), description: "Mild green vegetable", type: "vegetable", quantity: 4, location: "fridge", favorite: true}
+                    {
+                        name: "Apple",
+                        image: require("@/assets/apple.png"),
+                        description: "Crisp and juicy fruit",
+                        type: "fruit",
+                        quantity: 5,
+                        location: "fridge",
+                        favorite: true,
+                        expirationDate: "2024-02-13",
+                        bestBeforeDate: "2024-01-21"
+                    },
+                    {
+                        name: "Carrot",
+                        image: require("@/assets/carrot.png"),
+                        description: "Orange root vegetable rich in beta-carotene",
+                        type: "vegetable",
+                        quantity: 10,
+                        location: "fridge",
+                        favorite: false,
+                        expirationDate: "2024-02-13",
+                        bestBeforeDate: "2024-01-21"
+                    },
+                    {
+                        name: "Banana",
+                        image: require("@/assets/banana.jpg"),
+                        description: "Sweet fruit rich in potassium",
+                        type: "fruit",
+                        quantity: 7,
+                        location: "fruit basket",
+                        favorite: true,
+                        expirationDate: "2024-01-21",
+                        bestBeforeDate: "2024-01-16"
+                    },
+                    {
+                        name: "Spinach",
+                        image: require("@/assets/spinach.jpg"),
+                        description: "Green leafy vegetable rich in iron",
+                        type: "vegetable",
+                        quantity: 2,
+                        location: "fridge",
+                        favorite: false,
+                        expirationDate: "2024-01-21",
+                        bestBeforeDate: "2024-01-17"
+                    },
+                    {
+                        name: "Tomato",
+                        image: require("@/assets/tomato.jpg"),
+                        description: "Versatile red fruit",
+                        type: "fruit",
+                        quantity: 8,
+                        location: "fridge",
+                        favorite: true,
+                        expirationDate: "2024-01-28",
+                        bestBeforeDate: "2024-01-19"
+                    },
+                    {
+                        name: "Broccoli",
+                        image: require("@/assets/broccoli.jpg"),
+                        description: "Green vegetable rich in vitamins",
+                        type: "vegetable",
+                        quantity: 3,
+                        location: "fridge",
+                        favorite: false,
+                        expirationDate: "2024-01-29",
+                        bestBeforeDate: "2024-01-19"
+                    },
+                    {
+                        name: "Strawberry",
+                        image: require("@/assets/strawberry.jpg"),
+                        description: "Sweet red summer fruit",
+                        type: "fruit",
+                        quantity: 6,
+                        location: "fridge",
+                        favorite: true,
+                        expirationDate: "2024-01-21",
+                        bestBeforeDate: "2024-01-17"
+                    },
+                    {
+                        name: "Bell Pepper",
+                        image: require("@/assets/bellpaper.jpg"),
+                        description: "Colorful and crunchy vegetable",
+                        type: "vegetable",
+                        quantity: 5,
+                        location: "fridge",
+                        favorite: false,
+                        expirationDate: "2024-01-28",
+                        bestBeforeDate: "2024-01-19"
+                    },
+                    {
+                        name: "Orange",
+                        image: require("@/assets/orange.jpg"),
+                        description: "Citrus fruit rich in Vitamin C",
+                        type: "fruit",
+                        quantity: 9,
+                        location: "fruit basket",
+                        favorite: false,
+                        expirationDate: "2024-02-13",
+                        bestBeforeDate: "2024-01-24"
+                    },
+                    {
+                        name: "Zucchini",
+                        image: require("@/assets/zucchini.jpg"),
+                        description: "Mild green vegetable",
+                        type: "vegetable",
+                        quantity: 4,
+                        location: "fridge",
+                        favorite: true,
+                        expirationDate: "2024-01-28",
+                        bestBeforeDate: "2024-01-19"
+                    }
                 ],
                 meats: [
-                    {name: "Chicken", description: "Versatile white meat", type: "meat", quantity: 2, location: "fridge", favorite: true},
-                    {name: "Salmon", description: "Fish rich in omega-3 fatty acids", type: "fish", quantity: 4, location: "fridge", favorite: true},
-                    {name: "Tofu", description: "Plant-based protein source", type: "vegetarian protein", quantity: 1, location: "fridge", favorite: false},
-                    {name: "Ground Beef", description: "Red meat for burgers and sauces", type: "meat", quantity: 3, location: "freezer", favorite: false},
-                    {name: "Shrimp", description: "Versatile seafood", type: "seafood", quantity: 2, location: "freezer", favorite: true},
-                    {name: "Steak", description: "Juicy beef ribeye", type: "meat", quantity: 2, location: "fridge", favorite: true},
-                    {name: "Lentils", description: "Protein-rich legumes", type: "vegetarian protein", quantity: "1 kg", location: "pantry", favorite: false},
-                    {name: "Trout", description: "Delicate freshwater fish", type: "fish", quantity: 2, location: "fridge", favorite: false},
-                    {name: "Bacon", description: "Smoked pork slices", type: "meat", quantity: 12, location: "fridge", favorite: true},
-                    {name: "Chickpeas", description: "Nutty legumes great for salads and hummus", type: "vegetarian protein", quantity: "800 grams", location: "pantry", favorite: false}
+                    {
+                        name: "Chicken",
+                        description: "Versatile white meat",
+                        type: "meat",
+                        quantity: 2,
+                        location: "fridge",
+                        favorite: true,
+                        expirationDate: "2024-01-21",
+                        bestBeforeDate: "2024-01-18"
+                    },
+                    {
+                        name: "Salmon",
+                        description: "Fish rich in omega-3 fatty acids",
+                        type: "fish",
+                        quantity: 4,
+                        location: "fridge",
+                        favorite: true,
+                        expirationDate: "2024-01-19",
+                        bestBeforeDate: "2024-01-17"
+                    },
+                    {
+                        name: "Tofu",
+                        description: "Plant-based protein source",
+                        type: "vegetarian protein",
+                        quantity: 1,
+                        location: "fridge",
+                        favorite: false,
+                        expirationDate: "2024-01-24",
+                        bestBeforeDate: "null"
+                    },
+                    {
+                        name: "Ground Beef",
+                        description: "Red meat for burgers and sauces",
+                        type: "meat",
+                        quantity: 3,
+                        location: "freezer",
+                        favorite: false,
+                        expirationDate: "2024-02-13",
+                        bestBeforeDate: "2024-02-03"
+                    },
+                    {
+                        name: "Shrimp",
+                        description: "Versatile seafood",
+                        type: "seafood",
+                        quantity: 2,
+                        location: "freezer",
+                        favorite: true,
+                        expirationDate: "2024-03-15",
+                        bestBeforeDate: "2024-02-28"
+                    },
+                    {
+                        name: "Steak",
+                        description: "Juicy beef ribeye",
+                        type: "meat",
+                        quantity: 2,
+                        location: "fridge",
+                        favorite: true,
+                        expirationDate: "2024-01-24",
+                        bestBeforeDate: "2024-01-21"
+                    },
+                    {
+                        name: "Lentils",
+                        description: "Protein-rich legumes",
+                        type: "vegetarian protein",
+                        quantity: "1 kg",
+                        location: "pantry",
+                        favorite: false,
+                        expirationDate: "2024-07-13",
+                        bestBeforeDate: "null"
+                    },
+                    {
+                        name: "Trout",
+                        description: "Delicate freshwater fish",
+                        type: "fish",
+                        quantity: 2,
+                        location: "fridge",
+                        favorite: false,
+                        expirationDate: "2024-01-21",
+                        bestBeforeDate: "2024-01-18"
+                    },
+                    {
+                        name: "Bacon",
+                        description: "Smoked pork slices",
+                        type: "meat",
+                        quantity: 12,
+                        location: "fridge",
+                        favorite: true,
+                        expirationDate: "2024-01-28",
+                        bestBeforeDate: "2024-01-24"
+                    },
+                    {
+                        name: "Chickpeas",
+                        description: "Nutty legumes great for salads and hummus",
+                        type: "vegetarian protein",
+                        quantity: "800 grams",
+                        location: "pantry",
+                        favorite: false,
+                        expirationDate: "2024-07-13",
+                        bestBeforeDate: "null"
+                    }
                 ],
                 dairy: [
                     {name: "Lait", description: "Produit laitier de base, riche en calcium", type: "produit laitier", quantity: 2, location: "frigo", favorite: true},
@@ -122,7 +312,13 @@ export default {
             ];
             commit("SET_CATEGORIES_INVENTORY", mockCategories);
             return mockCategories;
+        },
+        fetchFoodLocations({commit}) {
+            const mockLocations = ["Frigidaire", "Garage", "Placards"];
+            commit("SET_FOOD_LOCATION", mockLocations);
+            return mockLocations;
         }
+
         // addRecipe({commit}, recipe) {},
         // editRecipe({commit}, recipe) {},
         // deleteRecipe({commit}, recipeId) {}

@@ -217,7 +217,7 @@
 									<div class="card card-xl-stretch mb-xl-8 col-4 me-8">
 										<div class="card-header border-0 py-5">
 											<h3 class="card-title align-items-start flex-column">
-												<span class="card-label fw-bold fs-3 mb-1">{{$t('recipes')}}</span>
+												<span class="card-label fw-bold fs-3 mb-1">{{$t('Recipes_List')}}</span>
 
 												<span class="text-muted fw-semibold fs-7">{{$t('Recipes_Next')}}</span>
 											</h3>

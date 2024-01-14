@@ -18,7 +18,7 @@
                          </button>
                      </div>
                  </div>
-                 <HeaderApp :page="$t('recipes')"/>
+                 <HeaderApp :page="$t('Recipes_List')"/>
                  <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<div class="container-xxl" id="kt_content_container">
 							<div class="d-flex flex-column flex-xl-row">
@@ -41,13 +41,13 @@
                                             <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold mb-6">
                                                 <li class="nav-item mt-2">
                                                     <a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="#">
-                                                        Recettes générées                    
+                                                        {{$t('Recipes_GeneratedRecipes')}}                    
                                                     </a>
                                                 </li>
                                         
                                                 <li class="nav-item mt-2">
                                                     <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="#">
-                                                        Mes recettes                    
+                                                        {{$t('Recipes_MyRecipes')}}                    
                                                     </a>
                                                 </li>
                                             </ul>
