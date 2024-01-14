@@ -62,7 +62,7 @@
 </template>
   <script>
 import { defineComponent } from 'vue';
-import HeaderApp from "@/components/header.vue";
+import HeaderApp from "@/components/header/header.vue";
 import MenuAside from '@/components/menu/MenuAside.vue'
 import InventoryForm from '@/components/inventory/InventoryForm.vue'
 import InventoryCard from '@/components/inventory/InventoryCard.vue'

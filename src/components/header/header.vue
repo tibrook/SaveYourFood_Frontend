@@ -135,18 +135,14 @@ export default{
             this.$router.push('/inventory');
         },
         logout() {
-            auth.logout(); // Call the logout function from auth.js
-            this.$router.push('/login'); // Redirect to login page after logout
+            auth.logout();
+            this.$router.push('/login');
         }
     },
     computed: {
         ...mapGetters(['currentLanguage'])
     },
-    watch: {},
     components: { NewIngredientModal }
 }
 </script>
-<style>
 
-
-</style>

@@ -3,63 +3,44 @@
 		<div class="d-flex flex-column flex-root">
 			<div class="d-flex flex-column flex-column-fluid flex-lg-row">
         <div class="d-flex flex-center w-lg-50 pt-15 pt-lg-0 px-10">
-					<!--begin::Aside-->
 					<div class="d-flex flex-center flex-lg-start flex-column align-items-center">
-						<!--begin::Logo-->
             <a href="#" class="mb-7">
               <chiefHatVue :className="'h-450px'" color="white"/>
-
             </a>
-						<!--end::Logo-->
-						<!--begin::Title-->
-						<h2 class="text-white fw-normal m-0">Manage your kitchen from your phone</h2>
-						<!--end::Title-->
+						<h2 class="text-white fw-normal m-0">{{$t('Header_ManageKitchen')}}</h2>
 					</div>
-					<!--begin::Aside-->
 				</div>
 				<div class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-end p-12 p-lg-20">
             <div class="bg-body d-flex flex-column align-items-stretch flex-center rounded-4 w-md-600px p-20">
               <div class="d-flex flex-center flex-column flex-column-fluid px-lg-10 pb-15 pb-lg-20">
                 <form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" @submit.prevent="login" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="index.html" action="#">
                   <div class="text-center mb-11">
-                    <h1 class="text-gray-900 fw-bolder mb-3">Sign In</h1>
-                    <div class="text-gray-500 fw-semibold fs-6">Your Social Campaigns</div>
+                    <h1 class="text-gray-900 fw-bolder mb-3">{{$t('SignIn_Title')}}</h1>
+                    <div class="text-gray-500 fw-semibold fs-6">{{$t('SignIn_Subtitle')}}</div>
                   </div>
                   <div class="row g-3 mb-9">
-                    <!--begin::Col-->
                     <div class="col-md-6">
-                      <!--begin::Google link=-->
                       <a href="#" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
-                      <img alt="Logo" src="@/assets/media/svg/brand-logos/google-icon.svg" class="h-15px me-3" />Sign in with Google</a>
-                      <!--end::Google link=-->
+                      <img alt="Logo" src="@/assets/media/svg/brand-logos/google-icon.svg" class="h-15px me-3" />{{$t('SignIn_WithGoogle')}}</a>
                     </div>
-                    <!--end::Col-->
-                    <!--begin::Col-->
                     <div class="col-md-6">
-                      <!--begin::Google link=-->
                       <a href="#" class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
                       <img alt="Logo" src="@/assets/media/svg/brand-logos/apple-black.svg" class="theme-light-show h-15px me-3" />
-                      <img alt="Logo" src="@/assets/media/svg/brand-logos/apple-black-dark.svg" class="theme-dark-show h-15px me-3" />Sign in with Apple</a>
-                      <!--end::Google link=-->
+                      <img alt="Logo" src="@/assets/media/svg/brand-logos/apple-black-dark.svg" class="theme-dark-show h-15px me-3" />{{$t('SignIn_WithApple')}}</a>
                     </div>
-                    <!--end::Col-->
                   </div>
                   <div class="separator separator-content my-14">
-                    <span class="w-125px text-gray-500 fw-semibold fs-7">Or with email</span>
+                    <span class="w-125px text-gray-500 fw-semibold fs-7">{{$t('SignIn_OrWithEmail')}}</span>
                   </div>
                   <div class="fv-row mb-8 fv-plugins-icon-container">
-                    <!--begin::Email-->
                     <input type="text" :placeholder="$t('Auth_EnterEmailAddress')" name="email" v-model="form.email" autocomplete="off" class="form-control bg-transparent" :class="{ 'is-invalid': v$.form.email.$error, 'is-valid': v$.form.email.$dirty && !v$.form.email.$error }"/>
                     <div v-if="v$.form.email.$error" class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback" >
                       {{$t('Form_FieldRequired')}}
                     </div>
-                    <!--end::Email-->
                   </div>
                   <div class="fv-row mb-3 fv-plugins-icon-container">
-                    <!--begin::Password-->
                     <input type="password" name="password" autocomplete="off" class="form-control bg-transparent" :placeholder="$t('Auth_EnterPassword')"
                             v-model="form.password" :class="{ 'is-invalid': v$.form.password.$error,'is-valid': v$.form.password.$dirty && !v$.form.password.$error}" />
-                    <!--end::Password-->
                     <div v-if="v$.form.password.required.$invalid" class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
                         {{$t('Form_FieldRequired')}}
                       </div>
@@ -70,27 +51,20 @@
                         {{ loginError }}
                       </div>
                   </div>
-
                   <div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
                     <div></div>
-                    <!--begin::Link-->
-                    <a href="authentication/layouts/creative/reset-password.html" class="link-primary">Forgot Password ?</a>
-                    <!--end::Link-->
+                    <a href="authentication/layouts/creative/reset-password.html" class="link-primary">{{$t('Form_ForgotPassword')}}</a>
                   </div>
                   <div class="d-grid mb-10">
                     <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
-                      <!--begin::Indicator label-->
                       <span class="indicator-label">{{$t('Auth_SignIntoAccount')}}</span>
-                      <!--end::Indicator label-->
-                      <!--begin::Indicator progress-->
-                      <span class="indicator-progress">Please wait... 
+                      <span class="indicator-progress">{{$t('SignIn_Wait')}} 
                         <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
                       </span>
-                      <!--end::Indicator progress-->
                     </button>
                   </div>
-                  <div class="text-gray-500 text-center fw-semibold fs-6">Not a Member yet? 
-                    <a href="authentication/layouts/creative/sign-up.html" class="link-primary">Sign up</a>
+                  <div class="text-gray-500 text-center fw-semibold fs-6">{{$t('Footer_NotMember')}}
+                    <a href="authentication/layouts/creative/sign-up.html" class="link-primary">{{$t('Footer_SignUp')}}</a>
                   </div>
                 </form>
               </div>
@@ -107,7 +81,7 @@
                         <span class="symbol symbol-20px me-4">
                           <img data-kt-element="lang-flag" class="rounded-1" src="@/assets/media/flags/united-states.svg" alt="" />
                         </span>
-                        <span data-kt-element="lang-name" >English</span>
+                        <span data-kt-element="lang-name" >{{$t('Language_English')}}</span>
                       </a>
                     </div>
                     <div class="menu-item px-3">
@@ -115,15 +89,15 @@
                         <span class="symbol symbol-20px me-4">
                           <img data-kt-element="lang-flag" class="rounded-1" src="@/assets/media/flags/france.svg" alt="" />
                         </span>
-                        <span data-kt-element="lang-name" >French</span>
+                        <span data-kt-element="lang-name" >{{$t('Language_French')}}</span>
                       </a>
                     </div>
                   </div>
                 </div>
                 <div class="d-flex fw-semibold text-primary fs-base gap-5">
-                  <a href="pages/team.html" target="_blank">Terms</a>
-                  <a href="pages/pricing/column.html" target="_blank">Plans</a>
-                  <a href="pages/contact.html" target="_blank">Contact Us</a>
+                  <a href="pages/team.html" target="_blank">{{$t('Footer_Terms')}}</a>
+                  <a href="pages/pricing/column.html" target="_blank">{{$t('Footer_Plans')}}</a>
+                  <a href="pages/contact.html" target="_blank">{{$t('Footer_ContactUs')}}</a>
                 </div>
               </div>
           </div>

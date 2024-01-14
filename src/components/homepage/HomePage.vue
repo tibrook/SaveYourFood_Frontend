@@ -1,85 +1,53 @@
 <template>
 	<div class="d-flex flex-column flex-root">
-		<!--begin::Page-->
 		<div class="page d-flex flex-row flex-column-fluid">
 			<MenuAside />
-			<!--begin::Wrapper-->
 			<div id="kt_wrapper" class="wrapper d-flex flex-column flex-row-fluid">
-				<!--begin::Header tablet and mobile-->
 				<div class="header-mobile py-3">
-					<!--begin::Container-->
 					<div class="container d-flex flex-stack">
-						<!--begin::Mobile logo-->
 						<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
 							<a href="index.html">
 								<img alt="Logo" src="assets/chiefHat.svg" class="h-35px" />
 							</a>
 						</div>
-						<!--end::Mobile logo-->
-						<!--begin::Aside toggle-->
 						<button class="btn btn-icon btn-active-color-primary me-n4" id="kt_aside_toggle">
 							<i class="ki-duotone ki-abstract-14 fs-2x">
 								<span class="path1"></span>
 								<span class="path2"></span>
 							</i>
 						</button>
-						<!--end::Aside toggle-->
 					</div>
-					<!--end::Container-->
 				</div>
-				<!--end::Header tablet and mobile-->
-				<!--begin::Header-->
 				<HeaderApp />
 				<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 					<div class=" container-xxl " id="kt_content_container">
-						<!--begin::Row-->
 						<div class="row g-5 g-xl-10 mb-5 mb-xl-12">
-							<!--begin::Col-->
 							<div class="col-xxl-12">
 								<div class="row mb-5 mb-xl-8 g-5 g-xl-8">
-									<!--begin::Col-->
 									<div class="col-3">
-										<!--begin::Card-->
 										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/inventory">
 											<i class="ki-duotone ki-basket fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>												<span class="fs-4 fw-bold">
 												{{$t('inventory')}}                </span>
 										</a>
-										<!--end::Card-->
 									</div>
-									<!--end::Col-->
-										
-									<!--begin::Col-->
 									<div class="col-3">
-										<!--begin::Card-->
 										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/recipes">
 											<i class="ki-duotone ki-scroll fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>												<span class="fs-4 fw-bold">
 												{{$t('recipes')}}                </span>
 										</a>
-										<!--end::Card-->
 									</div>
-									<!--end::Col-->
-										
-									<!--begin::Col-->
 									<div class="col-3">
-										<!--begin::Card-->
 										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="weeklyMeals">
 											<i class="ki-duotone ki-calendar fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span></i>												<span class="fs-4 fw-bold">
 												{{$t('Meals_Weekly')}}                  </span>
 										</a>
-										<!--end::Card-->
 									</div>
-									<!--end::Col-->
-										
-									<!--begin::Col-->
 									<div class="col-3">
-										<!--begin::Card-->
 										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/shoppingList">
 											<i class="ki-duotone ki-handcart  fs-2tx mb-5 ms-n1 text-gray-500"></i><span class="fs-4 fw-bold">
 												{{$t('ShoppingList_Main')}}                </span>
 										</a>
-										<!--end::Card-->
 									</div>
-									<!--end::Col-->
 								</div>
 							</div>
 							<div class="col-xl-12 ps-xl-12">
@@ -92,21 +60,12 @@
 											</h3>
 										</div>
 										<div class="card-body pt-5">
-											<!--begin::Timeline-->
 											<div class="timeline-label">
-												<!--begin::Item-->
 												<div class="timeline-item">
-													<!--begin::Label-->
 													<div class="timeline-label fw-bold text-gray-800 fs-6 ">1 day</div>
-													<!--end::Label-->
-
-													<!--begin::Badge-->
 													<div class="timeline-badge">
 														<i class="fa fa-genderless text-danger fs-1"></i>
 													</div>
-													<!--end::Badge-->
-
-													<!--begin::Text-->
 													<div class="fw-mormal timeline-content text-muted ps-3">
 														Saint-Nectaire
 														<a href="#">
@@ -118,23 +77,12 @@
 															</i>
 														</a>
 													</div>
-													<!--end::Text-->
 												</div>
-												<!--end::Item-->
-
-												<!--begin::Item-->
 												<div class="timeline-item">
-													<!--begin::Label-->
 													<div class="timeline-label fw-bold text-gray-800 fs-6">1 day</div>
-													<!--end::Label-->
-
-													<!--begin::Badge-->
 													<div class="timeline-badge">
 														<i class="fa fa-genderless text-danger fs-1"></i>
 													</div>
-													<!--end::Badge-->
-
-													<!--begin::Content-->
 													<div class="timeline-content d-flex">
 														<span class="fw-mormal text-muted ps-3">
 															Cuisses de poulet
@@ -151,23 +99,12 @@
 															</a>
 														</span>
 													</div>
-													<!--end::Content-->
 												</div>
-												<!--end::Item-->
-
-												<!--begin::Item-->
 												<div class="timeline-item">
-													<!--begin::Label-->
 													<div class="timeline-label fw-bold text-gray-800 fs-6">2 days </div>
-													<!--end::Label-->
-
-													<!--begin::Badge-->
 													<div class="timeline-badge">
 														<i class="fa fa-genderless text-danger fs-1"></i>
 													</div>
-													<!--end::Badge-->
-
-													<!--begin::Desc-->
 													<div class="timeline-content fw-mormal text-muted ps-3">
 														Cabillaud
 														<a href="#">
@@ -179,23 +116,12 @@
 															</i>
 														</a>
 													</div>
-													<!--end::Desc-->
 												</div>
-												<!--end::Item-->
-
-												<!--begin::Item-->
 												<div class="timeline-item">
-													<!--begin::Label-->
 													<div class="timeline-label fw-bold text-gray-800 fs-6">4 days</div>
-													<!--end::Label-->
-
-													<!--begin::Badge-->
 													<div class="timeline-badge">
 														<i class="fa fa-genderless text-warning fs-1"></i>
 													</div>
-													<!--end::Badge-->
-
-													<!--begin::Text-->
 													<div class="timeline-content fw-mormal text-muted ps-3">
 														Pate à tartiner
 														<a href="#">
@@ -207,23 +133,12 @@
 															</i>
 														</a>
 													</div>
-													<!--end::Text-->
 												</div>
-												<!--end::Item-->
-
-												<!--begin::Item-->
 												<div class="timeline-item">
-													<!--begin::Label-->
 													<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
-													<!--end::Label-->
-
-													<!--begin::Badge-->
 													<div class="timeline-badge">
 														<i class="fa fa-genderless text-warning fs-1"></i>
 													</div>
-													<!--end::Badge-->
-
-													<!--begin::Desc-->
 													<div class="timeline-content fw-mormal text-muted ps-3">
 														Steak 
 														<a href="#">
@@ -238,23 +153,12 @@
 																</i>
 															</a>
 													</div>
-													<!--end::Desc-->
 												</div>
-												<!--end::Item-->
-
-												<!--begin::Item-->
 												<div class="timeline-item">
-													<!--begin::Label-->
 													<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
-													<!--end::Label-->
-
-													<!--begin::Badge-->
 													<div class="timeline-badge">
 														<i class="fa fa-genderless text-warning fs-1"></i>
 													</div>
-													<!--end::Badge-->
-
-													<!--begin::Text-->
 													<div class="timeline-content fw-mormal text-muted ps-3">
 														Sauce soja
 														<a href="#">
@@ -269,23 +173,12 @@
 																</i>
 															</a>
 													</div>
-													<!--end::Text-->
 												</div>
-												<!--end::Item-->
-
-												<!--begin::Item-->
 												<div class="timeline-item">
-													<!--begin::Label-->
 													<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
-													<!--end::Label-->
-
-													<!--begin::Badge-->
 													<div class="timeline-badge">
 														<i class="fa fa-genderless text-warning fs-1"></i>
 													</div>
-													<!--end::Badge-->
-
-													<!--begin::Desc-->
 													<div class="timeline-content fw-mormal text-muted ps-3">
 														Lait
 														<a href="#">
@@ -300,23 +193,12 @@
 																</i>
 															</a>
 													</div>
-													<!--end::Desc-->
 												</div>
-												<!--end::Item-->
-
-												<!--begin::Item-->
 												<div class="timeline-item">
-													<!--begin::Label-->
 													<div class="timeline-label fw-bold text-gray-800 fs-6">1 week</div>
-													<!--end::Label-->
-
-													<!--begin::Badge-->
 													<div class="timeline-badge">
 														<i class="fa fa-genderless text-success fs-1"></i>
 													</div>
-													<!--end::Badge-->
-
-													<!--begin::Text-->
 													<div class="timeline-content fw-mormal text-muted ps-3">
 														Cidre
 														<a href="#">
@@ -328,11 +210,8 @@
 														</i>
 													</a>
 													</div>
-													<!--end::Text-->
 												</div>
-													<!--end::Item-->
 											</div>
-											<!--end::Timeline-->
 										</div>
 									</div>
 									<div class="card card-xl-stretch mb-xl-8 col-4 me-8">
@@ -347,59 +226,33 @@
 											<div class="">
 												<div class="d-flex flex-stack mb-5">
 													<div class="d-flex align-items-center me-2 full-width">
-														<!--begin::Symbol-->
 														<div class="symbol symbol-50px me-3 full-width">
 															<div class="symbol-label bg-light full-width">
 																<img src="@/assets/pouletprovencale.jpg" alt="" class="full-height-img">
 															</div>
 														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
 														<div class="full-width">
 															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Cuisse de poulet à la provençale</a>
 															<div class="fs-7 text-muted fw-semibold mt-1">Sortir les cuisses du congélateur</div>
 														</div>
-														<!--end::Title-->
 													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
 													<div class="badge badge-light fw-semibold py-4 px-3">aujourd'hui</div>
-													<!--end::Label-->
 												</div>
-												<!--end::Item-->
-
-												<!--begin::Item-->
 												<div class="d-flex flex-stack mb-5">
-													<!--begin::Section-->
 													<div class="d-flex align-items-center me-2">
-														<!--begin::Symbol-->
 														<div class="symbol symbol-50px me-3">
 															<div class="symbol-label bg-light">
 																<img src="@/assets/magretsoja.jpg" alt="" class="full-height-img">
 															</div>
 														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
 														<div>
 															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Magret à la sauce soja</a>
 															<div class="fs-7 text-muted fw-semibold mt-1">Faire mariner le magret</div>
 														</div>
-														<!--end::Title-->
 													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
 													<div class="badge badge-light fw-semibold py-4 px-3">demain midi</div>
-													<!--end::Label-->
 												</div>
-												<!--end::Item-->
-
-												<!--begin::Item-->
 												<div class="d-flex flex-stack mb-5">
-													<!--begin::Section-->
 													<div class="d-flex align-items-center me-2">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-50px me-3">
@@ -415,11 +268,7 @@
 														</div>
 														<!--end::Title-->
 													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
 													<div class="badge badge-light fw-semibold py-4 px-3">demain soir</div>
-													<!--end::Label-->
 												</div>
 												<!--end::Item-->
 												<!--begin::Item-->
@@ -432,131 +281,71 @@
 																<img src="@/assets/lasagna.jpg" alt="" class="full-height-img">
 															</div>
 														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
 														<div class="py-1">
 															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Lasagnes</a>
 														</div>
-														<!--end::Title-->
 													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
 													<div class="badge badge-light fw-semibold py-4 px-3">jeudi soir</div>
-													<!--end::Label-->
 												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
 												<div class="d-flex flex-stack mb-5">
-													<!--begin::Section-->
 													<div class="d-flex align-items-center me-2">
-														<!--begin::Symbol-->
 														<div class="symbol symbol-50px me-3">
 															<div class="symbol-label bg-light">
 																<img src="@/assets/patessaumon.jpg" alt="" class="full-height-img">
 															</div>
 														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
 														<div class="py-1">
 															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Pâtes au saumon</a>
 														</div>
-														<!--end::Title-->
 													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
 													<div class="badge badge-light fw-semibold py-4 px-3">vendredi soir</div>
-													<!--end::Label-->
 												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
 												<div class="d-flex flex-stack mb-5">
-													<!--begin::Section-->
 													<div class="d-flex align-items-center me-2">
-														<!--begin::Symbol-->
 														<div class="symbol symbol-50px me-3">
 															<div class="symbol-label bg-light">
 																<img src="@/assets/burger.jpg" alt="" class="full-height-img">
 															</div>
 														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
 														<div class="py-1">
 															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Burgers</a>
 														</div>
-														<!--end::Title-->
 													</div>
-													<!--end::Section-->
-
-													<!--begin::Label-->
 													<div class="badge badge-light fw-semibold py-4 px-3">samedi midi</div>
-													<!--end::Label-->
 												</div>
-												<!--end::Item-->
-												
 											</div>
-											<!--end::Items-->
 										</div>
-										<!--end::Body-->
 									</div>
 									<div class="card card-xl-stretch mb-5 mb-xl-8 col-4">
-										<!--begin::Header-->
 										<div class="card-header border-0">
 											<h3 class="card-title fw-bold text-gray-900">{{$t('ShoppingList_Main')}}</h3>
 										</div>
-										<!--begin::Body-->
 										<div class="card-body pt-2">
-											<!--begin::Item-->
 											<div class="d-flex align-items-center mb-8">
-												<!--begin::Bullet-->
 												<span class="bullet bullet-vertical h-40px bg-danger"></span>
-												<!--end::Bullet-->
-
-												<!--begin::Checkbox-->
 												<div class="form-check form-check-custom form-check-solid mx-5">
 													<input class="form-check-input" type="checkbox" value="">
 												</div>
-												<!--end::Checkbox-->
-
-												<!--begin::Description-->
 												<div class="flex-grow-1">
 													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Magrêt de canard</a>
 
 													<span class="text-muted fw-semibold d-block">1 magret (300g)</span>
 												</div>
-												<!--end::Description-->
-
 												<span class="badge badge-light-warning fs-8 fw-bold">Boucher</span>
 											</div>
 											<div class="d-flex align-items-center mb-8">
-												<!--begin::Bullet-->
 												<span class="bullet bullet-vertical h-40px bg-danger"></span>
-												<!--end::Bullet-->
-
-												<!--begin::Checkbox-->
 												<div class="form-check form-check-custom form-check-solid mx-5">
 													<input class="form-check-input" type="checkbox" value="">
 												</div>
-												<!--end::Checkbox-->
-
-												<!--begin::Description-->
 												<div class="flex-grow-1">
 													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pâtes</a>
 
 													<span class="text-muted fw-semibold d-block">500g</span>
 												</div>
-												<!--end::Description-->
-
 												<span class="badge badge-light-primary fs-8 fw-bold">Supermarché</span>
 											</div>
-												<!--end:Item-->
-														<!--begin::Item-->
 											<div class="d-flex align-items-center mb-8">
-												<!--begin::Bullet-->
 												<span class="bullet bullet-vertical h-40px bg-warning"></span>
 												<div class="form-check form-check-custom form-check-solid mx-5">
 													<input class="form-check-input" type="checkbox" value="">
@@ -579,72 +368,45 @@
 												<span class="badge badge-light-success fs-8 fw-bold">Producteur</span>
 											</div>
 											<div class="d-flex align-items-center mb-8">
-												<!--begin::Bullet-->
 												<span class="bullet bullet-vertical h-40px bg-warning"></span>
-												<!--end::Bullet-->
-
-												<!--begin::Checkbox-->
 												<div class="form-check form-check-custom form-check-solid mx-5">
 													<input class="form-check-input" type="checkbox" value="">
 												</div>
-												<!--end::Checkbox-->
-
-												<!--begin::Description-->
 												<div class="flex-grow-1">
 													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pâte à pizza</a>
 
 													<span class="text-muted fw-semibold d-block">For 3 pizza</span>
 												</div>
-												<!--end::Description-->
-
 												<span class="badge badge-light-danger fs-8 fw-bold">Boulangerie</span>
 											</div>
 											<div class="d-flex align-items-center ">
-												<!--begin::Bullet-->
 												<span class="bullet bullet-vertical h-40px bg-success"></span>
-												<!--end::Bullet-->
-
-												<!--begin::Checkbox-->
 												<div class="form-check form-check-custom form-check-solid mx-5">
 													<input class="form-check-input" type="checkbox" value="">
 												</div>
-												<!--end::Checkbox-->
-
-												<!--begin::Description-->
 												<div class="flex-grow-1">
 													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pommes</a>
 
 													<span class="text-muted fw-semibold d-block">400g</span>
 												</div>
-												<!--end::Description-->
-
 												<span class="badge badge-light-success fs-8 fw-bold">Producteur</span>
 											</div>
 										</div>
-										<!--end::Body-->
 									</div>
 								</div>
 								<div class="card   mb-xl-8">
-									<!--begin::Header-->
 									<div class="card-header border-0 pt-5">
 										<h3 class="card-title align-items-start flex-column">
 											<span class="card-label fw-bold text-gray-900">Preferences</span>
 										</h3>
 									</div>
-									<!--end::Header-->
-									<!--begin::Body-->
 									<div class="card-body pt-5">
-										<!--begin::Item-->
 										<div class="d-flex align-items-sm-center mb-7">
-											<!--begin::Symbol-->
 											<div class="symbol symbol-50px me-5">
 												<span class="symbol-label">
 													<i class="fa-solid fa-plate-wheat fs-2qx"></i>
 												</span>
 											</div>
-											<!--end::Symbol-->
-
-											<!--begin::Section-->
 											<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
 												<div class="flex-grow-1 me-2">
 													<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Top food</a>
@@ -654,21 +416,13 @@
 
 												<span class="badge badge-light fw-bold my-2">19 meals</span>
 											</div>
-											<!--end::Section-->                
 										</div>
-										<!--end::Item-->
-												
-										<!--begin::Item-->
 										<div class="d-flex align-items-sm-center mb-7">
-											<!--begin::Symbol-->
 											<div class="symbol symbol-50px me-5">
 												<span class="symbol-label">
 													<i class="fa-solid fa-carrot fs-2qx"></i>
 												</span>
 											</div>
-											<!--end::Symbol-->
-
-											<!--begin::Section-->
 											<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
 												<div class="flex-grow-1 me-2">
 													<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Top Vegetable</a>
@@ -678,21 +432,13 @@
 
 												<span class="badge badge-light fw-bold my-2">6 meals</span>
 											</div>
-											<!--end::Section-->                
 										</div>
-										<!--end::Item-->
-												
-										<!--begin::Item-->
 										<div class="d-flex align-items-sm-center mb-7">
-											<!--begin::Symbol-->
 											<div class="symbol symbol-50px me-5">
 												<span class="symbol-label">
 													<i class="fa-solid fa-utensils fs-2qx"></i>
 												</span>
 											</div>
-											<!--end::Symbol-->
-
-											<!--begin::Section-->
 											<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
 												<div class="flex-grow-1 me-2">
 													<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorise cuisine</a>
@@ -702,21 +448,13 @@
 
 												<span class="badge badge-light fw-bold my-2">3 meals</span>
 											</div>
-											<!--end::Section-->                
 										</div>
-										<!--end::Item-->
-												
-										<!--begin::Item-->
 										<div class="d-flex align-items-sm-center mb-7">
-											<!--begin::Symbol-->
 											<div class="symbol symbol-50px me-5">
 												<span class="symbol-label">
 													<i class="fa-solid fa-cake-candles fs-2qx"></i>
 												</span>
 											</div>
-											<!--end::Symbol-->
-
-											<!--begin::Section-->
 											<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
 												<div class="flex-grow-1 me-2">
 													<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorite dessert</a>
@@ -726,21 +464,13 @@
 
 												<span class="badge badge-light fw-bold my-2">3 meals</span>
 											</div>
-											<!--end::Section-->                
 										</div>
-										<!--end::Item-->
-												
-										<!--begin::Item-->
 										<div class="d-flex align-items-sm-center mb-7">
-											<!--begin::Symbol-->
 											<div class="symbol symbol-50px me-5">
 												<span class="symbol-label">
 													<i class="fa-solid fa-champagne-glasses fs-2qx"></i>
 												</span>
 											</div>
-											<!--end::Symbol-->
-
-											<!--begin::Section-->
 											<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
 												<div class="flex-grow-1 me-2">
 													<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorite appetizer</a>
@@ -750,11 +480,8 @@
 
 												<span class="badge badge-light fw-bold my-2">5 meals</span>
 											</div>
-											<!--end::Section-->                
 										</div>
-										<!--end::Item-->
 									</div>
-									<!--end::Body-->
 								</div>
 							</div>
 						</div>
@@ -767,23 +494,16 @@
 
 <script>
 import { defineComponent } from 'vue';
-import HeaderApp from "./header.vue";
+import HeaderApp from "@/components/header/header.vue";
 import MenuAside from '@/components/menu/MenuAside.vue';
 export default defineComponent({
-  watch: {
-  },
+  
   name: 'HomePage',
   components: {
 	HeaderApp,MenuAside
   },
 
-  mounted(){
-
-  },
  
-
-  methods:{
-  }
 })
 </script>
 <style>

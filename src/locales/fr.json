@@ -33,6 +33,7 @@
   "Settings_ManageUser": "Paramètres",
   "Settings_EditPreferences": "Modifier mes préférences",
   "Settings_Preferences": "Préférences",
+  "Settings_ProfileCompleation":"Complétion du profil",
 
   "Recipes_List": "Recettes",
   "Recipes_Ingredients": "Ingrédients",
@@ -57,6 +58,7 @@
   "Inventory_Manage": "Gérez votre inventaire",
   "Inventory_Main": "Inventaire",
   "Inventory_Message": "Gardez une trace de vos ingrédients et gérez votre garde-manger.",
+  "Inventory_Quantity": "Quantité",
 
   "Meals_Weekly": "Repas de la semaine",
   "Meals_Planned": "Repas planifiés",
@@ -72,8 +74,69 @@
   "ShoppingList_Message": "Créez et gérez facilement vos listes de courses.",
   "ShoppingList_Make": "Gérez votre liste",
   "ShoppingList_Manage": "Gérez votre liste de courses",
+  "ShoppingList_Items":"Elements dans la liste de courses",
 
   "Form_FieldRequired": "Ce champ est requis",
   "Form_NoSpecialCharacters": "Les caractères spéciaux ne sont pas admis",
-  "Form_MissingCriteria": "Il manque : "
+  "Form_MissingCriteria": "Il manque : ",
+  "Form_EmailPlaceholder": "Entrez votre adresse e-mail",
+  "Form_PasswordPlaceholder": "Entrez votre mot de passe",
+  "Form_ForgotPassword": "Mot de passe oublié ?",
+
+  "Image_ChangeAvatarTooltip": "Changer l'avatar",
+  "Image_CancelAvatarTooltip": "Annuler l'avatar",
+  "Image_RemoveAvatarTooltip": "Retirer l'avatar",
+  "Image_FormText": "Types de fichiers autorisés : png, jpg, jpeg.",
+  
+  "Label_Name": "Nom",
+  "Label_Description": "Description",
+  "Label_Location": "Emplacement",
+  "Label_Type": "Type",
+  
+  "Button_Update": "Mettre à jour",
+  "Button_SignIn": "Se connecter",
+
+  "Header_ManageKitchen": "Gérez votre cuisine depuis votre téléphone",
+
+  "SignIn_Title": "Connexion",
+  "SignIn_Subtitle": "Vos campagnes sociales",
+  "SignIn_WithGoogle": "Se connecter avec Google",
+  "SignIn_WithApple": "Se connecter avec Apple",
+  "SignIn_OrWithEmail": "Ou avec un email",
+  "SignIn_Wait": "Veuillez patienter...",
+  
+  "Footer_NotMember": "Pas encore membre ?",
+  "Footer_SignUp": "S'inscrire",
+  "Footer_Terms": "Conditions",
+  "Footer_Plans": "Plans",
+  "Footer_ContactUs": "Nous contacter",
+
+  "LanguageSwitcher_Tooltip": "Changer de langue",
+  "Language_English": "Anglais",
+  "Language_French": "Français",
+
+  "Card_Preparation": "Préparation",
+  "Card_CookingTime": "Temps de cuisson",
+  "Card_Description": "Description",
+
+  "Form_Title_AddRecipe": "Ajouter recette",
+  "Label_Image": "Image",
+  "Tooltip_ChangeImage": "Changer l'image",
+  "Tooltip_CancelImage": "Annuler l'image",
+  "Tooltip_RemoveImage": "Retirer l'image",
+  "FormText_AllowedFileTypes": "Types de fichiers autorisés : png, jpg, jpeg.",
+  "Input_NamePlaceholder": "Nom de la recette",
+  "Label_Ingredients": "Ingrédients",
+  "Input_IngredientsPlaceholder": "Ajoutez les ingrédients",
+  "Label_Category": "Catégorie",
+  "Input_CategoryPlaceholder": "Ajoutez une ou plusieurs catégories",
+  "Label_PreparationTime": "Préparation",
+  "Label_CookingTime": "Cuisson",
+  "Label_PreparationSteps": "Étapes de préparation",
+  "Label_TipsAndTricks": "Conseils et astuces",
+  "Label_Portions": "Portions",
+  "Input_PortionsPlaceholder": "Portions",
+  "Input_DescriptionPlaceholder": "Description",
+  "Label_SuggestedPairings": "Suggestion de plats complémentaires (vins...)",
+  "Input_SuggestedPairingsPlaceholder": "Suggestion"
 }

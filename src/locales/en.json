@@ -33,8 +33,8 @@
     "Settings_ManageUser": "Settings",
     "Settings_EditPreferences": "Edit preferences",
     "Settings_Preferences": "Preferences",
+    "Settings_ProfileCompleation":"Profile Compleation",
 
-    
     "Recipes_List": "Recipes",
     "Recipes_Ingredients": "Ingredients",
     "Recipes_Explore": "Explore",
@@ -58,6 +58,7 @@
     "Inventory_Manage": "Manage your inventory",
     "Inventory_Main": "Inventory",
     "Inventory_Message": "Keep track of your ingredients and manage your pantry.",
+    "Inventory_Quantity": "Quantity",
 
     "Meals_Weekly": "Weekly Meals",
     "Meals_Planned": "Planned meals",
@@ -73,8 +74,70 @@
     "ShoppingList_Message": "Create and manage your shopping list with ease.",
     "ShoppingList_Make": "Make a List",
     "ShoppingList_Manage": "Manage your shopping list",
-   
+    "ShoppingList_Items":"Items in shopping list",
+
     "Form_FieldRequired": "This field is required",
     "Form_NoSpecialCharacters": "Special characters are not admitted",
-    "Form_MissingCriteria": "Missing: "
+    "Form_MissingCriteria": "Missing: ",
+    "Form_EmailPlaceholder": "Enter your email address",
+    "Form_PasswordPlaceholder": "Enter your password",
+    "Form_ForgotPassword": "Forgot Password ?",
+
+    "Image_ChangeAvatarTooltip": "Change avatar",
+    "Image_CancelAvatarTooltip": "Cancel avatar",
+    "Image_RemoveAvatarTooltip": "Remove avatar",
+    "Image_FormText": "Allowed file types: png, jpg, jpeg.",
+    
+    "Label_Name": "Name",
+    "Label_Description": "Description",
+    "Label_Location": "Location",
+    "Label_Type": "Type",
+
+    "Button_Update": "Update",
+    "Button_SignIn": "Sign Into Account",
+
+    "Header_ManageKitchen": "Manage your kitchen from your phone",
+
+    "SignIn_Title": "Sign In",
+    "SignIn_Subtitle": "Your Social Campaigns",
+    "SignIn_WithGoogle": "Sign in with Google",
+    "SignIn_WithApple": "Sign in with Apple",
+    "SignIn_OrWithEmail": "Or with email",
+    "SignIn_Wait": "Please wait...",
+
+    "Footer_NotMember": "Not a Member yet?",
+    "Footer_SignUp": "Sign up",
+    "Footer_Terms": "Terms",
+    "Footer_Plans": "Plans",
+    "Footer_ContactUs": "Contact Us",
+
+    "LanguageSwitcher_Tooltip": "Change Language",
+    "Language_English": "English",
+    "Language_French": "French",
+
+    "Card_Preparation": "Preparation",
+    "Card_CookingTime": "Cooking Time",
+    "Card_Description": "Description",
+
+    "Form_Title_AddRecipe": "Add Recipe",
+    "Label_Image": "Image",
+    "Tooltip_ChangeImage": "Change Image",
+    "Tooltip_CancelImage": "Cancel Image",
+    "Tooltip_RemoveImage": "Remove Image",
+    "Input_NamePlaceholder": "Recipe Name",
+    "Label_Ingredients": "Ingredients",
+    "Input_IngredientsPlaceholder": "Add Ingredients",
+    "Label_Category": "Category",
+    "Input_CategoryPlaceholder": "Add one or more categories",
+    "Label_PreparationTime": "Preparation",
+    "Label_CookingTime": "Cooking Time",
+    "Label_PreparationSteps": "Preparation Steps",
+    "Label_TipsAndTricks": "Tips and Tricks",
+    "Label_Portions": "Portions",
+    "Input_PortionsPlaceholder": "Portions",
+    "Input_DescriptionPlaceholder": "Description",
+    "Label_SuggestedPairings": "Suggested Complementary Dishes (wines...)",
+    "Input_SuggestedPairingsPlaceholder": "Suggestion"
+
+    
 }

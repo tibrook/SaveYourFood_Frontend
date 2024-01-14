@@ -62,7 +62,7 @@
 																</i>
 																<div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="4500" data-kt-countup-prefix="$">0</div>
 															</div>
-															<div class="fw-semibold fs-6 text-gray-500">Ingredients</div>
+															<div class="fw-semibold fs-6 text-gray-500">{{$t('Recipes_Ingredients')}}</div>
 														</div>
 														<div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
 															<div class="d-flex align-items-center">
@@ -72,7 +72,7 @@
 																</i>
 																<div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="80">0</div>
 															</div>
-															<div class="fw-semibold fs-6 text-gray-500">Recipes</div>
+															<div class="fw-semibold fs-6 text-gray-500">{{$t('Recipes_List')}}</div>
 														</div>
 														<div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
 															<div class="d-flex align-items-center">
@@ -82,7 +82,7 @@
 																</i>
 																<div class="fs-2 fw-bold" data-kt-countup="true" data-kt-countup-value="60" data-kt-countup-prefix="%">0</div>
 															</div>
-															<div class="fw-semibold fs-6 text-gray-500">Items in shopping list</div>
+															<div class="fw-semibold fs-6 text-gray-500">{{$t('ShoppingList_Items')}}</div>
 														</div>
 													</div>
 												</div>
@@ -130,7 +130,7 @@
 </template>
 <script>
 import MenuAside from '@/components/menu/MenuAside.vue'
-import HeaderApp from "@/components/header.vue"
+import HeaderApp from "@/components/header/header.vue"
 import chiefHat from "@/components/icons/chiefHat.vue"
 import Preferences from "@/components/Preferences.vue"
 import AccountSettings from "@/components/AccountSettings.vue"

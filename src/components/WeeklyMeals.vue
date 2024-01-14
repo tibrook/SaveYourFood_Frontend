@@ -51,9 +51,11 @@
 .
 <script>
 import MenuAside from '@/components/menu/MenuAside.vue'
-import HeaderApp from "@/components/header.vue"
+import HeaderApp from "@/components/header/header.vue"
 
 export default {
+  methods: {
+  },
     components:{
         MenuAside, HeaderApp
     },

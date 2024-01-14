@@ -69,7 +69,7 @@
  </template>
    <script>
  import { defineComponent } from 'vue';
- import HeaderApp from "@/components/header.vue";
+ import HeaderApp from "@/components/header/header.vue";
  import MenuAside from '@/components/menu/MenuAside.vue'
  import RecipeForm from "@/components/recipes/RecipeForm.vue"
  import RecipeCard from "@/components/recipes/RecipeCard.vue"

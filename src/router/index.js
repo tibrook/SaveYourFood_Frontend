@@ -1,8 +1,8 @@
 // router/index.js
 import {createRouter, createWebHistory} from "vue-router";
-import UserLogin from "@/components/UserLogin.vue";
-import HomePage from "@/components/HomePage.vue";
-import RegisterUser from "@/components/RegisterUser.vue";
+import UserLogin from "@/components/login/UserLogin.vue";
+import HomePage from "@/components/homepage/HomePage.vue";
+import RegisterUser from "@/components/register/RegisterUser.vue";
 import auth from "@/api/auth";
 import newIngredientModalVue from "@/components/newIngredientModal.vue";
 

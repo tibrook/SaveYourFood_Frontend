@@ -5,7 +5,7 @@
             <div class="mb-2">
                 <div class="text-center">
                     <span class="fw-bold text-gray-800 cursor-pointer text-hover-primary fs-6">{{ item.name }}</span>
-                    <span class="text-gray-500 fw-semibold d-block fs-7">Quantité : {{ item.quantity }}</span>
+                    <span class="text-gray-500 fw-semibold d-block fs-7">{{$t('Inventory_Quantity')}} : {{ item.quantity }}</span>
                     <span class="text-gray-500 fw-semibold d-block fs-7">{{ item.location }}</span>
                 </div>
             </div>
@@ -31,14 +31,3 @@ export default{
     }
 }
 </script>
-<style scoped>
-.full-width {
-  flex-grow: 1!important; 
-}
-.full-height-img {
-  height: 100%; 
-  width: 100%;
-  object-fit: cover;
-  border-radius: inherit; 
-}
-</style>
