@@ -2,7 +2,8 @@ export default {
     state() {
         return {
             inventory: {},
-            inventoryCategories: []
+            inventoryCategories: [],
+            quickConsumeItems: []
         };
     },
     getters: {
@@ -14,6 +15,9 @@ export default {
         },
         inventoryCategories: (state) => {
             return state.inventoryCategories;
+        },
+        quickConsumeItems: (state) => {
+            return state.quickConsumeItems;
         }
     },
     mutations: {
@@ -28,6 +32,9 @@ export default {
         },
         SET_CATEGORIES_INVENTORY(state, inventoryCategories) {
             state.inventoryCategories = inventoryCategories;
+        },
+        SET_QUICK_CONSUME_ITEMS(state, items) {
+            state.quickConsumeItems = items;
         },
         EDIT_INVENTORY(state, updatedInventory) {
             const index = state.inventory.findIndex((inventory) => inventory.id === updatedInventory.id);
@@ -317,6 +324,78 @@ export default {
             const mockLocations = ["Frigidaire", "Garage", "Placards"];
             commit("SET_FOOD_LOCATION", mockLocations);
             return mockLocations;
+        },
+        fetchQuickConsumeItems({commit}) {
+            const quickConsumeMockData = [
+                {
+                    name: "Saint-Nectaire",
+                    daysRemaining: "1 day",
+                    iconClass: "fa-genderless text-danger",
+                    recipeLink: "#",
+                    isPlanned: false,
+                    tooltipTitle: "Choose a recipe"
+                },
+                {
+                    name: "Cuisses de poulet",
+                    daysRemaining: "1 day",
+                    iconClass: "fa-genderless text-danger",
+                    recipeLink: "#",
+                    isPlanned: true,
+                    tooltipTitle: "View Recipe"
+                },
+                {
+                    name: "Cabillaud",
+                    daysRemaining: "2 days",
+                    iconClass: "fa-genderless text-danger",
+                    recipeLink: "#",
+                    isPlanned: false,
+                    tooltipTitle: "Choose a recipe"
+                },
+                {
+                    name: "Pate à tartiner",
+                    daysRemaining: "4 days",
+                    iconClass: "fa-genderless text-warning",
+                    recipeLink: "#",
+                    tooltipTitle: "Choose a recipe",
+                    isPlanned: true
+                },
+                {
+                    name: "Steak",
+                    daysRemaining: "5 days",
+                    iconClass: "fa-genderless text-warning",
+                    recipeLink: "#",
+                    isPlanned: true,
+                    tooltipTitle: "View Recipe"
+                },
+                {
+                    name: "Sauce soja",
+                    daysRemaining: "5 days",
+                    iconClass: "fa-genderless text-warning",
+                    recipeLink: "#",
+                    isPlanned: false,
+
+                    tooltipTitle: "View Recipe"
+                },
+                {
+                    name: "Lait",
+                    daysRemaining: "5 days",
+                    iconClass: "fa-genderless text-warning",
+                    recipeLink: "#",
+                    isPlanned: false,
+
+                    tooltipTitle: "View Recipe"
+                },
+                {
+                    name: "Cidre",
+                    daysRemaining: "1 week",
+                    iconClass: "fa-genderless text-success",
+                    recipeLink: "#",
+                    isPlanned: false,
+                    tooltipTitle: "Choose a recipe"
+                }
+            ];
+            commit("SET_QUICK_CONSUME_ITEMS", quickConsumeMockData);
+            return quickConsumeMockData;
         }
 
         // addRecipe({commit}, recipe) {},

@@ -27,13 +27,13 @@
 									<div class="col-3">
 										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/inventory">
 											<i class="ki-duotone ki-basket fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>												<span class="fs-4 fw-bold">
-												{{$t('inventory')}}                </span>
+												{{$t('Inventory_Main')}}                </span>
 										</a>
 									</div>
 									<div class="col-3">
 										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/recipes">
 											<i class="ki-duotone ki-scroll fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>												<span class="fs-4 fw-bold">
-												{{$t('recipes')}}                </span>
+												{{$t('Recipes_List')}}                </span>
 										</a>
 									</div>
 									<div class="col-3">
@@ -52,270 +52,9 @@
 							</div>
 							<div class="col-xl-12 ps-xl-12">
 								<div class="row mb-5 mb-xl-8 g-5 g-xl-12">
-									<div class="card mb-5 mb-xl-8 col-3 me-8 ">
-										<div class="card-header align-items-center border-0 mt-4">
-											<h3 class="card-title align-items-start flex-column">
-												<span class="fw-bold mb-2 text-gray-900">{{$t('Inventory_QuickConsume')}}</span>            
-												<span class="text-muted fw-semibold fs-7">3 {{ $t('Inventory_ThisWeekConsume') }}</span>
-											</h3>
-										</div>
-										<div class="card-body pt-5">
-											<div class="timeline-label">
-												<div class="timeline-item">
-													<div class="timeline-label fw-bold text-gray-800 fs-6 ">1 day</div>
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-danger fs-1"></i>
-													</div>
-													<div class="fw-mormal timeline-content text-muted ps-3">
-														Saint-Nectaire
-														<a href="#">
-															<i class="ki-duotone ki-note fs-3 text-danger " 
-																data-bs-toggle="tooltip" 
-																data-bs-custom-class="tooltip-inverse" 
-																data-bs-title='Choose a recipe'>
-																<span class="path1"></span><span class="path2"></span>
-															</i>
-														</a>
-													</div>
-												</div>
-												<div class="timeline-item">
-													<div class="timeline-label fw-bold text-gray-800 fs-6">1 day</div>
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-danger fs-1"></i>
-													</div>
-													<div class="timeline-content d-flex">
-														<span class="fw-mormal text-muted ps-3">
-															Cuisses de poulet
-															<a href="#">
-																<i class="ki-duotone ki-note-2 text-success fs-3"
-																	data-bs-toggle="tooltip" 
-																	data-bs-custom-class="tooltip-inverse" 
-																	data-bs-title='View Recipe'>
-																	<span class="path1"></span>
-																	<span class="path2"></span>
-																	<span class="path3"></span>
-																	<span class="path4"></span>
-																</i>
-															</a>
-														</span>
-													</div>
-												</div>
-												<div class="timeline-item">
-													<div class="timeline-label fw-bold text-gray-800 fs-6">2 days </div>
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-danger fs-1"></i>
-													</div>
-													<div class="timeline-content fw-mormal text-muted ps-3">
-														Cabillaud
-														<a href="#">
-															<i class="ki-duotone ki-note fs-3 text-danger " 
-																data-bs-toggle="tooltip" 
-																data-bs-custom-class="tooltip-inverse" 
-																data-bs-title='Choose a recipe'>
-																<span class="path1"></span><span class="path2"></span>
-															</i>
-														</a>
-													</div>
-												</div>
-												<div class="timeline-item">
-													<div class="timeline-label fw-bold text-gray-800 fs-6">4 days</div>
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-warning fs-1"></i>
-													</div>
-													<div class="timeline-content fw-mormal text-muted ps-3">
-														Pate à tartiner
-														<a href="#">
-															<i class="ki-duotone ki-note fs-3 text-danger " 
-																data-bs-toggle="tooltip" 
-																data-bs-custom-class="tooltip-inverse" 
-																data-bs-title='Choose a recipe'>
-																<span class="path1"></span><span class="path2"></span>
-															</i>
-														</a>
-													</div>
-												</div>
-												<div class="timeline-item">
-													<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-warning fs-1"></i>
-													</div>
-													<div class="timeline-content fw-mormal text-muted ps-3">
-														Steak 
-														<a href="#">
-																<i class="ki-duotone ki-note-2 text-success fs-3"
-																	data-bs-toggle="tooltip" 
-																	data-bs-custom-class="tooltip-inverse" 
-																	data-bs-title='View Recipe'>
-																	<span class="path1"></span>
-																	<span class="path2"></span>
-																	<span class="path3"></span>
-																	<span class="path4"></span>
-																</i>
-															</a>
-													</div>
-												</div>
-												<div class="timeline-item">
-													<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-warning fs-1"></i>
-													</div>
-													<div class="timeline-content fw-mormal text-muted ps-3">
-														Sauce soja
-														<a href="#">
-																<i class="ki-duotone ki-note-2 text-success fs-3"
-																	data-bs-toggle="tooltip" 
-																	data-bs-custom-class="tooltip-inverse" 
-																	data-bs-title='View Recipe'>
-																	<span class="path1"></span>
-																	<span class="path2"></span>
-																	<span class="path3"></span>
-																	<span class="path4"></span>
-																</i>
-															</a>
-													</div>
-												</div>
-												<div class="timeline-item">
-													<div class="timeline-label fw-bold text-gray-800 fs-6">5 days</div>
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-warning fs-1"></i>
-													</div>
-													<div class="timeline-content fw-mormal text-muted ps-3">
-														Lait
-														<a href="#">
-																<i class="ki-duotone ki-note-2 text-success fs-3"
-																	data-bs-toggle="tooltip" 
-																	data-bs-custom-class="tooltip-inverse" 
-																	data-bs-title='View Recipe'>
-																	<span class="path1"></span>
-																	<span class="path2"></span>
-																	<span class="path3"></span>
-																	<span class="path4"></span>
-																</i>
-															</a>
-													</div>
-												</div>
-												<div class="timeline-item">
-													<div class="timeline-label fw-bold text-gray-800 fs-6">1 week</div>
-													<div class="timeline-badge">
-														<i class="fa fa-genderless text-success fs-1"></i>
-													</div>
-													<div class="timeline-content fw-mormal text-muted ps-3">
-														Cidre
-														<a href="#">
-														<i class="ki-duotone ki-note fs-3 text-danger " 
-															data-bs-toggle="tooltip" 
-															data-bs-custom-class="tooltip-inverse" 
-															data-bs-title='Choose a recipe'>
-															<span class="path1"></span><span class="path2"></span>
-														</i>
-													</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="card card-xl-stretch mb-xl-8 col-4 me-8">
-										<div class="card-header border-0 py-5">
-											<h3 class="card-title align-items-start flex-column">
-												<span class="card-label fw-bold fs-3 mb-1">{{$t('Recipes_List')}}</span>
-
-												<span class="text-muted fw-semibold fs-7">{{$t('Recipes_Next')}}</span>
-											</h3>
-										</div>
-										<div class="card-body d-flex flex-column">
-											<div class="">
-												<div class="d-flex flex-stack mb-5">
-													<div class="d-flex align-items-center me-2 full-width">
-														<div class="symbol symbol-50px me-3 full-width">
-															<div class="symbol-label bg-light full-width">
-																<img src="@/assets/pouletprovencale.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<div class="full-width">
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Cuisse de poulet à la provençale</a>
-															<div class="fs-7 text-muted fw-semibold mt-1">Sortir les cuisses du congélateur</div>
-														</div>
-													</div>
-													<div class="badge badge-light fw-semibold py-4 px-3">aujourd'hui</div>
-												</div>
-												<div class="d-flex flex-stack mb-5">
-													<div class="d-flex align-items-center me-2">
-														<div class="symbol symbol-50px me-3">
-															<div class="symbol-label bg-light">
-																<img src="@/assets/magretsoja.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<div>
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Magret à la sauce soja</a>
-															<div class="fs-7 text-muted fw-semibold mt-1">Faire mariner le magret</div>
-														</div>
-													</div>
-													<div class="badge badge-light fw-semibold py-4 px-3">demain midi</div>
-												</div>
-												<div class="d-flex flex-stack mb-5">
-													<div class="d-flex align-items-center me-2">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50px me-3">
-															<div class="symbol-label bg-light">
-																<img src="@/assets/steakharicot.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<!--end::Symbol-->
-
-														<!--begin::Title-->
-														<div class="py-1">
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Steak haricots verts</a>
-														</div>
-														<!--end::Title-->
-													</div>
-													<div class="badge badge-light fw-semibold py-4 px-3">demain soir</div>
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex flex-stack mb-5">
-													<!--begin::Section-->
-													<div class="d-flex align-items-center me-2">
-														<!--begin::Symbol-->
-														<div class="symbol symbol-50px me-3">
-															<div class="symbol-label bg-light">
-																<img src="@/assets/lasagna.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<div class="py-1">
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Lasagnes</a>
-														</div>
-													</div>
-													<div class="badge badge-light fw-semibold py-4 px-3">jeudi soir</div>
-												</div>
-												<div class="d-flex flex-stack mb-5">
-													<div class="d-flex align-items-center me-2">
-														<div class="symbol symbol-50px me-3">
-															<div class="symbol-label bg-light">
-																<img src="@/assets/patessaumon.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<div class="py-1">
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Pâtes au saumon</a>
-														</div>
-													</div>
-													<div class="badge badge-light fw-semibold py-4 px-3">vendredi soir</div>
-												</div>
-												<div class="d-flex flex-stack mb-5">
-													<div class="d-flex align-items-center me-2">
-														<div class="symbol symbol-50px me-3">
-															<div class="symbol-label bg-light">
-																<img src="@/assets/burger.jpg" alt="" class="full-height-img">
-															</div>
-														</div>
-														<div class="py-1">
-															<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Burgers</a>
-														</div>
-													</div>
-													<div class="badge badge-light fw-semibold py-4 px-3">samedi midi</div>
-												</div>
-											</div>
-										</div>
-									</div>
+									<ConsumeQuicklyWidget :items="quickConsumeItems"/>
+									<NextRecipeWidget :recipes="plannedRecipes"/>
+									<ShoppingListWidget :shoppingList="shoppingList"/>
 									<div class="card card-xl-stretch mb-5 mb-xl-8 col-4">
 										<div class="card-header border-0">
 											<h3 class="card-title fw-bold text-gray-900">{{$t('ShoppingList_Main')}}</h3>
@@ -496,14 +235,31 @@
 import { defineComponent } from 'vue';
 import HeaderApp from "@/components/header/header.vue";
 import MenuAside from '@/components/menu/MenuAside.vue';
+import { mapGetters,mapActions } from 'vuex';
+import ConsumeQuicklyWidget from "./ConsumeQuicklyWidget.vue"
+import NextRecipeWidget from "./NextRecipeWidget.vue"
+import ShoppingListWidget from "./ShoppingListWidget.vue"
 export default defineComponent({
   
-  name: 'HomePage',
-  components: {
-	HeaderApp,MenuAside
-  },
+	name: 'HomePage',
+	components: {
+		HeaderApp,MenuAside,ConsumeQuicklyWidget, NextRecipeWidget,ShoppingListWidget
+	},
+	mounted(){
+		this.onExecuteQueries()
+	},
+	computed: {
+			...mapGetters(['quickConsumeItems', 'plannedRecipes', 'shoppingList']),
 
- 
+	},
+	methods: {
+		...mapActions(['fetchQuickConsumeItems', 'fetchPlannedRecipes', 'fetchShoppingList']),
+		async onExecuteQueries(){
+			this.fetchQuickConsumeItems()
+			this.fetchPlannedRecipes()
+			await this.fetchShoppingList()
+		}
+	}
 })
 </script>
 <style>

@@ -18,7 +18,7 @@
                         </button>
                     </div>
                 </div>
-                <HeaderApp :page="$t('inventory')" />
+                <HeaderApp :page="$t('Inventory_Main')" />
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content" >
                     <div class="container-xxl" id="kt_content_container">
                         <ul class="nav nav-pills d-flex justify-content-between nav-pills-custom gap-3 mb-6">

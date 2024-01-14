@@ -3,7 +3,8 @@ export default {
         return {
             recipes: [],
             categories: [],
-            userRecipes: {}
+            userRecipes: {},
+            plannedRecipes: []
         };
     },
     getters: {
@@ -18,6 +19,9 @@ export default {
         },
         userRecipes: (state) => {
             return state.userRecipes;
+        },
+        plannedRecipes: (state) => {
+            return state.plannedRecipes;
         }
     },
     mutations: {
@@ -29,6 +33,9 @@ export default {
         },
         SET_USER_RECIPES(state, recipes) {
             state.userRecipes = recipes;
+        },
+        SET_PLANNED_RECIPES(state, plannedRecipes) {
+            state.plannedRecipes = plannedRecipes;
         },
         SET_CATEGORIES(state, categories) {
             state.categories = categories;
@@ -202,7 +209,49 @@ export default {
             commit("SET_USER_RECIPES", mockRecipes);
             return mockRecipes;
         },
+        fetchPlannedRecipes({commit}) {
+            const plannedRecipesMock = [
+                {
+                    name: "Cuisse de poulet à la provençale",
+                    image: require("@/assets/pouletprovencale.jpg"),
+                    description: "Sortir les cuisses du congélateur",
+                    plannedDate: "aujourd'hui"
+                },
+                {
+                    name: "Magret à la sauce soja",
+                    image: require("@/assets/magretsoja.jpg"),
+                    description: "Faire mariner le magret",
+                    plannedDate: "demain midi"
+                },
+                {
+                    name: "Steak haricots verts",
+                    image: require("@/assets/steakharicot.jpg"),
+                    description: "",
+                    plannedDate: "demain soir"
+                },
+                {
+                    name: "Lasagnes",
+                    image: require("@/assets/lasagna.jpg"),
+                    description: "",
+                    plannedDate: "jeudi soir"
+                },
+                {
+                    name: "Pâtes au saumon",
+                    image: require("@/assets/patessaumon.jpg"),
+                    description: "",
+                    plannedDate: "vendredi soir"
+                },
+                {
+                    name: "Burgers",
+                    image: require("@/assets/burger.jpg"),
+                    description: "",
+                    plannedDate: "samedi midi"
+                }
+            ];
 
+            commit("SET_PLANNED_RECIPES", plannedRecipesMock);
+            return plannedRecipesMock;
+        },
         fetchCategories({commit}) {
             const mockCategories = [
                 {name: "Aperitif", type: "fruits", image: require("@/assets/aperitif.png"), options: 8},
