@@ -132,9 +132,9 @@
 import MenuAside from '@/components/menu/MenuAside.vue'
 import HeaderApp from "@/components/header/header.vue"
 import chiefHat from "@/components/icons/chiefHat.vue"
-import Preferences from "@/components/Preferences.vue"
-import AccountSettings from "@/components/AccountSettings.vue"
-import MyRecipes from "@/components/MyRecipes.vue";
+import Preferences from "@/components/account/Preferences.vue"
+import AccountSettings from "@/components/account/AccountSettings.vue"
+import MyRecipes from "@/components/recipes/MyRecipes.vue";
 
 export default {
     name: 'UserAccount',
@@ -142,9 +142,8 @@ export default {
 		HeaderApp,MenuAside,Preferences, chiefHat, AccountSettings, MyRecipes
 		},
 	}
-  </script>
-  <style scoped>
-  </style>
+
+</script>
   
   
   

@@ -7,7 +7,7 @@
 					<div class="container d-flex flex-stack">
 						<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
 							<a href="index.html">
-								<img alt="Logo" src="assets/chiefHat.svg" class="h-35px" />
+								<img alt="Logo" src="@/assets/chiefHat.svg" class="h-35px" />
 							</a>
 						</div>
 						<button class="btn btn-icon btn-active-color-primary me-n4" id="kt_aside_toggle">

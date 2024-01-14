@@ -22,8 +22,8 @@
                     <img alt="Logo" src="@/assets/userLogo.jpg" />
                   </div>
                   <div class="d-flex flex-column">
-                    <div class="fw-bold d-flex align-items-center fs-5">Alex </div>
-                    <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">alex@gmail.com</a>
+                    <div class="fw-bold d-flex align-items-center fs-5">{{userSettings.name}}</div>
+                    <a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{userSettings.email}}</a>
                   </div>
                 </div>
               </div>
@@ -64,7 +64,7 @@
                 </router-link>
               </div>
               <div class="menu-item px-5">
-                <a href="#"  class="menu-link px-5" @click="logout">{{$t('Auth_SignOut')}}</a>
+                <a href="#"  class="menu-link px-5" @click="disconnect">{{$t('Auth_SignOut')}}</a>
               </div>
             </div>
           </div>
@@ -78,11 +78,10 @@
 </template>
 <script>
 import { useRouter } from 'vue-router';
-import auth from '@/api/auth'; 
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n'; 
-import {  mapGetters } from 'vuex';
-import NewIngredientModal from './header/newIngredientModal.vue';
+import {  mapGetters, mapActions } from 'vuex';
+import NewIngredientModal from '@/components/header/newIngredientModal.vue';
 
 export default{
     name: "HeaderApp",
@@ -111,9 +110,11 @@ export default{
             showModal : false
         };
     },
-    mounted() {
+    computed: {
+        ...mapGetters(['currentLanguage', 'userSettings'])
     },
     methods: {
+      ...mapActions(['logout']),
         toggleDropdown(event) {
             event.stopPropagation();
             this.showDropdown = !this.showDropdown;
@@ -134,14 +135,13 @@ export default{
         goToInventory() {
             this.$router.push('/inventory');
         },
-        logout() {
-            auth.logout();
-            this.$router.push('/login');
+        disconnect() {
+            this.logout().then(() => {
+                this.$router.push('/login');  // Redirection après le logout
+            });
         }
     },
-    computed: {
-        ...mapGetters(['currentLanguage'])
-    },
+   
     components: { NewIngredientModal }
 }
 </script>

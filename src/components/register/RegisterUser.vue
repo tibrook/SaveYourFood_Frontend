@@ -126,10 +126,10 @@
   import { useVuelidate } from '@vuelidate/core'; 
   import imageLogo from "@/assets/chiefHat.svg"
   import leftImage from '@/assets/loginBackground.png';
-  import { register } from "@/api/register.js";
-  import LangageSwitcher from './utils/LangageSwitcher.vue';
+  import LangageSwitcher from '@/components/utils/LangageSwitcher.vue';
   import { required ,email  } from '@vuelidate/validators'; 
   import { useRouter } from 'vue-router';
+  import {  mapActions } from 'vuex';
   import { noSpecialChars, validatePassword } from '@/utils/validations';
     export default {
       name: 'RegisterUser',
@@ -206,6 +206,7 @@
         }
       },
       methods: {
+        ...mapActions(['register']),
         getProgressBarClass(strength) {
           if (strength < 40) return 'bg-danger';
           if (strength < 60) return 'bg-warning';
@@ -221,7 +222,7 @@
               lastName: this.form.lastName,
               username: this.form.username
             };
-           let response = await register(userData);
+           let response = await this.register(userData);
            console.log(response)
            if (response) {
               if (response.statusCode === 409) {

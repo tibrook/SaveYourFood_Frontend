@@ -2,9 +2,8 @@ import {createRouter, createWebHistory} from "vue-router";
 import UserLogin from "@/components/login/UserLogin.vue";
 import HomePage from "@/components/homepage/HomePage.vue";
 import RegisterUser from "@/components/register/RegisterUser.vue";
-import auth from "@/api/auth";
 import newIngredientModalVue from "@/components/header/newIngredientModal.vue";
-
+import store from "@/store";
 const routes = [
     {
         path: "/",
@@ -45,7 +44,7 @@ const routes = [
     {
         path: "/weekly-meals",
         name: "WeeklyMeals",
-        component: () => import("@/components/weeklyMeals/WeeklyMeals.vue")
+        component: () => import("@/components/weaklyMeals/WeeklyMeals.vue")
     },
     {
         path: "/account/preferences",
@@ -69,7 +68,7 @@ const router = createRouter({
     routes
 });
 router.beforeEach((to, from, next) => {
-    const isAuthenticated = auth.isAuthenticated();
+    const isAuthenticated = store.getters.isAuthenticated;
 
     if (isAuthenticated && (to.path === "/" || to.name === "Login")) {
         next({path: "/home"});

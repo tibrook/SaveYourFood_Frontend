@@ -13,7 +13,7 @@
 				<div class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-end p-12 p-lg-20">
             <div class="bg-body d-flex flex-column align-items-stretch flex-center rounded-4 w-md-600px p-20">
               <div class="d-flex flex-center flex-column flex-column-fluid px-lg-10 pb-15 pb-lg-20">
-                <form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" @submit.prevent="login" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="index.html" action="#">
+                <form class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework" @submit.prevent="connect" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="index.html" action="#">
                   <div class="text-center mb-11">
                     <h1 class="text-gray-900 fw-bolder mb-3">{{$t('SignIn_Title')}}</h1>
                     <div class="text-gray-500 fw-semibold fs-6">{{$t('SignIn_Subtitle')}}</div>
@@ -108,16 +108,15 @@
 </template>
   <script>
   import { ref } from 'vue';
-  import chiefHatVue from './icons/chiefHat.vue'
+  import chiefHatVue from '@/components/icons/chiefHat.vue'
   import leftImage from '@/assets/loginBackground.png';
   import imageLogo from "@/assets/chiefHat.svg"
   import { useVuelidate } from '@vuelidate/core'; 
   import { required ,email  } from '@vuelidate/validators'
   import { validatePassword } from '@/utils/validations';
   import { useRouter } from 'vue-router';
-  import  auth  from '@/api/auth';
   import { useI18n } from 'vue-i18n'; 
-  import {  mapGetters } from 'vuex';
+  import {  mapGetters,mapActions } from 'vuex';
 
   export default {
     name: 'UserLogin',
@@ -171,12 +170,13 @@
 
     },
     methods: {
-      async login() {
+      ...mapActions(['login']),
+      async connect() {
         this.loginError = '';
         this.v$.$validate();
         if (!this.v$.$error) {
           try {
-              const response = await auth.login(this.form);
+              const response = await this.login(this.form);
               if(response && response.statusCode){
                 this.loginError = response.message;
               }
@@ -196,7 +196,7 @@
   </script>
   <style scoped>
   #kt_app_signin{
-    background-image: url('../assets/auth/bg4.jpg')
+    background-image: url('../../assets/auth/bg4.jpg')
   }    
   </style>
   
