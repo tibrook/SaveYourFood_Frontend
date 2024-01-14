@@ -41,11 +41,19 @@
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-6 fv-row">
-                                <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" value="Alexandre" />
+                                <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" value="" />
                             </div>
                             <div class="col-lg-6 fv-row">
                                 <input type="text" name="lname" class="form-control form-control-lg form-control-solid" placeholder="Last name" value="Guillouet" />
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-6">
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Emplacements alimentaires</label>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Frigidaire" value="" />
                         </div>
                     </div>
                 </div>
@@ -69,12 +77,17 @@
     </div>
 </template>
 <script>
+import {  mapGetters } from 'vuex';
+
 export default {
     name: 'AccountSettings',
     data(){
         return{
             imageUrl: '@/assets/userLogo.jpg'
         }
+    },
+    computed: {
+     ...mapGetters(['userSettings'])
     },
     mounted(){
         //eslint-disable-next-line

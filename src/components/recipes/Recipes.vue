@@ -106,7 +106,7 @@
             //eslint-disable-next-line
             new Tagify(ingredientsInput);
          }
-        this.fetchRecipes()
+        this.fetchGeneratedRecipes()
         this.fetchCategories()
         if(this.allRecipes && this.allRecipes.length){
             this.recipes = this.allRecipes
@@ -114,7 +114,7 @@
      },
   
      methods: {
-        ...mapActions(['fetchRecipes', 'fetchCategories']),
+        ...mapActions(['fetchGeneratedRecipes', 'fetchCategories']),
 
          filterByCategory(categoryType) {
             this.selectedCategory = categoryType;

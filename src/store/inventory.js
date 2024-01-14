@@ -1,8 +1,8 @@
 export default {
     state() {
         return {
-            inventory: [],
-            InventoryCategories: []
+            inventory: {},
+            inventoryCategories: []
         };
     },
     getters: {
@@ -12,16 +12,22 @@ export default {
         getInventoryById: (state) => (id) => {
             return state.inventory.find((inventory) => inventory.id === id);
         },
-        categoriesInventory: (state) => {
-            return state.InventoryCategories;
+        inventoryCategories: (state) => {
+            return state.inventoryCategories;
         }
     },
     mutations: {
-        ADD_INVENTORY(state, inventory) {
-            state.inventory.push(inventory);
+        ADD_INVENTORY(state, {category, item}) {
+            if (!state.inventory[category]) {
+                state.inventory[category] = [];
+            }
+            state.inventory[category].push(item);
         },
-        SET_CATEGORIES_INVENTORY(state, InventoryCategories) {
-            state.InventoryCategories = InventoryCategories;
+        SET_INVENTORY(state, inventory) {
+            state.inventory = inventory;
+        },
+        SET_CATEGORIES_INVENTORY(state, inventoryCategories) {
+            state.inventoryCategories = inventoryCategories;
         },
         EDIT_INVENTORY(state, updatedInventory) {
             const index = state.inventory.findIndex((inventory) => inventory.id === updatedInventory.id);
@@ -107,12 +113,12 @@ export default {
             const mockCategories = [
                 {name: "Fruits & Légumes", type: "fruits", image: require("@/assets/fruitlegumes.jpg"), options: 8},
                 {name: "Viandes, Poissons", type: "meats", image: require("@/assets/viandespoissons.jpg"), options: 8},
-                {name: "Produits Laitiers", type: "dairy", image: require("@/assets/produitslaitiers.jpg"), options: 8},
-                {name: "Céréales & Féculents", type: "cereals", image: require("@/assets/cerealesfeculents.jpg"), options: 8},
+                {name: "Produits Laitiers", type: "dairy", image: require("@/assets/produitslaitiers.png"), options: 8},
+                {name: "Céréales & Féculents", type: "cereals", image: require("@/assets/cereales.png"), options: 8},
                 {name: "Epices & Condiments", type: "condiments", image: require("@/assets/epicerie.jpg"), options: 8},
                 {name: "Produits Secs", type: "condiments", image: require("@/assets/produitssec.jpg"), options: 8},
                 {name: "Conserves & Bocaux", type: "condiments", image: require("@/assets/conserves.jpg"), options: 8},
-                {name: "Boissons", type: "condiments", image: require("@/assets/beveragesImage.jpg"), options: 8}
+                {name: "Boissons", type: "condiments", image: require("@/assets/boissons.png"), options: 8}
             ];
             commit("SET_CATEGORIES_INVENTORY", mockCategories);
             return mockCategories;

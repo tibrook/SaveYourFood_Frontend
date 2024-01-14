@@ -1,7 +1,7 @@
 <template>
     <div class="card-header cursor-pointer">
         <div class="card-title m-0">
-            <h3 class="fw-bold m-0">{{$t('Settings_MyPreferences')}}</h3>
+            <h3 class="fw-bold m-0">{{$t('Settings_Preferences')}}</h3>
         </div>
         <a href="account/settings.html" class="btn btn-sm btn-primary align-self-center">{{$t('Settings_EditPreferences')}}</a>
     </div>

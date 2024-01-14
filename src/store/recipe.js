@@ -2,7 +2,8 @@ export default {
     state() {
         return {
             recipes: [],
-            categories: []
+            categories: [],
+            userRecipes: {}
         };
     },
     getters: {
@@ -14,14 +15,20 @@ export default {
         },
         categories: (state) => {
             return state.categories;
+        },
+        userRecipes: (state) => {
+            return state.userRecipes;
         }
     },
     mutations: {
-        Recipes_AddNew(state, recipe) {
+        ADD_RECIPE(state, recipe) {
             state.recipes.push(recipe);
         },
         SET_RECIPES(state, recipes) {
             state.recipes = recipes;
+        },
+        SET_USER_RECIPES(state, recipes) {
+            state.userRecipes = recipes;
         },
         SET_CATEGORIES(state, categories) {
             state.categories = categories;
@@ -40,7 +47,7 @@ export default {
         }
     },
     actions: {
-        fetchRecipes({commit}) {
+        fetchGeneratedRecipes({commit}) {
             const mockRecipes = [
                 {
                     name: "Bouillabaisse",
@@ -119,6 +126,83 @@ export default {
             commit("SET_RECIPES", mockRecipes);
             return mockRecipes;
         },
+        fetchUserRecipes({commit}) {
+            const mockRecipes = {
+                saladeCesar: {
+                    name: "Salade César Classique",
+                    image: require("@/assets/saladeCesar.jpg"),
+                    description: "Une salade verte traditionnelle de la cuisine italo-américaine avec une sauce César crémeuse, des croûtons croquants et du parmesan.",
+                    datePublication: "15 mars 2024",
+                    preparationTime: "20 min",
+                    portions: 4,
+                    cookingTime: "0 min",
+                    category: "Plat principal"
+                },
+                risottoChampignons: {
+                    name: "Risotto aux Champignons",
+                    image: require("@/assets/rissotoChampignons.jpg"),
+                    description: "Risotto crémeux et riche, agrémenté de champignons sauvages et parfumé à l'ail et au vin blanc.",
+                    datePublication: "20 mars 2024",
+                    preparationTime: "10 min",
+                    portions: 4,
+                    cookingTime: "45 min",
+                    category: "Plat principal"
+                },
+                curryPouletThai: {
+                    name: "Curry de Poulet Thaï",
+                    image: require("@/assets/curryPoulet.jpg"),
+                    description: "Curry thaï épicé et aromatique avec du poulet tendre, lait de coco et un mélange de fines herbes thaïlandaises.",
+                    datePublication: "25 mars 2024",
+                    preparationTime: "15 min",
+                    portions: 4,
+                    cookingTime: "30 min",
+                    category: "Plat principal"
+                },
+                tarteAuxPommes: {
+                    name: "Tarte aux Pommes",
+                    image: require("@/assets/tartepommes.jpg"),
+                    description: "Tarte aux pommes croustillante avec une garniture de pommes sucrées et une pointe de cannelle, parfaite comme dessert réconfortant.",
+                    datePublication: "30 mars 2024",
+                    preparationTime: "30 min",
+                    portions: 8,
+                    cookingTime: "1 h",
+                    category: "Dessert"
+                },
+                bouillabaisse: {
+                    name: "Bouillabaisse",
+                    image: require("@/assets/bouillabaise.jpg"),
+                    description: "Soupe de poissons provençale riche et robuste, garnie de fruits de mer et servie avec de la rouille.",
+                    datePublication: "5 avril 2024",
+                    preparationTime: "25 min",
+                    portions: 6,
+                    cookingTime: "40 min",
+                    category: "Plat principal"
+                },
+                burgerMaisonGourmet: {
+                    name: "Burger Maison Gourmet",
+                    image: require("@/assets/burger.jpg"),
+                    description: "Un burger juteux avec un steak haché de qualité, garni de fromage affiné, de laitue croquante, de tomate fraîche et de sauce maison, le tout dans un pain brioché artisanal.",
+                    datePublication: "15 avril 2024",
+                    preparationTime: "20 min",
+                    portions: 4,
+                    cookingTime: "10 min",
+                    category: "Plat principal"
+                },
+                paellaValenciana: {
+                    name: "Paella Valenciana",
+                    image: require("@/assets/burger.jpg"), // Remplacer par l'image appropriée
+                    description: "Paella espagnole authentique avec un mélange de viandes et fruits de mer, du riz safrané et une variété de légumes frais.",
+                    datePublication: "10 avril 2024",
+                    preparationTime: "15 min",
+                    portions: 6,
+                    cookingTime: "1 h",
+                    category: "Plat principal"
+                }
+            };
+            commit("SET_USER_RECIPES", mockRecipes);
+            return mockRecipes;
+        },
+
         fetchCategories({commit}) {
             const mockCategories = [
                 {name: "Aperitif", type: "fruits", image: require("@/assets/aperitif.png"), options: 8},
