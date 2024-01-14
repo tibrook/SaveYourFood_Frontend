@@ -47,7 +47,7 @@
 														<i class="ki-duotone ki-sms fs-4">
 															<span class="path1"></span>
 															<span class="path2"></span>
-														</i>admin@gmail.com</a>
+														</i>{{userSettings.email}}</a>
 													</div>
 												</div>
 											</div>
@@ -135,14 +135,17 @@ import chiefHat from "@/components/icons/chiefHat.vue"
 import Preferences from "@/components/account/Preferences.vue"
 import AccountSettings from "@/components/account/AccountSettings.vue"
 import MyRecipes from "@/components/recipes/MyRecipes.vue";
+import {  mapGetters } from 'vuex';
 
 export default {
     name: 'UserAccount',
 	components: {
 		HeaderApp,MenuAside,Preferences, chiefHat, AccountSettings, MyRecipes
-		},
-	}
-
+	},
+	computed: {
+     ...mapGetters(['userSettings'])
+    }
+}
 </script>
   
   

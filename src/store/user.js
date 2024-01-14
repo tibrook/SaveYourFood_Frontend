@@ -1,14 +1,17 @@
 import axios from "axios";
 
-const API_AUTH_URL = "http://127.0.0.1:3000/auth/login";
-const API_REGISTER_URL = "http://127.0.0.1:3000/users";
+const BASE_URL = "http://127.0.0.1:3000";
+const API_AUTH_URL = "/auth/login";
+const API_REGISTER_URL = "/users";
+// const API_USER_PREFERENCES_URL = "/user/preferences";
 
 export default {
     state() {
         return {
             token: localStorage.getItem("token") || null,
             language: localStorage.getItem("language") || "en",
-            userSettings: JSON.parse(localStorage.getItem("userSettings")) || {}
+            userSettings: JSON.parse(localStorage.getItem("userSettings")) || {},
+            userPreferences: null
         };
     },
     getters: {
@@ -16,7 +19,8 @@ export default {
         isAuthenticated: (state) => {
             return !!state.token;
         },
-        userSettings: (state) => state.userSettings
+        userSettings: (state) => state.userSettings,
+        userPreferences: (state) => state.userPreferences
     },
     mutations: {
         SET_LANGUAGE(state, newLanguage) {
@@ -34,6 +38,10 @@ export default {
         SET_USER_SETTINGS(state, settings) {
             state.userSettings = settings;
             localStorage.setItem("userSettings", JSON.stringify(settings));
+        },
+        SET_USER_PREFERENCES(state, preferences) {
+            state.userPreferences = preferences;
+            console.log(state.userPreferences);
         }
     },
     actions: {
@@ -45,7 +53,7 @@ export default {
         },
         async login({commit}, credentials) {
             try {
-                const response = await axios.post(API_AUTH_URL, credentials);
+                const response = await axios.post(BASE_URL + API_AUTH_URL, credentials);
                 if (response && response.status === 201) {
                     const token = response.data.access_token;
                     const userSettings = {
@@ -79,6 +87,35 @@ export default {
             } catch (error) {
                 console.error("Error occurred:", error);
                 return error.response ? error.response.data : {error: error.message};
+            }
+        },
+        async fetchUserPreferences({commit}) {
+            try {
+                // const response = await axios.get(BASE_URL + API_USER_PREFERENCES_URL, {
+                //     headers: {Authorization: `Bearer ${state.token}`}
+                // });
+                const response = {data: {}};
+
+                // Mockup to removed
+                response.data = {
+                    cuisineFavorite: "Française", // Favorite Cuisine
+                    favoriteFoods: ["Pasta", "Sushi", "Salmon"], // Favorite Foods
+                    preferredOrigin: "Méditerranéenne", // Preferred Origin
+                    allergies: ["Arachides", "Lactose"], // Allergies
+                    dislikedFoods: ["Oignons", "Ail"], // Disliked Foods
+                    dietaryRestrictions: ["Végétarien", "Sans gluten"], // Dietary Restrictions
+                    mealTypePreference: ["Dîner", "Déjeuner"], // Meal Type Preference
+                    cookingSkillLevel: "Intermédiaire", // Cooking Skill Level
+                    favoriteIngredients: ["Tomates", "Basilic", "Mozzarella"], // Favorite Ingredients
+                    healthFocus: ["Faible en calories", "Riche en protéines"], // Health Focus
+                    mealPreparationTime: "30 minutes", // Meal Preparation Time
+                    spiceTolerance: "Moyenne" // Spice Tolerance
+                };
+                if (response && response.data) {
+                    commit("SET_USER_PREFERENCES", response.data);
+                }
+            } catch (error) {
+                console.error("Error fetching user preferences:", error);
             }
         }
     }

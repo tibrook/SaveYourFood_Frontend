@@ -13,28 +13,28 @@
                 <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
                     <form id="kt_modal_new_target_form" class="form" action="#">
                         <div class="mb-13 text-center">
-                            <h1 class="mb-3">Importer un Aliment</h1>
+                            <h1 class="mb-3">{{$t('NewIngredient_ModalTitle')}}</h1>
                         </div>
                         <div class="row g-9 mb-8">
                             <div class="col-md-6 fv-row d-flex flex-column align-items-center">
                                 <div class="d-flex flex-center" data-kt-add-auth-action="qr-code">
                                     <img src="@/assets/media/misc/qr.png" alt="Scan this QR code" class="h-50px" />
                                 </div>
-                                <button class="btn btn-light-primary mt-4">Scan QrCode</button>
+                                <button class="btn btn-light-primary mt-4">{{$t('NewIngredient_ScanQrCode')}}</button>
                             </div>
 
                             <div class="col-md-6 fv-row d-flex flex-column align-items-center">
                                 <div class="d-flex flex-center" data-kt-add-auth-action="qr-code">
                                     <img src="@/assets/camera.png" alt="Scan this QR code" class="h-50px" />
                                 </div>
-                                <button class="btn btn-light-primary mt-4">Analyse Image</button>
+                                <button class="btn btn-light-primary mt-4">{{$t('NewIngredient_AnalyseImage')}}</button>
 
                             </div>
                         </div>
                         <div class="row g-9 mb-8">
                             <div class="col-md-6 fv-row">
-                                <label class="required fs-6 fw-semibold mb-2">Nom</label>
-                                <input type="text" class="form-control form-control-solid" placeholder="Entrer le nom de l'aliment" name="target_title" />
+                                <label class="required fs-6 fw-semibold mb-2">{{$t('NewIngredient_NameLabel')}}</label>
+                                <input type="text" class="form-control form-control-solid" :placeholder="$t('NewIngredient_NamePlaceholder')" name="target_title" />
                             </div>
                             <div class="col-md-6 fv-row d-flex flex-column align-items-center">
                                     <div  class="image-input image-input-outline" data-kt-image-input="true" :style="selectedIngredient ? 'background-image:url('+ selectedIngredient.image +')' : 'blank'">
@@ -60,12 +60,12 @@
                                             </i>
                                         </span>
                                     </div>
-                                    <div class="form-text">Fichier autorisés: png, jpg, jpeg.</div>
+                                    <div class="form-text">{{$t('Image_FormText')}}</div>
                                 </div>
                         </div>
                         <div class="row g-9 mb-8">
                             <div class="col-md-6 fv-row">
-                                <label class="required fs-6 fw-semibold mb-2">Catégorie</label>
+                                <label class="required fs-6 fw-semibold mb-2">{{$t('NewIngredient_CategoryLabel')}}</label>
                                 <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Sélectionner la cétagorie d'aliment" name="target_assign">
                                     <option value="">Légume</option>
                                     <option value="1">Fruit</option>
@@ -73,7 +73,7 @@
                                 </select>
                             </div>
                             <div class="col-md-6 fv-row">
-                                <label class="required fs-6 fw-semibold mb-2">Date de péremption</label>
+                                <label class="required fs-6 fw-semibold mb-2">{{$t('NewIngredient_ExpiryDateLabel')}}</label>
                                 <div class="position-relative d-flex align-items-center">
                                     <i class="ki-duotone ki-calendar-8 fs-2 position-absolute mx-4">
                                         <span class="path1"></span>
@@ -83,13 +83,13 @@
                                         <span class="path5"></span>
                                         <span class="path6"></span>
                                     </i>
-                                    <input class="form-control form-control-solid ps-12" placeholder="Sélectionner la date" name="due_date" />
+                                    <input class="form-control form-control-solid ps-12" :placeholder="$t('NewIngredient_ExpiryDatePlaceholder')" name="due_date" />
                                 </div>
                             </div>
                         </div>
                         <div class="row g-9 mb-8">
                             <div class="col-md-6 fv-row">
-                                <label class="required fs-6 fw-semibold mb-2">Emplacement</label>
+                                <label class="required fs-6 fw-semibold mb-2">{{$t('NewIngredient_LocationLabel')}}</label>
                                 <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Séléctionner l'emplacement" name="target_assign">
                                     <option value="">Placards</option>
                                     <option value="1">Frigo</option>
@@ -97,9 +97,9 @@
                                 </select>
                             </div>
                             <div class="col-md-6 fv-row">
-                                <label class="required fs-6 fw-semibold mb-2">Quantité</label>
+                                <label class="required fs-6 fw-semibold mb-2">{{$t('NewIngredient_QuantityLabel')}}</label>
                                 <div class="position-relative d-flex align-items-center">
-                                    <input class="form-control form-control-solid ps-12 w-200px" placeholder="Saisir la quantité" name="due_date" />
+                                    <input class="form-control form-control-solid ps-12 w-200px" :placeholder="$t('NewIngredient_QuantityPlaceholder')" name="due_date" />
                                     <select class="form-select form-select-solid w-40px" data-control="select2" data-hide-search="true" data-placeholder="Selectionner l'unité" name="target_assign">
                                         <option value="3">Kg</option>
                                         <option value="1">G</option>
@@ -109,14 +109,14 @@
                             </div>
                         </div>
                         <div class="d-flex flex-column mb-8">
-                            <label class="fs-6 fw-semibold mb-2">Description</label>
-                            <textarea class="form-control form-control-solid" rows="3" name="target_details" placeholder="Ajouter des détails"></textarea>
+                            <label class="fs-6 fw-semibold mb-2">{{$t('NewIngredient_DescriptionLabel')}}</label>
+                            <textarea class="form-control form-control-solid" rows="3" name="target_details" :placeholder="$t('NewIngredient_DescriptionPlaceholder')"></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="reset" id="kt_modal_new_target_cancel" class="btn btn-light me-3">Annuler</button>
+                            <button type="reset" id="kt_modal_new_target_cancel" class="btn btn-light me-3">{{$t('NewIngredient_CancelButton')}}</button>
                             <button type="submit" id="kt_modal_new_target_submit" class="btn btn-primary">
-                                <span class="indicator-label">Ajouter</span>
-                                <span class="indicator-progress">Please wait... 
+                                <span class="indicator-label">{{$t('NewIngredient_AddButton')}}</span>
+                                <span class="indicator-progress">{{$t('NewIngredient_PleaseWait')}}
                                 <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                             </button>
                         </div>

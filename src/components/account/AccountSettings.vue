@@ -33,11 +33,11 @@
                                 </i>
                             </span>
                         </div>
-                        <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                        <div class="form-text">{{$t('Image_FormText')}}</div>
                     </div>
                 </div>
                 <div class="row mb-6">
-                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Full Name</label>
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('NewIngredient_NameLabel')}}</label>
                     <div class="col-lg-8">
                         <div class="row">
                             <div class="col-lg-6 fv-row">
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="row mb-6">
-                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Language</label>
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Settings_Language')}}</label>
                     <div class="col-lg-8 fv-row">
                         <select name="language" aria-label="Select a Language" data-control="select2" data-placeholder="Select a language..." class="form-select form-select-solid form-select-lg">
                             <option value="">Select a Language...</option>
