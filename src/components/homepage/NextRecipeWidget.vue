@@ -17,7 +17,7 @@
                             </div>
                         </div>
                         <div class="full-width">
-                            <a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">{{ recipe.name }}</a>
+                            <router-link :to="`/recipe/${recipe.id}`">{{ recipe.name }}</router-link>
                             <div class="fs-7 text-muted fw-semibold mt-1">{{ recipe.description }}</div>
                         </div>
                     </div>

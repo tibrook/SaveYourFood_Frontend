@@ -42,6 +42,11 @@ const routes = [
         component: () => import("@/components/recipes/Recipes.vue")
     },
     {
+        path: "/recipe/:id",
+        name: "EditRecipe",
+        component: () => import("@/components/recipes/Recipes.vue")
+    },
+    {
         path: "/weekly-meals",
         name: "WeeklyMeals",
         component: () => import("@/components/weaklyMeals/WeeklyMeals.vue")

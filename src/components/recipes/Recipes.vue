@@ -3,21 +3,7 @@
          <div class="page d-flex flex-row flex-column-fluid">
              <MenuAside />
              <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
-                 <div class="header-mobile py-3">
-                     <div class="container d-flex flex-stack">
-                         <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
-                             <a href="index.html">
-                                 <img alt="Logo" src="@/assets/chiefHat.svg" class="h-35px" />
-                             </a>
-                         </div>
-                         <button class="btn btn-icon btn-active-color-primary me-n4" id="kt_aside_toggle">
-                             <i class="ki-duotone ki-abstract-14 fs-2x">
-                                 <span class="path1"></span>
-                                 <span class="path2"></span>
-                             </i>
-                         </button>
-                     </div>
-                 </div>
+                 <HeaderMobile />
                  <HeaderApp :page="$t('Recipes_List')"/>
                  <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<div class="container-xxl" id="kt_content_container">
@@ -72,6 +58,7 @@
  import HeaderApp from "@/components/header/header.vue";
  import MenuAside from '@/components/menu/MenuAside.vue'
  import RecipeForm from "@/components/recipes/RecipeForm.vue"
+ import HeaderMobile from "@/components/header/HeaderMobile.vue"
  import RecipeCard from "@/components/recipes/RecipeCard.vue"
  import { mapGetters,mapActions } from 'vuex';
 
@@ -79,7 +66,7 @@
      name: 'RecipesList', 
      components: {
          MenuAside,RecipeForm,
-         HeaderApp, RecipeCard
+         HeaderApp, RecipeCard,HeaderMobile
      },
      data() {
          return {
@@ -101,21 +88,37 @@
         },
     },
      mounted() {
+       
          if(document.querySelector("#kt_tagify_1")){
             const ingredientsInput = document.querySelector("#kt_tagify_1");
             //eslint-disable-next-line
             new Tagify(ingredientsInput);
          }
-        this.fetchGeneratedRecipes()
-        this.fetchCategories()
+         this.onExecuteQueries()
+      
         if(this.allRecipes && this.allRecipes.length){
             this.recipes = this.allRecipes
         }
+        
      },
   
      methods: {
-        ...mapActions(['fetchGeneratedRecipes', 'fetchCategories']),
+        ...mapActions(['fetchAllRecipes', 'fetchCategories']),
 
+        async onExecuteQueries(){
+            await this.fetchAllRecipes()
+            await this.fetchCategories()
+            const recipeId = parseInt(this.$route.params.id);
+            if (recipeId) {
+                const foundRecipe = this.allRecipes.find(recipe => recipe.id === recipeId);
+                console.log(foundRecipe)
+                console.log(this.allRecipes)
+                if (foundRecipe) {
+                    this.selectedRecipe = foundRecipe;
+                    this.isEditFormMode = true;
+                }
+            }
+        },
          filterByCategory(categoryType) {
             this.selectedCategory = categoryType;
          },
@@ -140,7 +143,8 @@
          selectIngredient(ingredient) {
              this.selectedRecipe = ingredient;
          }
-     }
+     },
+   
    });
    </script>
    
