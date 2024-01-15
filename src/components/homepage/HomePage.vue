@@ -52,86 +52,9 @@
 							</div>
 							<div class="col-xl-12 ps-xl-12">
 								<div class="row mb-5 mb-xl-8 g-5 g-xl-12">
-									<ConsumeQuicklyWidget :items="quickConsumeItems"/>
-									<NextRecipeWidget :recipes="plannedRecipes"/>
-									<ShoppingListWidget :shoppingList="shoppingList"/>
-									<div class="card card-xl-stretch mb-5 mb-xl-8 col-4">
-										<div class="card-header border-0">
-											<h3 class="card-title fw-bold text-gray-900">{{$t('ShoppingList_Main')}}</h3>
-										</div>
-										<div class="card-body pt-2">
-											<div class="d-flex align-items-center mb-8">
-												<span class="bullet bullet-vertical h-40px bg-danger"></span>
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
-												</div>
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Magrêt de canard</a>
-
-													<span class="text-muted fw-semibold d-block">1 magret (300g)</span>
-												</div>
-												<span class="badge badge-light-warning fs-8 fw-bold">Boucher</span>
-											</div>
-											<div class="d-flex align-items-center mb-8">
-												<span class="bullet bullet-vertical h-40px bg-danger"></span>
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
-												</div>
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pâtes</a>
-
-													<span class="text-muted fw-semibold d-block">500g</span>
-												</div>
-												<span class="badge badge-light-primary fs-8 fw-bold">Supermarché</span>
-											</div>
-											<div class="d-flex align-items-center mb-8">
-												<span class="bullet bullet-vertical h-40px bg-warning"></span>
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
-												</div>
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pommes de terre</a>
-													<span class="text-muted fw-semibold d-block">3 Kgs</span>
-												</div>
-												<span class="badge badge-light-success fs-8 fw-bold">Producteur</span>
-											</div>
-											<div class="d-flex align-items-center mb-8">
-												<span class="bullet bullet-vertical h-40px bg-success"></span>
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
-												</div>
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Haricots verts</a>
-													<span class="text-muted fw-semibold d-block">500g</span>
-												</div>
-												<span class="badge badge-light-success fs-8 fw-bold">Producteur</span>
-											</div>
-											<div class="d-flex align-items-center mb-8">
-												<span class="bullet bullet-vertical h-40px bg-warning"></span>
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
-												</div>
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pâte à pizza</a>
-
-													<span class="text-muted fw-semibold d-block">For 3 pizza</span>
-												</div>
-												<span class="badge badge-light-danger fs-8 fw-bold">Boulangerie</span>
-											</div>
-											<div class="d-flex align-items-center ">
-												<span class="bullet bullet-vertical h-40px bg-success"></span>
-												<div class="form-check form-check-custom form-check-solid mx-5">
-													<input class="form-check-input" type="checkbox" value="">
-												</div>
-												<div class="flex-grow-1">
-													<a href="#" class="text-gray-800 text-hover-primary fw-bold fs-6">Pommes</a>
-
-													<span class="text-muted fw-semibold d-block">400g</span>
-												</div>
-												<span class="badge badge-light-success fs-8 fw-bold">Producteur</span>
-											</div>
-										</div>
-									</div>
+									<ConsumeQuicklyWidget class="h-500px overflow-scroll" :items="quickConsumeItems"/>
+									<NextRecipeWidget class="h-500px overflow-scroll" :recipes="plannedRecipes"/>
+									<ShoppingListWidget class="h-500px overflow-scroll" :shoppingList="shoppingList"/>
 								</div>
 								<div class="card   mb-xl-8">
 									<div class="card-header border-0 pt-5">

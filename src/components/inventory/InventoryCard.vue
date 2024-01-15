@@ -1,5 +1,5 @@
 <template>
-    <div class="card card-flush mb-4" :class="selectedIngredient === item ? 'border-primary border-4px' : ''" >
+    <div class="card card-flush mb-4 me-4" :class="selectedIngredient === item ? 'border-primary border-4px' : ''" >
         <div class="card-body text-center  cursor-pointer">
             <img :src="item.image" class="rounded-3 mb-2 mt-2" alt="" style="width: 100px; height: 100px;" />
             <div class="mb-2">
