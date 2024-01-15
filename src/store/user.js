@@ -11,7 +11,8 @@ export default {
             token: localStorage.getItem("token") || null,
             language: localStorage.getItem("language") || "en",
             userSettings: JSON.parse(localStorage.getItem("userSettings")) || {},
-            userPreferences: null
+            userPreferences: null,
+            userPreferencesStatistics: null
         };
     },
     getters: {
@@ -20,7 +21,8 @@ export default {
             return !!state.token;
         },
         userSettings: (state) => state.userSettings,
-        userPreferences: (state) => state.userPreferences
+        userPreferences: (state) => state.userPreferences,
+        userPreferencesStatistics: (state) => state.userPreferencesStatistics
     },
     mutations: {
         SET_LANGUAGE(state, newLanguage) {
@@ -42,6 +44,9 @@ export default {
         SET_USER_PREFERENCES(state, preferences) {
             state.userPreferences = preferences;
             console.log(state.userPreferences);
+        },
+        SET_USER_PREFERENCES_STATISTICS(state, preferences) {
+            state.userPreferencesStatistics = preferences;
         }
     },
     actions: {
@@ -119,6 +124,45 @@ export default {
             } catch (error) {
                 console.error("Error fetching user preferences:", error);
             }
+        },
+        async fetchUserPreferencesStatistics({commit}) {
+            // const response = await axios.get(BASE_URL + API_USER_PREFERENCES_URL, {
+            //     headers: {Authorization: `Bearer ${state.token}`}
+            // });
+            const mockData = [
+                {
+                    icon: "fa-solid fa-plate-wheat fs-2qx",
+                    title: "Top food",
+                    subtitle: "Rice",
+                    meals: 19
+                },
+                {
+                    icon: "fa-solid fa-carrot fs-2qx",
+                    title: "Top Vegetable",
+                    subtitle: "Zucchini",
+                    meals: 6
+                },
+                {
+                    icon: "fa-solid fa-utensils fs-2qx",
+                    title: "Favorite Cuisine",
+                    subtitle: "Indian",
+                    meals: 3
+                },
+                {
+                    icon: "fa-solid fa-cake-candles fs-2qx",
+                    title: "Favorite Dessert",
+                    subtitle: "Fondant au chocolat",
+                    meals: 3
+                },
+                {
+                    icon: "fa-solid fa-champagne-glasses fs-2qx",
+                    title: "Favorite Appetizer",
+                    subtitle: "Wraps Saumon",
+                    meals: 5
+                }
+            ];
+            commit("SET_USER_PREFERENCES_STATISTICS", mockData);
+            return mockData;
         }
     }
 };

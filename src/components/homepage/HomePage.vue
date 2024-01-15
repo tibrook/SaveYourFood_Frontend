@@ -50,101 +50,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-xl-12 ps-xl-12">
+							<div class="col-xl-12 ps-xl-12 mt-0">
 								<div class="row mb-5 mb-xl-8 g-5 g-xl-12">
 									<ConsumeQuicklyWidget class="h-500px overflow-scroll" :items="quickConsumeItems"/>
 									<NextRecipeWidget class="h-500px overflow-scroll" :recipes="plannedRecipes"/>
 									<ShoppingListWidget class="h-500px overflow-scroll" :shoppingList="shoppingList"/>
 								</div>
-								<div class="card   mb-xl-8">
-									<div class="card-header border-0 pt-5">
-										<h3 class="card-title align-items-start flex-column">
-											<span class="card-label fw-bold text-gray-900">Preferences</span>
-										</h3>
-									</div>
-									<div class="card-body pt-5">
-										<div class="d-flex align-items-sm-center mb-7">
-											<div class="symbol symbol-50px me-5">
-												<span class="symbol-label">
-													<i class="fa-solid fa-plate-wheat fs-2qx"></i>
-												</span>
-											</div>
-											<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
-												<div class="flex-grow-1 me-2">
-													<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Top food</a>
-													
-													<span class="text-muted fw-semibold d-block fs-7">Rice</span>
-												</div>                     
-
-												<span class="badge badge-light fw-bold my-2">19 meals</span>
-											</div>
-										</div>
-										<div class="d-flex align-items-sm-center mb-7">
-											<div class="symbol symbol-50px me-5">
-												<span class="symbol-label">
-													<i class="fa-solid fa-carrot fs-2qx"></i>
-												</span>
-											</div>
-											<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
-												<div class="flex-grow-1 me-2">
-													<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Top Vegetable</a>
-													
-													<span class="text-muted fw-semibold d-block fs-7">Zucchini</span>
-												</div>                     
-
-												<span class="badge badge-light fw-bold my-2">6 meals</span>
-											</div>
-										</div>
-										<div class="d-flex align-items-sm-center mb-7">
-											<div class="symbol symbol-50px me-5">
-												<span class="symbol-label">
-													<i class="fa-solid fa-utensils fs-2qx"></i>
-												</span>
-											</div>
-											<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
-												<div class="flex-grow-1 me-2">
-													<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorise cuisine</a>
-													
-													<span class="text-muted fw-semibold d-block fs-7">Indian</span>
-												</div>                     
-
-												<span class="badge badge-light fw-bold my-2">3 meals</span>
-											</div>
-										</div>
-										<div class="d-flex align-items-sm-center mb-7">
-											<div class="symbol symbol-50px me-5">
-												<span class="symbol-label">
-													<i class="fa-solid fa-cake-candles fs-2qx"></i>
-												</span>
-											</div>
-											<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
-												<div class="flex-grow-1 me-2">
-													<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorite dessert</a>
-													
-													<span class="text-muted fw-semibold d-block fs-7">Fondant au chocolat</span>
-												</div>                     
-
-												<span class="badge badge-light fw-bold my-2">3 meals</span>
-											</div>
-										</div>
-										<div class="d-flex align-items-sm-center mb-7">
-											<div class="symbol symbol-50px me-5">
-												<span class="symbol-label">
-													<i class="fa-solid fa-champagne-glasses fs-2qx"></i>
-												</span>
-											</div>
-											<div class="d-flex align-items-center flex-row-fluid flex-wrap">                    
-												<div class="flex-grow-1 me-2">
-													<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold">Favorite appetizer</a>
-													
-													<span class="text-muted fw-semibold d-block fs-7">Wraps Saumon</span>
-												</div>                     
-
-												<span class="badge badge-light fw-bold my-2">5 meals</span>
-											</div>
-										</div>
-									</div>
-								</div>
+								<UserPreferencesWidget :preferences="userPreferencesStatistics" />
 							</div>
 						</div>
 					</div>
@@ -162,25 +74,27 @@ import { mapGetters,mapActions } from 'vuex';
 import ConsumeQuicklyWidget from "./ConsumeQuicklyWidget.vue"
 import NextRecipeWidget from "./NextRecipeWidget.vue"
 import ShoppingListWidget from "./ShoppingListWidget.vue"
+import UserPreferencesWidget from './UserPreferencesWidget.vue';
 export default defineComponent({
   
 	name: 'HomePage',
 	components: {
-		HeaderApp,MenuAside,ConsumeQuicklyWidget, NextRecipeWidget,ShoppingListWidget
+		HeaderApp,MenuAside,ConsumeQuicklyWidget, NextRecipeWidget,ShoppingListWidget,UserPreferencesWidget
 	},
 	mounted(){
 		this.onExecuteQueries()
 	},
 	computed: {
-			...mapGetters(['quickConsumeItems', 'plannedRecipes', 'shoppingList']),
+			...mapGetters(['quickConsumeItems', 'plannedRecipes', 'shoppingList', 'userPreferencesStatistics']),
 
 	},
 	methods: {
-		...mapActions(['fetchQuickConsumeItems', 'fetchPlannedRecipes', 'fetchShoppingList']),
-		async onExecuteQueries(){
+		...mapActions(['fetchQuickConsumeItems', 'fetchPlannedRecipes', 'fetchShoppingList', 'fetchUserPreferencesStatistics']),
+		onExecuteQueries(){
 			this.fetchQuickConsumeItems()
 			this.fetchPlannedRecipes()
-			await this.fetchShoppingList()
+			this.fetchShoppingList()
+			this.fetchUserPreferencesStatistics()
 		}
 	}
 })
