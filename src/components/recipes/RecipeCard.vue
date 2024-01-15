@@ -1,29 +1,30 @@
 <template>
       <div class="col-md-6 col-xl-4" >
         <a href="#" class="card border-hover-primary" @click="onRecipeClick">
-            <div class="card-header border-0 pt-9 me-4 ms-4">
+            <div class="card-header border-0 pt-9 m-auto">
                 <div class="card-title m-0 ">
-                    <div class="symbol symbol-50px  bg-light full-width">
+                    <div class="symbol symbol-150px  bg-light full-width">
                         <div class="symbol-label bg-light">
-                        <img :src="recipe.image" alt="image" class="full-height-img" />
+                            <img :src="recipe.image" alt="image" class="full-height-img m-auto" />
                         </div>
+
                     </div>
                 </div>
                 <!-- <div class="card-toolbar">
                     <span class="badge badge-light-primary fw-bold me-auto px-4 py-3">{{recipe.category}}</span>
                 </div> -->
             </div>
-            <div class="card-body p-9">
-                <div class="fs-3 fw-bold text-gray-900">{{recipe.name}}</div>
+            <div class="card-body p-2">
+                <div class="fs-3 fw-bold text-gray-900 text-center mb-2">{{recipe.name}}</div>
                 <p class="text-gray-500 fw-semibold fs-5 mt-1 mb-7">{{recipe.description}}</p>
                 <div class="d-flex flex-wrap mb-5">
                     <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 mb-3">
                         <div class="fs-6 text-gray-800 fw-bold">{{recipe.preparationTime}}</div>
-                        <div class="fw-semibold text-gray-500">{{$t('Card_Preparation')}}</div>
+                        <div class="fw-semibold text-gray-500">{{$t('Label_PreparationTime')}}</div>
                     </div>
                     <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 mb-3">
                         <div class="fs-6 text-gray-800 fw-bold">{{recipe.cookingTime}}</div>
-                        <div class="fw-semibold text-gray-500">{{$t('Card_CookingTime')}}</div>
+                        <div class="fw-semibold text-gray-500">{{$t('Label_CookingTime')}}</div>
                     </div>
                 </div>
             </div>

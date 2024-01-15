@@ -25,9 +25,6 @@ export default{
             default: null        
         }
     },
-    mounted(){
-        console.log(this.item)
-    },
     methods: {
         onItemClick() {
             this.$emit('item-clicked', this.recipe);

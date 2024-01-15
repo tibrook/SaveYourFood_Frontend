@@ -51,7 +51,7 @@
                             </div>
                             <div class="flex-row-auto w-xl-450px" v-if="selectedIngredient">
 
-                               <InventoryForm v-if="selectedIngredient" :selectedIngredient="selectedIngredient" @submit="handleFormSubmit" @closeIngredientForm='handleCloseForm' />
+                               <InventoryForm v-if="selectedIngredient" :selectedIngredient="selectedIngredient"  @closeIngredientForm='handleCloseForm' />
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,6 @@ import { mapGetters,mapActions } from 'vuex';
         },
         async fetchCategoriesData() {
             await this.fetchInventoryCategories()
-            console.log(this.inventoryCategories)
         },
         async fetchInventoryData() {
             await this.fetchInventory()
@@ -121,7 +120,6 @@ import { mapGetters,mapActions } from 'vuex';
         },
         selectItem(item) {
             this.selectedIngredient = item;
-            console.log(item)
         },
         addItem() {
             this.newItem.id = Date.now().toString();

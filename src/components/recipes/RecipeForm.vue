@@ -1,7 +1,7 @@
 <template>
     <div class="card card-flush bg-body" id="kt_pos_form">
         <div class="card-header pt-5">
-            <h3 class="card-title fw-bold text-gray-800 fs-2qx">{{isEditing ?selectedRecipe?.name :  $t('Form_Title_AddRecipe') }}</h3>
+            <h3 class="card-title fw-bold text-gray-800 fs-2qx">{{isEditing ? selectedRecipe.name :  $t('Form_Title_AddRecipe') }}</h3>
         </div>
         <form id="kt_account_profile_details_form" class="form">
         <div class="card-body border-top p-9">
@@ -10,7 +10,7 @@
                 <div class="col-lg-8">
                     <div  class="image-input image-input-outline image-input-empty" data-kt-image-input="true" :style="selectedRecipe ? 'background-image:url('+ selectedRecipe.image +')' : 'blank'">
                         <div class="image-input-wrapper w-125px h-125px"></div>
-                        <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" :title="$t('Tooltip_ChangeImage')">
+                        <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" :title="$t('Image_ChangeImage')">
                             <i class="ki-duotone ki-pencil fs-7">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
@@ -18,13 +18,13 @@
                             <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
                             <input type="hidden" name="avatar_remove" />
                         </label>
-                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" :title="$t('Tooltip_CancelImage')">
+                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" :title="$t('Image_CancelImage')">
                             <i class="ki-duotone ki-cross fs-2">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
                             </i>
                         </span>
-                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" :title="$t('Tooltip_RemoveImage')">
+                        <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" :title="$t('Image_RemoveImage')">
                             <i class="ki-duotone ki-cross fs-2">
                                 <span class="path1"></span>
                                 <span class="path2"></span>
@@ -80,17 +80,15 @@
             <div class="row mb-6">
                 <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_PreparationSteps')}}</label>
                 <div class="col-lg-8 fv-row">
-                    <placeholder type="text" name="fname" class="form-control" placeholder='type'>
-                    {{   selectedRecipe ?selectedRecipe?.preparationSteps  : undefined }}
-                    </placeholder>
+                    <textarea type="text" name="fname" class="form-control" :value="selectedRecipe ?selectedRecipe.preparationSteps  : undefined ">
+                    </textarea>
                 </div>
             </div>
             <div class="row mb-6">
                 <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_TipsAndTricks')}}</label>
                 <div class="col-lg-8 fv-row">
-                    <placeholder type="text" name="fname" class="form-control  mb-3 mb-lg-0" placeholder="Conseils" >
-                        {{ selectedRecipe ?selectedRecipe?.tips : undefined }}
-                    </placeholder>
+                    <textarea type="text" name="fname" class="form-control  mb-3 mb-lg-0" :value="selectedRecipe ?selectedRecipe.selectedRecipe  : undefined" >
+                    </textarea>
                 </div>
             </div>
             <div class="row mb-6">
@@ -105,9 +103,8 @@
             <div class="row mb-6">
                 <label class="col-lg-4 col-form-label fw-semibold fs-6">Description</label>
                 <div class="col-lg-8 fv-row">
-                    <placeholder  name="fname" class="form-control" placeholder="Description"  >
-                        {{ selectedRecipe ?selectedRecipe.description : undefined }}
-                    </placeholder>
+                    <textarea name="fname" class="form-control" :value="selectedRecipe ?selectedRecipe.description : undefined" >
+                    </textarea>
                 </div>
             </div>
             <div class="row mb-6">
@@ -132,9 +129,15 @@
       },
       isEditing: {
         type: Boolean,
-        required: true
+        default:false
       },
     },
+    data(){
+        return{
+        }
+    },
+    watch:{
+    }
   };
   </script>
   <style scoped>

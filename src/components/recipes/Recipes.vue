@@ -44,7 +44,7 @@
 									</div>
 								</div>
 								<div class="flex-row-auto w-xl-450px">
-                                    <RecipeForm v-if="isFormVisible" :isEditing="isEditFormMode" :selectedRecipe="selectedRecipe" @submit="handleFormSubmit" />
+                                    <RecipeForm v-if="isFormVisible" :isEditing="isEditFormMode" :selectedRecipe="selectedRecipe" />
 								</div>
 							</div>
 						</div>
@@ -111,8 +111,6 @@
             const recipeId = parseInt(this.$route.params.id);
             if (recipeId) {
                 const foundRecipe = this.allRecipes.find(recipe => recipe.id === recipeId);
-                console.log(foundRecipe)
-                console.log(this.allRecipes)
                 if (foundRecipe) {
                     this.selectedRecipe = foundRecipe;
                     this.isEditFormMode = true;
