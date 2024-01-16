@@ -404,10 +404,10 @@ export default {
         },
         fetchCategories({commit}) {
             const mockCategories = [
-                {name: "Aperitif", type: "fruits", image: require("@/assets/aperitif.png"), options: 8},
-                {name: "Entrées", type: "meats", image: require("@/assets/entrees.png"), options: 8},
-                {name: "Plât", type: "cereals", image: require("@/assets/plats.png"), options: 8},
-                {name: "Dessert", type: "dairy", image: require("@/assets/desserts.png"), options: 8}
+                {name: "Aperitif", category: "Aperitif", type: "fruits", image: require("@/assets/aperitif.png"), options: 8},
+                {name: "Entrée", category: "Entrée", type: "meats", image: require("@/assets/entrees.png"), options: 8},
+                {name: "Plât", category: "Plât", type: "cereals", image: require("@/assets/plats.png"), options: 8},
+                {name: "Dessert", category: "Dessert", type: "dairy", image: require("@/assets/desserts.png"), options: 8}
             ];
             commit("SET_CATEGORIES", mockCategories);
             return mockCategories;

@@ -19,7 +19,7 @@
 														</div>
 														<div class="">
 															<span class="text-gray-800 fw-bold fs-2 d-block">{{category.name}}</span>
-															<span class="text-gray-500 fw-semibold fs-7">8 apéritifs</span>
+                                                            <span class="text-gray-500 fw-semibold fs-7">{{currentTab === 'generatedRecipes' ?   generatedRecipeCountByCategory[category.name] || 0 : userRecipeCountByCategory[category.name]  || 0 }} recettes</span>
 														</div>
 													</a>
                                                 </li>
@@ -89,6 +89,21 @@
         ...mapGetters(['generatedRecipes', 'categories', 'userRecipes']),
         filteredRecipes() {
             return this.currentTab === 'userRecipes' ? this.userRecipes : this.generatedRecipes;
+        },
+        generatedRecipeCountByCategory() {
+            let count = {};
+            console.log(this.generatedRecipes)
+            this.generatedRecipes.forEach((recipe) => {
+                count[recipe.category] = (count[recipe.category] || 0) + 1;
+            });
+            return count || 0;
+        },
+        userRecipeCountByCategory() {
+            let count = {};
+            this.userRecipes.forEach((recipe) => {
+                count[recipe.category] = (count[recipe.category] || 0) + 1;
+            });
+            return count || 0;
         },
     },
      mounted() {
