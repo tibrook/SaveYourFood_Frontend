@@ -1,7 +1,14 @@
 <template>
       <div class="col-md-6 col-xl-4" >
-        <a href="#" class="card border-hover-primary" @click="onRecipeClick">
+        
+        <a href="#" class="card border-hover-primary" @click="onRecipeClick" :class="selectedRecipe ? 'border-primary': undefined" >
+            <div class="add-icon " @click.stop="addToFavorites(recipe)" @mouseover.stop>
+                    <i v-if="myRecipe" class="fa fa-plus-circle fs-2 "></i>
+                    <i v-else  class="fa-solid fa-circle-minus fs-2 "></i>
+
+                </div>
             <div class="card-header border-0 pt-9 m-auto">
+                
                 <div class="card-title m-0 ">
                     <div class="symbol symbol-150px  bg-light full-width">
                         <div class="symbol-label bg-light">
@@ -10,6 +17,7 @@
 
                     </div>
                 </div>
+                
                 <!-- <div class="card-toolbar">
                     <span class="badge badge-light-primary fw-bold me-auto px-4 py-3">{{recipe.category}}</span>
                 </div> -->
@@ -37,11 +45,22 @@ export default{
         recipe:{
             type: Object, 
             default:null
+        },
+        myRecipe:{
+            type: Boolean, 
+            required:true
+        }
+    },
+    data(){
+        return{
+            selectedRecipe: false,
+
         }
     },
     methods: {
         onRecipeClick() {
             this.$emit('recipe-clicked', this.recipe);
+            this.selectedRecipe = this.recipe
         }
     }
 }
@@ -56,4 +75,20 @@ export default{
   object-fit: cover;
   border-radius: inherit; 
 }
+.add-icon {
+    color: green; 
+    position: absolute;
+    right: 16px;
+    top:8px;
+    transition: color 0.3s ease;
+    z-index: 10;
+    /* autres styles de l'icône */
+}
+.fa-plus-circle{
+    color: green; 
+}
+.fa-circle-minus{
+    color: red; 
+}
+
 </style>

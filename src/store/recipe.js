@@ -1,11 +1,11 @@
 export default {
     state() {
         return {
-            recipes: [],
-            categories: [],
-            userRecipes: {},
-            generatedRecipes: {},
-            plannedRecipes: []
+            recipes: null,
+            categories: null,
+            userRecipes: null,
+            generatedRecipes: null,
+            plannedRecipes: null
         };
     },
     getters: {
@@ -36,7 +36,7 @@ export default {
             state.recipes = recipes;
         },
         SET_GENERATED_RECIPES(state, recipes) {
-            state.recipes = recipes;
+            state.generatedRecipes = recipes;
         },
         SET_USER_RECIPES(state, recipes) {
             state.userRecipes = recipes;
@@ -281,8 +281,8 @@ export default {
             return mockRecipes;
         },
         fetchUserRecipes({commit}) {
-            const mockRecipes = {
-                saladeCesar: {
+            const mockRecipes = [
+                {
                     id: 7,
                     name: "Salade César Classique",
                     image: require("@/assets/saladeCesar.jpg"),
@@ -293,7 +293,7 @@ export default {
                     cookingTime: "0 min",
                     category: "Plat principal"
                 },
-                risottoChampignons: {
+                {
                     id: 8,
                     name: "Risotto aux Champignons",
                     image: require("@/assets/rissotoChampignons.jpg"),
@@ -304,7 +304,7 @@ export default {
                     cookingTime: "45 min",
                     category: "Plat principal"
                 },
-                curryPouletThai: {
+                {
                     id: 9,
                     name: "Curry de Poulet Thaï",
                     image: require("@/assets/curryPoulet.jpg"),
@@ -315,7 +315,7 @@ export default {
                     cookingTime: "30 min",
                     category: "Plat principal"
                 },
-                tarteAuxPommes: {
+                {
                     id: 10,
                     name: "Tarte aux Pommes",
                     image: require("@/assets/tartepommes.jpg"),
@@ -326,7 +326,7 @@ export default {
                     cookingTime: "1 h",
                     category: "Dessert"
                 },
-                bouillabaisse: {
+                {
                     id: 11,
                     name: "Bouillabaisse",
                     image: require("@/assets/bouillabaise.jpg"),
@@ -336,29 +336,8 @@ export default {
                     portions: 6,
                     cookingTime: "40 min",
                     category: "Plat principal"
-                },
-                burgerMaisonGourmet: {
-                    id: 12,
-                    name: "Burger Maison Gourmet",
-                    image: require("@/assets/burger.jpg"),
-                    description: "Un burger juteux avec un steak haché de qualité, garni de fromage affiné, de laitue croquante, de tomate fraîche et de sauce maison, le tout dans un pain brioché artisanal.",
-                    datePublication: "15 avril 2024",
-                    preparationTime: "20 min",
-                    portions: 4,
-                    cookingTime: "10 min",
-                    category: "Plat principal"
-                },
-                paellaValenciana: {
-                    name: "Paella Valenciana",
-                    image: require("@/assets/burger.jpg"), // Remplacer par l'image appropriée
-                    description: "Paella espagnole authentique avec un mélange de viandes et fruits de mer, du riz safrané et une variété de légumes frais.",
-                    datePublication: "10 avril 2024",
-                    preparationTime: "15 min",
-                    portions: 6,
-                    cookingTime: "1 h",
-                    category: "Plat principal"
                 }
-            };
+            ];
             commit("SET_USER_RECIPES", mockRecipes);
             return mockRecipes;
         },
