@@ -43,7 +43,6 @@ export default {
         },
         SET_USER_PREFERENCES(state, preferences) {
             state.userPreferences = preferences;
-            console.log(state.userPreferences);
         },
         SET_USER_PREFERENCES_STATISTICS(state, preferences) {
             state.userPreferencesStatistics = preferences;

@@ -56,7 +56,7 @@
             <label class="col-lg-4 fw-semibold text-muted">{{$t('Preferences_cookingSkillLevel')}}
             </label>
             <div class="col-lg-8 d-flex align-items-center">
-                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences.cookingSkillLevel}}</span>
+                <span class="fw-bold fs-6 text-gray-800 me-2">{{userPreferences?.cookingSkillLevel}}</span>
             </div>
         </div>
         <div class="row mb-7">

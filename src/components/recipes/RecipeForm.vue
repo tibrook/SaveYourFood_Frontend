@@ -90,7 +90,7 @@
             <div class="row mb-6">
                 <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_TipsAndTricks')}}</label>
                 <div class="col-lg-8 fv-row">
-                    <textarea type="text" name="fname" class="form-control  mb-3 mb-lg-0" :value="selectedRecipe ?selectedRecipe.selectedRecipe  : undefined" >
+                    <textarea type="text" name="fname" class="form-control  mb-3 mb-lg-0" :value="selectedRecipe ?selectedRecipe.tips  : undefined" >
                     </textarea>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                 <div class="col-lg-8 fv-row d-flex justify-content-between w-100">
                     <label class="col-lg-4 col-form-label required fw-semibold fs-6 w-auto me-2">{{$t('Label_Portions')}}</label>
                     <div class="input-group mb-5 ms4">
-                        <input type="text" name="fname" class="form-control mb-3 mb-lg-0" :placeholder="$t('Label_Portions')"  />
+                        <input type="text" name="fname" class="form-control mb-3 mb-lg-0" :placeholder="$t('Label_Portions')" :value="selectedRecipe ?selectedRecipe.portions : undefined"  />
                         <span class="input-group-text" id="basic-addon2">Personnes</span>
                     </div>  
                 </div>
@@ -113,7 +113,7 @@
             <div class="row mb-6">
                 <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_SuggestedPairings')}}</label>
                 <div class="col-lg-8 fv-row">
-                    <input type="text" name="fname" class="form-control  mb-3 mb-lg-0" placeholder="Suggestion" :value="selectedRecipe ?selectedRecipe.type : 'type'" />
+                    <input type="text" name="fname" class="form-control  mb-3 mb-lg-0" placeholder="Suggestion" :value="selectedRecipe ?selectedRecipe.suggestedPairings : undefined" />
                 </div>
             </div>
         </div>
