@@ -94,7 +94,7 @@ export default {
     },
     methods:{
         closeCard(){
-            this.$emit('close-ingredient-form', this.recipe);
+            this.$emit('close-ingredient-form', this.selectedIngredient);
         },
     }
   };

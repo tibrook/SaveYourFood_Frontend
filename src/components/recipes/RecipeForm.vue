@@ -2,6 +2,9 @@
     <div class="card card-flush bg-body" id="kt_pos_form">
         <div class="card-header pt-5">
             <h3 class="card-title fw-bold text-gray-800 fs-2qx">{{isEditing ? selectedRecipe.name :  $t('Form_Title_AddRecipe') }}</h3>
+            <div class="btn btn-sm btn-icon">
+                <i  class="ki-duotone ki-cross fs-2 "  @click="closeEditForm"><span class="path1"></span><span  class="path2"></span></i>
+            </div>
         </div>
         <form id="kt_account_profile_details_form" class="form">
         <div class="card-body border-top p-9">
@@ -136,7 +139,10 @@
         return{
         }
     },
-    watch:{
+    methods:{
+        closeEditForm(){
+            this.$emit('close-recipe-form', this.recipe);
+        },
     }
   };
   </script>

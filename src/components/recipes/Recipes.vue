@@ -44,7 +44,7 @@
 									</div>
 								</div>
 								<div class="flex-row-auto w-xl-450px">
-                                    <RecipeForm v-if="isFormVisible" :isEditing="isEditFormMode" :selectedRecipe="selectedRecipe" />
+                                    <RecipeForm v-if="isFormVisible" :isEditing="isEditFormMode" :selectedRecipe="selectedRecipe" @closeRecipeForm='handleCloseRecipeForm'/>
 								</div>
 							</div>
 						</div>
@@ -116,6 +116,9 @@
                     this.isEditFormMode = true;
                 }
             }
+        },
+        handleCloseRecipeForm(){
+            this.selectedRecipe = ""
         },
          filterByCategory(categoryType) {
             this.selectedCategory = categoryType;
