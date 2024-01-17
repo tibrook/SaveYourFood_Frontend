@@ -5,7 +5,7 @@
             <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
                 <HeaderApp :page="$t('Meals_Weekly')"/>
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-                    <div class="container-xxl" id="kt_content_container">
+                    <div class="container-xxl full-height" id="kt_content_container">
                         <div class="card">
                             <div class="card-header">
                                 <h2 class="card-title fw-bold">{{$t('Meals_Calendar')}}</h2>
@@ -28,18 +28,18 @@
 <script>
 import MenuAside from '@/components/menu/MenuAside.vue'
 import HeaderApp from "@/components/header/header.vue"
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
+    computed: {
+        ...mapGetters(['currentWeekMeals'])
+    },
     methods: {
-    },
-    components:{
-        MenuAside, HeaderApp
-    },
-    mounted(){
-        var calendarEl = document.getElementById("kt_calendar_app");
-
-        // eslint-disable-next-line
-        var calendar = new FullCalendar.Calendar(calendarEl, {
+        ...mapActions(['fetchWeeklyMeals']),
+        initializeCalendar(events) {
+            var calendarEl = document.getElementById("kt_calendar_app");
+            //eslint-disable-next-line
+            var calendar = new FullCalendar.Calendar(calendarEl, {
             headerToolbar: {
                 left: "prev,next today",
                 center: "title",
@@ -58,13 +58,46 @@ export default {
             editable: true,
             dayMaxEvents: true,
             navLinks: true,
-            events: [
-                { title: 'Menu Midi', start: '2024-01-17T12:00:00', end: '2024-01-17T13:00:00' },
-                { title: 'Menu Soir', start: '2024-01-17T20:00:00', end: '2024-01-17T21:00:00' },
-            ],
+            events:events,
         });
-
-        calendar.render();
+            calendar.render();
+        }
+    },
+    components:{
+        MenuAside, HeaderApp
+    },
+    mounted(){
+        this.fetchWeeklyMeals().then(() => {
+        const events = this.currentWeekMeals.flatMap(meal => {
+            if (meal.meal) {
+                return [
+                    {
+                        title: meal.meal.title + ' (Midi)',
+                        start: meal.date + 'T12:00:00',
+                        end: meal.date + 'T13:00:00',
+                    },
+                    {
+                        title: meal.meal.title + ' (Soir)',
+                        start: meal.date + 'T20:00:00',
+                        end: meal.date + 'T21:00:00',
+                    }
+                ];
+            }
+            return [];
+        });
+        this.initializeCalendar(events);
+    });
     }
 }
 </script>
+<style>
+.full-height {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#kt_content_container {
+    flex: 1; 
+}
+</style>

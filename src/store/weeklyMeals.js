@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 export default {
     state() {
         return {
@@ -38,8 +40,30 @@ export default {
     },
     actions: {
         fetchWeeklyMeals({commit}) {
-            const mockWeeklyMeals = [
+            const today = dayjs();
+            const platsOriginaux = [
+                "Risotto aux Champignons", "Tarte Tatin", "Bouillabaisse",
+                "Curry de Poulet Thaï", "Paella Espagnole", "Ratatouille",
+                "Carbonara à l'Italienne", "Sushi Deluxe", "Poulet Tandoori",
+                "Couscous Royal", "Chili Con Carne", "Lasagnes Végétariennes"
             ];
+            const mockWeeklyMeals = [];
+
+            for (let i = 0; i < 7; i++) {
+                const mealDate = today.add(i, 'day');
+                const randomPlat = platsOriginaux[Math.floor(Math.random() * platsOriginaux.length)];
+                const imagePath = `path/to/${randomPlat.replace(/\s+/g, '').toLowerCase()}.jpg`;
+
+                mockWeeklyMeals.push({
+                    day: mealDate.format('dddd'),
+                    date: mealDate.format('YYYY-MM-DD'),
+                    meal: {
+                        title: randomPlat,
+                        image: imagePath
+                    }
+                });
+            }
+
             commit("SET_WEEKLY_MEALS", mockWeeklyMeals);
             return mockWeeklyMeals;
         },
