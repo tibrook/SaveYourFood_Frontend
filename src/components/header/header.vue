@@ -29,8 +29,8 @@
               </div>
               <div class="separator my-2"></div>
               <div class="menu-item px-5">
-                <router-link id="usermenu_accountPreferencesLink" :to="{name: 'accountPreferences'}" class="menu-link px-5">
-                    {{ $t("Settings_MyPreferences") }}
+                <router-link id="usermenu_accountPreferencesLink" :to="{name: 'accountPreferences'}" class=" router-link">
+                    <span class="menu-link px-5">{{ $t("Settings_MyPreferences") }}</span>
                 </router-link>
               </div>
               <div class="menu-item px-5">
@@ -146,3 +146,8 @@ export default{
 }
 </script>
 
+<style>
+.router-link {
+  all:unset
+}
+</style>

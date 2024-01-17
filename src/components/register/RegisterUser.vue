@@ -223,7 +223,6 @@
               username: this.form.username
             };
            let response = await this.register(userData);
-           console.log(response)
            if (response) {
               if (response.statusCode === 409) {
                 this.emailError = this.$t('Auth_EmailInUse');

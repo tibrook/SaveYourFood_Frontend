@@ -50,19 +50,29 @@
                 <div class="row mb-6">
                     <label class="col-lg-4 col-form-label fw-semibold fs-6">Description</label>
                     <div class="col-lg-8 fv-row">
-                        <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" :value="selectedIngredient ?selectedIngredient.description : 'description'" />
+                        <textarea type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" :value="selectedIngredient ?selectedIngredient.description : 'description'" ></textarea>
                     </div>
                 </div>
                 <div class="row mb-6">
                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Label_Location')}}</label>
                     <div class="col-lg-8 fv-row">
-                        <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" :value="selectedIngredient ?selectedIngredient.location : 'emplacement'" />
+                    <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Select..." name="settings_customer">
+                        <option>{{selectedIngredient ?selectedIngredient.location : 'emplacement'}}</option>
+                        <option value="1">Placards</option>
+                        <option value="2">Garage</option>
+                    </select>
+                    <!-- <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" :value="selectedIngredient ?selectedIngredient.location : 'emplacement'" /> -->
                     </div>
                 </div>
                 <div class="row mb-6">
                     <label class="col-lg-4 col-form-label required fw-semibold fs-6">Type</label>
                     <div class="col-lg-8 fv-row">
-                        <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Type" :value="selectedIngredient ?selectedIngredient.type : 'type'" />
+                        <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Select..." name="settings_customer">
+                            <option>{{ selectedIngredient ?selectedIngredient.type : 'type' }}</option>
+                            <option value="1">Placards</option>
+                            <option value="2">Garage</option>
+                        </select>
+                        <!-- <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Type" :value="selectedIngredient ?selectedIngredient.type : 'type'" /> -->
                     </div>
                 </div>
             </div>
@@ -84,7 +94,7 @@ export default {
     },
     methods:{
         closeCard(){
-            this.$emit('close-ingredient-form', this.recipe);
+            this.$emit('close-ingredient-form', this.selectedIngredient);
         },
     }
   };

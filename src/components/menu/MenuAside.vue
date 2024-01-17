@@ -14,7 +14,7 @@
                     <div v-for="menuItem in menuItems" :key="menuItem.id" :class="['menu-item py-2', isMenuItemActive(menuItem.routeName) ? 'here show' : '']" 
          data-bs-toggle="tooltip" :data-bs-title="menuItem.title">                    <span class="menu-link menu-center">
                         <span class="menu-icon me-0">
-                            <router-link :id="menuItem.id" :to="{name: menuItem.routeName}" class="text-decoration-none ">
+                            <router-link :id="menuItem.id" :to="{name: menuItem.routeName}" class="router-link ">
                                 <i :class="['ki-duotone', menuItem.icon, 'fs-2x']">
                                     <span class="path1"></span>
                                     <span class="path2"></span>
@@ -54,3 +54,8 @@ export default {
     },
 }
 </script>
+<style>
+.router-link {
+  all:unset
+}
+</style>

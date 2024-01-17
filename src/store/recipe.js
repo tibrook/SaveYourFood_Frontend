@@ -1,11 +1,11 @@
 export default {
     state() {
         return {
-            recipes: [],
-            categories: [],
-            userRecipes: {},
-            generatedRecipes: {},
-            plannedRecipes: []
+            recipes: null,
+            categories: null,
+            userRecipes: null,
+            generatedRecipes: null,
+            plannedRecipes: null
         };
     },
     getters: {
@@ -36,7 +36,7 @@ export default {
             state.recipes = recipes;
         },
         SET_GENERATED_RECIPES(state, recipes) {
-            state.recipes = recipes;
+            state.generatedRecipes = recipes;
         },
         SET_USER_RECIPES(state, recipes) {
             state.userRecipes = recipes;
@@ -71,9 +71,11 @@ export default {
                     cookingTime: 40,
                     tips: "Servir avec du riz basmati pour un repas complet.",
                     complementaryDishes: "Un Pinot Noir léger.",
-                    preparationSteps: ["Faire revenir les oignons et l'ail, ajouter les poissons et les fruits de mer.", "Ajouter un bouillon de poisson et des herbes, laisser mijoter.", "Servir avec de la rouille et du pain grillé."],
+                    preparationSteps: ["Faire revenir les oignons et l'ail.", "Ajouter les poissons et les fruits de mer.", "Ajouter un bouillon de poisson et des herbes, laisser mijoter.", "Servir avec de la rouille et du pain grillé."],
                     description: "Soupe de poissons provençale riche et robuste, garnie de fruits de mer et servie avec de la rouille.",
-                    portions: 6
+                    portions: 6,
+                    ingredients: ["Poissons variés", "Fruits de mer", "Oignons", "Ail", "Herbes de Provence", "Bouillon de poisson", "Huile d'olive"],
+                    suggestedPairings: "Vin blanc de Provence ou Rosé frais"
                 },
                 {
                     name: "Quiche aux Légumes",
@@ -81,12 +83,13 @@ export default {
                     category: "Entrée",
                     preparationTime: 15,
                     cookingTime: 35,
-                    complementaryDishes: "Un Pinot Noir léger.",
-                    preparationSteps: ["Faire revenir les oignons et l'ail, ajouter les poissons et les fruits de mer.", "Ajouter un bouillon de poisson et des herbes, laisser mijoter.", "Servir avec de la rouille et du pain grillé."],
-                    tips: "Servir avec du riz basmati pour un repas complet.",
-
+                    tips: "Servir avec une salade verte pour un repas léger.",
+                    complementaryDishes: "Un Chardonnay frais.",
+                    preparationSteps: ["Préparer la pâte brisée et la placer dans un moule.", "Faire revenir les légumes de saison.", "Battre les œufs et la crème, verser sur les légumes.", "Cuire au four jusqu'à ce que la quiche soit dorée."],
                     description: "Quiche riche et savoureuse, remplie de légumes de saison et d'un mélange d'œufs crémeux.",
-                    portions: 6
+                    portions: 6,
+                    ingredients: ["Pâte brisée", "Légumes de saison", "Œufs", "Crème fraîche", "Fromage râpé"],
+                    suggestedPairings: "Salade verte, Vinaigrette légère"
                 },
                 {
                     name: "Poulet Rôti aux Herbes",
@@ -94,11 +97,13 @@ export default {
                     category: "Plât",
                     preparationTime: 20,
                     cookingTime: 90,
-                    complementaryDishes: "Un Pinot Noir léger.",
-                    preparationSteps: ["Faire revenir les oignons et l'ail, ajouter les poissons et les fruits de mer.", "Ajouter un bouillon de poisson et des herbes, laisser mijoter.", "Servir avec de la rouille et du pain grillé."],
-                    tips: "Servir avec du riz basmati pour un repas complet.",
+                    tips: "Laisser reposer le poulet 10 minutes avant de le découper.",
+                    complementaryDishes: "Un Merlot rond.",
+                    preparationSteps: ["Préchauffer le four à 180°C.", "Frotter le poulet avec un mélange d'herbes et d'huile d'olive.", "Rôtir dans le four, en arrosant régulièrement.", "Servir avec des légumes rôtis."],
                     description: "Poulet rôti juteux assaisonné avec un mélange d'herbes aromatiques, accompagné de légumes rôtis.",
-                    portions: 4
+                    portions: 4,
+                    ingredients: ["1 poulet entier", "Herbes de Provence", "Huile d'olive", "Sel", "Poivre", "Légumes variés pour rôtir"],
+                    suggestedPairings: "Légumes rôtis, Merlot"
                 },
                 {
                     name: "Curry de Poulet Thaï",
@@ -106,11 +111,13 @@ export default {
                     category: "Plât",
                     preparationTime: 15,
                     cookingTime: 30,
-                    description: "Curry thaï épicé et aromatique avec du poulet tendre, lait de coco et un mélange de fines herbes thaïlandaises.",
-                    preparationSteps: ["Faire mariner le poulet dans des épices.", "Faire sauter le poulet, puis ajouter le lait de coco et les herbes.", "Laisser mijoter jusqu'à cuisson complète."],
-                    tips: "Servir avec du riz basmati pour un repas complet.",
+                    tips: "Ajouter du piment pour plus de piquant.",
                     complementaryDishes: "Un Riesling frais ou une bière légère.",
-                    portions: 4
+                    preparationSteps: ["Mariner le poulet dans des épices thaï.", "Faire sauter le poulet, ajouter le lait de coco et les herbes.", "Laisser mijoter jusqu'à cuisson complète.", "Servir avec du riz basmati."],
+                    description: "Curry thaï épicé et aromatique avec du poulet tendre, lait de coco et un mélange de fines herbes thaïlandaises.",
+                    portions: 4,
+                    ingredients: ["Poulet", "Pâte de curry thaï", "Lait de coco", "Herbes thaï", "Huile", "Riz basmati"],
+                    suggestedPairings: "Riz basmati, Riesling"
                 },
                 {
                     name: "Tarte aux Pommes",
@@ -118,11 +125,13 @@ export default {
                     category: "Dessert",
                     preparationTime: 30,
                     cookingTime: 60,
-                    description: "Tarte aux pommes croustillante avec une garniture de pommes sucrées et une pointe de cannelle, parfaite comme dessert réconfortant.",
-                    preparationSteps: ["Préparer la pâte et la disposer dans un moule à tarte.", "Couper les pommes et les mélanger avec de la cannelle et du sucre.", "Cuire au four jusqu'à ce que la pâte soit dorée."],
                     tips: "Utiliser des pommes Granny Smith pour un équilibre parfait entre sucré et acidulé.",
                     complementaryDishes: "Un vin de dessert comme le Sauternes.",
-                    portions: 8
+                    preparationSteps: ["Préparer la pâte et la disposer dans un moule à tarte.", "Couper les pommes et les mélanger avec de la cannelle et du sucre.", "Cuire au four jusqu'à ce que la pâte soit dorée."],
+                    description: "Tarte aux pommes croustillante avec une garniture de pommes sucrées et une pointe de cannelle, parfaite comme dessert réconfortant.",
+                    portions: 8,
+                    ingredients: ["Pâte à tarte", "Pommes Granny Smith", "Cannelle", "Sucre", "Beurre"],
+                    suggestedPairings: "Crème anglaise, Sauternes"
                 },
                 {
                     name: "Bouillabaisse",
@@ -130,11 +139,14 @@ export default {
                     category: "Plât",
                     preparationTime: 25,
                     cookingTime: 40,
-                    description: "Soupe de poissons provençale riche et robuste, garnie de fruits de mer et servie avec de la rouille.",
-                    preparationSteps: ["Faire revenir les oignons et l'ail, ajouter les poissons et les fruits de mer.", "Ajouter un bouillon de poisson et des herbes, laisser mijoter.", "Servir avec de la rouille et du pain grillé."],
+
                     tips: "Utiliser un assortiment de poissons pour plus de saveur.",
                     complementaryDishes: "Un vin blanc de Provence ou une Rosé frais.",
-                    portions: 6
+                    preparationSteps: ["Faire revenir les oignons et l'ail.", "Ajouter les poissons et les fruits de mer.", "Ajouter un bouillon de poisson et des herbes, laisser mijoter.", "Servir avec de la rouille et du pain grillé."],
+                    description: "Soupe de poissons provençale riche et robuste, garnie de fruits de mer et servie avec de la rouille.",
+                    portions: 6,
+                    ingredients: ["Poissons variés", "Fruits de mer", "Oignons", "Ail", "Herbes de Provence", "Bouillon de poisson", "Rouille"],
+                    suggestedPairings: "Pain grillé, Vin blanc de Provence"
                 }
             ];
             commit("SET_GENERATED_RECIPES", mockRecipes);
@@ -281,8 +293,8 @@ export default {
             return mockRecipes;
         },
         fetchUserRecipes({commit}) {
-            const mockRecipes = {
-                saladeCesar: {
+            const mockRecipes = [
+                {
                     id: 7,
                     name: "Salade César Classique",
                     image: require("@/assets/saladeCesar.jpg"),
@@ -293,7 +305,7 @@ export default {
                     cookingTime: "0 min",
                     category: "Plat principal"
                 },
-                risottoChampignons: {
+                {
                     id: 8,
                     name: "Risotto aux Champignons",
                     image: require("@/assets/rissotoChampignons.jpg"),
@@ -304,7 +316,7 @@ export default {
                     cookingTime: "45 min",
                     category: "Plat principal"
                 },
-                curryPouletThai: {
+                {
                     id: 9,
                     name: "Curry de Poulet Thaï",
                     image: require("@/assets/curryPoulet.jpg"),
@@ -315,7 +327,7 @@ export default {
                     cookingTime: "30 min",
                     category: "Plat principal"
                 },
-                tarteAuxPommes: {
+                {
                     id: 10,
                     name: "Tarte aux Pommes",
                     image: require("@/assets/tartepommes.jpg"),
@@ -326,7 +338,7 @@ export default {
                     cookingTime: "1 h",
                     category: "Dessert"
                 },
-                bouillabaisse: {
+                {
                     id: 11,
                     name: "Bouillabaisse",
                     image: require("@/assets/bouillabaise.jpg"),
@@ -336,29 +348,8 @@ export default {
                     portions: 6,
                     cookingTime: "40 min",
                     category: "Plat principal"
-                },
-                burgerMaisonGourmet: {
-                    id: 12,
-                    name: "Burger Maison Gourmet",
-                    image: require("@/assets/burger.jpg"),
-                    description: "Un burger juteux avec un steak haché de qualité, garni de fromage affiné, de laitue croquante, de tomate fraîche et de sauce maison, le tout dans un pain brioché artisanal.",
-                    datePublication: "15 avril 2024",
-                    preparationTime: "20 min",
-                    portions: 4,
-                    cookingTime: "10 min",
-                    category: "Plat principal"
-                },
-                paellaValenciana: {
-                    name: "Paella Valenciana",
-                    image: require("@/assets/burger.jpg"), // Remplacer par l'image appropriée
-                    description: "Paella espagnole authentique avec un mélange de viandes et fruits de mer, du riz safrané et une variété de légumes frais.",
-                    datePublication: "10 avril 2024",
-                    preparationTime: "15 min",
-                    portions: 6,
-                    cookingTime: "1 h",
-                    category: "Plat principal"
                 }
-            };
+            ];
             commit("SET_USER_RECIPES", mockRecipes);
             return mockRecipes;
         },
@@ -413,10 +404,10 @@ export default {
         },
         fetchCategories({commit}) {
             const mockCategories = [
-                {name: "Aperitif", type: "fruits", image: require("@/assets/aperitif.png"), options: 8},
-                {name: "Entrées", type: "meats", image: require("@/assets/entree.jpg"), options: 8},
-                {name: "Plât", type: "cereals", image: require("@/assets/plat.jpg"), options: 8},
-                {name: "Dessert", type: "dairy", image: require("@/assets/dessert.jpg"), options: 8}
+                {name: "Aperitif", category: "Aperitif", type: "fruits", image: require("@/assets/aperitif.png"), options: 8},
+                {name: "Entrée", category: "Entrée", type: "meats", image: require("@/assets/entrees.png"), options: 8},
+                {name: "Plât", category: "Plât", type: "cereals", image: require("@/assets/plats.png"), options: 8},
+                {name: "Dessert", category: "Dessert", type: "dairy", image: require("@/assets/desserts.png"), options: 8}
             ];
             commit("SET_CATEGORIES", mockCategories);
             return mockCategories;

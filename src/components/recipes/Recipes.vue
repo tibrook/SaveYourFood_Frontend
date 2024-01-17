@@ -19,32 +19,36 @@
 														</div>
 														<div class="">
 															<span class="text-gray-800 fw-bold fs-2 d-block">{{category.name}}</span>
-															<span class="text-gray-500 fw-semibold fs-7">8 apéritifs</span>
+                                                            <span class="text-gray-500 fw-semibold fs-7">{{currentTab === 'generatedRecipes' ?   generatedRecipeCountByCategory[category.name] || 0 : userRecipeCountByCategory[category.name]  || 0 }} recettes</span>
 														</div>
 													</a>
                                                 </li>
 											</ul>
                                             <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold mb-6">
                                                 <li class="nav-item mt-2">
-                                                    <a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="#">
-                                                        {{$t('Recipes_GeneratedRecipes')}}                    
+                                                    <a class="nav-link text-active-primary ms-0 me-10 py-5"
+                                                    :class="{active: currentTab === 'generatedRecipes'}"
+                                                    @click="changeTab('generatedRecipes')" role="button">
+                                                        {{$t('Recipes_GeneratedRecipes')}}
                                                     </a>
                                                 </li>
-                                        
+
                                                 <li class="nav-item mt-2">
-                                                    <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="#">
-                                                        {{$t('Recipes_MyRecipes')}}                    
+                                                    <a class="nav-link text-active-primary ms-0 me-10 py-5"
+                                                    :class="{active: currentTab === 'userRecipes'}" role="button"
+                                                    @click="changeTab('userRecipes')">
+                                                        {{$t('Recipes_MyRecipes')}}
                                                     </a>
                                                 </li>
                                             </ul>
 											<div class="row g-6 g-xl-9">
-                                                <RecipeCard v-for="recipe in filteredRecipes" :key="recipe.id" :recipe="recipe"  @recipe-clicked="handleRecipeClick" />
+                                                <RecipeCard v-for="recipe in filteredRecipes" :key="recipe.id" :recipe="recipe" :myRecipe="currentTab === 'generatedRecipes' ? true : false"  @recipe-clicked="handleRecipeClick" />
                                             </div>
 										</div>
 									</div>
 								</div>
 								<div class="flex-row-auto w-xl-450px">
-                                    <RecipeForm v-if="isFormVisible" :isEditing="isEditFormMode" :selectedRecipe="selectedRecipe" @submit="handleFormSubmit" />
+                                    <RecipeForm v-if="isFormVisible" :isEditing="isEditFormMode" :selectedRecipe="selectedRecipe" @closeRecipeForm='handleCloseRecipeForm' />
 								</div>
 							</div>
 						</div>
@@ -77,14 +81,29 @@
              formMode: 'add',
              selectedRecipe: null,
              filteredItems: [],
-             defaultImage: '../assets/cereales.png',
+             currentTab :"generatedRecipes",
              recipes : []
          };
      },
      computed: {
-        ...mapGetters(['allRecipes', 'categories']),
+        ...mapGetters(['generatedRecipes', 'categories', 'userRecipes']),
         filteredRecipes() {
-            return this.recipes.filter(recipe => recipe.category === this.selectedCategory);
+            return this.currentTab === 'userRecipes' ? this.userRecipes : this.generatedRecipes;
+        },
+        generatedRecipeCountByCategory() {
+            let count = {};
+            console.log(this.generatedRecipes)
+            this.generatedRecipes.forEach((recipe) => {
+                count[recipe.category] = (count[recipe.category] || 0) + 1;
+            });
+            return count || 0;
+        },
+        userRecipeCountByCategory() {
+            let count = {};
+            this.userRecipes.forEach((recipe) => {
+                count[recipe.category] = (count[recipe.category] || 0) + 1;
+            });
+            return count || 0;
         },
     },
      mounted() {
@@ -94,39 +113,43 @@
             //eslint-disable-next-line
             new Tagify(ingredientsInput);
          }
-         this.onExecuteQueries()
-      
-        if(this.allRecipes && this.allRecipes.length){
-            this.recipes = this.allRecipes
-        }
+         this.fetchGeneratedRecipes(); 
+         this.fetchCategories(); 
+       
         
      },
   
      methods: {
-        ...mapActions(['fetchAllRecipes', 'fetchCategories']),
+        ...mapActions(['fetchGeneratedRecipes', 'fetchCategories', 'fetchUserRecipes']),
 
         async onExecuteQueries(){
-            await this.fetchAllRecipes()
+            await this.fetchGeneratedRecipes()
             await this.fetchCategories()
+            await this.fetchUserRecipes()
             const recipeId = parseInt(this.$route.params.id);
             if (recipeId) {
-                const foundRecipe = this.allRecipes.find(recipe => recipe.id === recipeId);
-                console.log(foundRecipe)
-                console.log(this.allRecipes)
+                const foundRecipe = this.generatedRecipes.find(recipe => recipe.id === recipeId);
                 if (foundRecipe) {
                     this.selectedRecipe = foundRecipe;
                     this.isEditFormMode = true;
                 }
             }
         },
+        changeTab(tabName) {
+            this.currentTab = tabName;
+        },
+        handleCloseRecipeForm(){
+            this.selectedRecipe = null;
+            this.isEditFormMode = false;
+        },
          filterByCategory(categoryType) {
             this.selectedCategory = categoryType;
          },
          handleRecipeClick(clickedRecipe) {
             console.log('Recette cliquée :', clickedRecipe);
-                this.isEditFormMode = !this.isEditFormMode
-                this.selectedRecipe = clickedRecipe;
-            },
+            this.selectedRecipe = clickedRecipe;
+            this.isEditFormMode = true;
+        },
           submitForm() {
              if (this.formMode === 'add') {
                  this.addItem();
@@ -144,6 +167,15 @@
              this.selectedRecipe = ingredient;
          }
      },
+     watch:{
+        currentTab(newTab) {
+            if (newTab === 'generatedRecipes') {
+            this.fetchGeneratedRecipes();
+            } else if (newTab === 'userRecipes') {
+                this.fetchUserRecipes();
+            }
+        }
+     }
    
    });
    </script>

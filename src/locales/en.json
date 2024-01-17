@@ -135,6 +135,9 @@
     "Image_ChangeAvatarTooltip": "Change avatar",
     "Image_CancelAvatarTooltip": "Cancel avatar",
     "Image_RemoveAvatarTooltip": "Remove avatar",
+    "Image_ChangeImage": "Change Image",
+    "Image_CancelImage": "Cancel Image",
+    "Image_RemoveImage": "Remove Image",
     "Image_FormText": "Allowed file types: png, jpg, jpeg.",
 
     "Label_Name": "Name",
