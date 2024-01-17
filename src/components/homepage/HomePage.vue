@@ -24,7 +24,7 @@
 						<div class="row g-5 g-xl-10 mb-5 mb-xl-12">
 							<div class="col-xxl-12">
 								<div class="row mb-5 mb-xl-8 g-5 g-xl-8">
-									<div class="col-3">
+									<div class="col-3 rounded-3 bg-white  bgi-no-repeat" style="background-position: right top; background-size: 30%; background-image: url(/assets/11.svg);">
 										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/inventory">
 											<i class="ki-duotone ki-basket fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>												<span class="fs-4 fw-bold">
 												{{$t('Inventory_Main')}}                </span>
@@ -67,7 +67,6 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
 import HeaderApp from "@/components/header/header.vue";
 import MenuAside from '@/components/menu/MenuAside.vue';
 import { mapGetters,mapActions } from 'vuex';
@@ -75,12 +74,17 @@ import ConsumeQuicklyWidget from "./ConsumeQuicklyWidget.vue"
 import NextRecipeWidget from "./NextRecipeWidget.vue"
 import ShoppingListWidget from "./ShoppingListWidget.vue"
 import UserPreferencesWidget from './UserPreferencesWidget.vue';
-export default defineComponent({
+export default {
   
 	name: 'HomePage',
 	components: {
 		HeaderApp,MenuAside,ConsumeQuicklyWidget, NextRecipeWidget,ShoppingListWidget,UserPreferencesWidget
 	},
+	data(){
+        return{
+            imageUrl: '@/assets/media/svg/brand-logos/abstract-1.svg'
+        }
+    },
 	mounted(){
 		this.onExecuteQueries()
 	},
@@ -97,7 +101,7 @@ export default defineComponent({
 			this.fetchUserPreferencesStatistics()
 		}
 	}
-})
+}
 </script>
 <style>
   .full-width {
