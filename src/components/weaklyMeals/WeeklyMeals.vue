@@ -8,10 +8,10 @@
                     <div class="container-xxl" id="kt_content_container">
                         <div class="card">
                             <div class="card-header">
-                                <h2 class="card-title fw-bold">Calendar</h2>
+                                <h2 class="card-title fw-bold">{{$t('Meals_Calendar')}}</h2>
                                 <div class="card-toolbar">
                                     <button class="btn btn-flex btn-primary" data-kt-calendar="add">
-                                    <i class="ki-duotone ki-plus fs-2"></i>Add Event</button>
+                                    <i class="ki-duotone ki-plus fs-2"></i>{{$t('Meals_AddDish')}}</button>
                                 </div>
                             </div>
                             <div class="card-body">
