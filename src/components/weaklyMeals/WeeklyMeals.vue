@@ -47,10 +47,11 @@ export default {
             },
             height: 800,
             contentHeight: 780,
+            locale:'fr',
             aspectRatio: 3,
             nowIndicator: true,
             views: {
-                timeGridWeek: { buttonText: "week" }
+                timeGridWeek: { buttonText: "Semaine" }
             },
             initialView: "timeGridWeek",
             slotMinTime: "11:00:00", 
