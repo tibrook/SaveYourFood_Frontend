@@ -24,28 +24,46 @@
 						<div class="row g-5 g-xl-10 mb-5 mb-xl-12">
 							<div class="col-xxl-12">
 								<div class="row mb-5 mb-xl-8 g-5 g-xl-8">
-									<div class="col-3 rounded-3 bg-white  bgi-no-repeat" style="background-position: right top; background-size: 30%; background-image: url(/assets/11.svg);">
-										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/inventory">
-											<i class="ki-duotone ki-basket fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>												<span class="fs-4 fw-bold">
-												{{$t('Inventory_Main')}}                </span>
+									<div class="col-3 rounded-3 " >
+										<a class="card customCard flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10 bg-white  bgi-no-repeat" href="/inventory" style="background-position: right top; background-size: 30%; background-image: url(/assets/11.svg);">
+											<i class="ki-duotone ki-basket fs-2tx mb-5 ms-n1 text-gray-500">
+												<span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span>
+											</i>	
+											<span class="fs-6 fw-semibold top-right-info">19 éléments</span>
+
+											<span class="fs-4 fw-bold">
+												{{$t('Inventory_Main')}}                
+											</span>
+
 										</a>
 									</div>
 									<div class="col-3">
-										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/recipes">
-											<i class="ki-duotone ki-scroll fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>												<span class="fs-4 fw-bold">
-												{{$t('Recipes_List')}}                </span>
+										<a class="card customCard flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10 bg-white  bgi-no-repeat" href="/inventory" style="background-position: right top; background-size: 30%; background-image: url(/assets/abstract-2.svg);">
+											<i class="ki-duotone ki-scroll fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>												
+											<span class="fs-6 fw-semibold top-right-info">12 recettes</span>
+											<span class="fs-4 fw-bold">
+												{{$t('Recipes_List')}}                
+											</span>
+												
 										</a>
 									</div>
 									<div class="col-3">
-										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="weeklyMeals">
-											<i class="ki-duotone ki-calendar fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span></i>												<span class="fs-4 fw-bold">
-												{{$t('Meals_Weekly')}}                  </span>
+										<a class="card customCard flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10 bg-white  bgi-no-repeat" href="/inventory" style="background-position: right top; background-size: 30%; background-image: url(/assets/abstract-3.svg);">
+											<i class="ki-duotone ki-calendar fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span>
+											</i>				
+											<span class="fs-6 fw-semibold top-right-info">4 repas</span>
+											<span class="fs-4 fw-bold">
+												{{$t('Meals_Weekly')}}                  
+											</span>
 										</a>
 									</div>
 									<div class="col-3">
-										<a class="card flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10" href="/shoppingList">
-											<i class="ki-duotone ki-handcart  fs-2tx mb-5 ms-n1 text-gray-500"></i><span class="fs-4 fw-bold">
-												{{$t('ShoppingList_Main')}}                </span>
+										<a class="card customCard flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10 bg-white  bgi-no-repeat" href="/inventory" style="background-position: right top; background-size: 30%; background-image: url(/assets/abstract-4.svg);">
+											<i class="ki-duotone ki-handcart  fs-2tx mb-5 ms-n1 text-gray-500"></i>
+											<span class="fs-6 fw-semibold top-right-info">12 éléments</span>
+											<span class="fs-4 fw-bold">
+												{{$t('ShoppingList_Main')}}                
+											</span>
 										</a>
 									</div>
 								</div>
@@ -120,4 +138,12 @@ export default {
     border-radius: inherit; /* Hérite le border-radius de son parent direct */
   }
 
+.top-right-info {
+    position: absolute;
+    bottom: 10px; /* Ajustez ces valeurs selon vos besoins */
+    right: 10px;
+}
+.customCard{
+	position:relative
+}
 </style>
