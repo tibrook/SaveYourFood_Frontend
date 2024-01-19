@@ -9,7 +9,7 @@
 							<div class="d-flex flex-column flex-lg-row">
 								<div class="d-none d-lg-flex flex-column flex-lg-row-auto w-100 w-lg-275px" data-kt-drawer="true" data-kt-drawer-name="inbox-aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_inbox_aside_toggle">
 									<div class="card card-flush mb-0" data-kt-sticky="false" data-kt-sticky-name="inbox-aside-sticky" data-kt-sticky-offset="{default: false, xl: '100px'}" data-kt-sticky-width="{lg: '275px'}" data-kt-sticky-left="auto" data-kt-sticky-top="100px" data-kt-sticky-animation="false" data-kt-sticky-zindex="95">
-										<div class="card-body">
+										<div class="card-body" >
 											<a href="apps/inbox/compose.html" class="btn btn-primary fw-bold w-100 mb-8">Nouvel élément</a>
 											<div class="menu menu-column menu-rounded menu-state-bg menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary mb-10">
 												<div class="menu-item mb-3">
@@ -36,8 +36,8 @@
 													</span>
 												</div>
 											</div>
-											<div class="menu menu-column menu-rounded menu-state-bg menu-state-title-primary">
-												<div v-for="(category, index) in categories" :key="index"  class="menu-item mb-3">
+											<div class="menu menu-column menu-rounded menu-state-bg menu-state-title-primary" v-if="categoriesShoppingList" >
+												<div v-for="(category, index) in categoriesShoppingList" :key="index"  class="menu-item mb-3">
 													<span class="menu-link">
 														<span class="menu-icon">
 															<i class="ki-duotone ki-abstract-8 fs-5 me-3 lh-0" :class="category.color">
@@ -119,21 +119,17 @@
 															</div>
 														</td>
 														<td class="w-150px w-md-175px">
-															<a href="apps/inbox/reply.html" class="d-flex align-items-center text-gray-900">
-																<div class="symbol symbol-35px me-3">
-																	<div class="symbol-label bg-light-danger">
-																	</div>
-																</div>
-																<span class="fw-semibold">{{item.name}}</span>
-															</a>
+															<div class="text-gray-900 gap-1 pt-2">
+																<span class="fw-bold me-4">{{item.name}}</span>
+																<div v-if="shoppingList &&categoriesShoppingList &&  getCategory(item)" 	class="badge" :class="getCategory(item).color">{{getCategory(item).name}}</div>
+															</div>
 														</td>
 														<td>
 															<div class="text-gray-900 gap-1 pt-2">
 																<a href="apps/inbox/reply.html" class="text-gray-900">
-																	<span class="fw-bold">{{item.recipeName}}</span>
+																	<span class="fw-semibold text-primary">{{item.recipeName}}</span>
 																</a>
 															</div>
-															<div class="badge badge-light-primary">recipe</div>
 														</td>
 														<td>
 															<div class="text-gray-900 gap-1 pt-2">
@@ -163,63 +159,27 @@
 <script>
 import MenuAside from '@/components/menu/MenuAside.vue'
 import HeaderApp from "@/components/header/header.vue"
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
-	data(){
-		return{
-			shoppingList : [
-				{ id: 1, name: "Pommes", category: "Fruits", nextMenuDate: "2024-02-01", quantity: "5 Kg", recipeName: "Tarte aux pommes", recipeId: "R1" },
-				{ id: 2, name: "Tomates", category: "Légumes", nextMenuDate: "2024-02-02", quantity: "1 Kg", recipeName: "Salade de tomates", recipeId: "R2" },
-				{ id: 3, name: "Poulet", category: "Viande", nextMenuDate: "2024-02-03", quantity: "1 Poulet (800g)", recipeName: "Poulet rôti", recipeId: "R3" },
-				{ id: 4, name: "Pâtes", category: "Féculents", nextMenuDate: "2024-02-04", quantity: "2 Kg", recipeName: "Pâtes Carbonara", recipeId: "R4" },
-				{ id: 5, name: "Lait", category: "Produits laitiers", nextMenuDate: "2024-02-05", quantity: "6 bouteilles", recipeName: "Quiche", recipeId: "R5" },
-				{ id: 6, name: "Œufs", category: "Produits laitiers", nextMenuDate: "2024-02-06", quantity: "12 oeufs", recipeName: "Omelette", recipeId: "R6" },
-				{ id: 7, name: "Fromage", category: "Produits laitiers", nextMenuDate: "2024-02-07", quantity: "500 g", recipeName: "Pizza", recipeId: "R7" },
-				{ id: 8, name: "Pain", category: "Boulangerie", nextMenuDate: "2024-02-08", quantity: 2, recipeName: "Sandwich", recipeId: "R8" },
-				{ id: 9, name: "Poisson", category: "Poissonnerie", nextMenuDate: "2024-02-09", quantity: 4, recipeName: "Poisson grillé", recipeId: "R9" },
-				{ id: 10, name: "Riz", category: "Féculents", nextMenuDate: "2024-02-10", quantity: 500, recipeName: "Risotto", recipeId: "R10" },
-				{ id: 11, name: "Courgettes", category: "Légumes", nextMenuDate: "2024-02-11", quantity: 6, recipeName: "Gratin de courgettes", recipeId: "R11" },
-				{ id: 12, name: "Poivrons", category: "Légumes", nextMenuDate: "2024-02-12", quantity: 5, recipeName: "Poivrons farcis", recipeId: "R12" },
-				{ id: 13, name: "Boeuf", category: "Viande", nextMenuDate: "2024-02-13", quantity: 500, recipeName: "Bœuf Bourguignon", recipeId: "R13" },
-				{ id: 14, name: "Carottes", category: "Légumes", nextMenuDate: "2024-02-14", quantity: 7, recipeName: "Carottes Vichy", recipeId: "R14" },
-				{ id: 15, name: "Champignons", category: "Légumes", nextMenuDate: "2024-02-15", quantity: 250, recipeName: "Champignons farcis", recipeId: "R15" },
-				{ id: 16, name: "Oignons", category: "Légumes", nextMenuDate: "2024-02-16", quantity: 4, recipeName: "Soupe à l'oignon", recipeId: "R16" },
-				{ id: 17, name: "Ail", category: "Condiments", nextMenuDate: "2024-02-17", quantity: 2, recipeName: "Aïoli", recipeId: "R17" },
-				{ id: 18, name: "Chocolat", category: "Confiserie", nextMenuDate: "2024-02-18", quantity: 3, recipeName: "Moelleux au chocolat", recipeId: "R18" },
-				{ id: 19, name: "Citrons", category: "Fruits", nextMenuDate: "2024-02-19", quantity: 4, recipeName: "Tarte au citron", recipeId: "R19" },
-				{ id: 20, name: "Noix", category: "Fruits secs", nextMenuDate: "2024-02-20", quantity: 200, recipeName: "Gâteau aux noix", recipeId: "R20" }
-			],
-			categories:[
-				{
-					id: 1, 
-					name: 'Intermarché',
-					color:'badge-light-danger'
-				},
-				{
-					id: 2, 
-					name: 'Producteurs fruits & légumes',
-					color:'badge-light-success'
-				},
-				{
-					id: 3, 
-					name: 'Boucherie',
-					color:'badge-light-info'
-				},
-				{
-					id: 4, 
-					name: 'Boulangerie',
-					color:'badge-light-warning'
-				}
-
-			]
-		}
-	},
+	computed: {
+        ...mapGetters(['shoppingList', 'categoriesShoppingList'])
+    },
+	mounted(){
+		this.fetchShoppingList()
+		this.fetchCategoriesShoppingList()
+	},	
     components:{
         MenuAside, HeaderApp
     },
-    mounted(){
-    
-    }
+	methods:{
+        ...mapActions(['fetchShoppingList', 'fetchCategoriesShoppingList']),
+		getCategory(item){
+			return this.categoriesShoppingList.find(category => category.id === item.shoppingCategory);
+		},
+		
+	}
+
 }
 </script>
 <style>
