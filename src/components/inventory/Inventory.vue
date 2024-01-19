@@ -36,13 +36,125 @@
                             </li>
                         </ul>
                         <div class="d-flex flex-column flex-xl-row">
-                            <div class="d-flex flex-row-fluid me-xl-9 mb-10 mb-xl-0" >
-                                <div class="card card-flush card-p-0 bg-transparent border-0">
+                            <div class="d-flex flex-row-fluid me-xl-9 mb-10 mb-xl-0" :class="{'full-width-when-no-ingredient': !selectedIngredient}" >
+                                <div class="card card-flush card-p-0 bg-transparent border-0 w-100">
                                     <div class="card-body">
                                         <div class="tab-content">
                                             <div class="tab-pane fade show active" id="kt_pos_food_content_1">
                                                 <div class="row" v-if="filteredItems">
-                                                    <InventoryCard class="col-md-2" v-for="(item, index) in filteredItems"  :selectedIngredient="selectedIngredient" :item="item" :key="index" @click="selectItem(item)"/>
+                                                    <div class="card">
+                                                        <div class="card-header align-items-center py-5 gap-2 gap-md-5">
+                                                            <div class="d-flex flex-wrap gap-2">
+                                                                <div class="form-check form-check-sm form-check-custom form-check-solid me-4 me-lg-7">
+                                                                    <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_inbox_listing .form-check-input" value="1" />
+                                                                </div>
+                                                                <a href="#" class="btn btn-sm btn-icon btn-light btn-active-light-primary" data-bs-toggle="tooltip" data-bs-dismiss="click" data-bs-placement="top" title="Delete">
+                                                                    <i class="ki-duotone ki-trash fs-2">
+                                                                        <span class="path1"></span>
+                                                                        <span class="path2"></span>
+                                                                        <span class="path3"></span>
+                                                                        <span class="path4"></span>
+                                                                        <span class="path5"></span>
+                                                                    </i>
+                                                                </a>
+                                                                <div>
+                                                                    <a href="#" class="btn btn-sm btn-icon btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start">
+                                                                        <i class="ki-duotone ki-down fs-2"></i>
+                                                                    </a>
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex align-items-center flex-wrap gap-2">
+                                                                <div class="d-flex align-items-center position-relative">
+                                                                    <i class="ki-duotone ki-magnifier fs-3 position-absolute ms-4">
+                                                                        <span class="path1"></span>
+                                                                        <span class="path2"></span>
+                                                                    </i>
+                                                                    <input type="text" data-kt-inbox-listing-filter="search" class="form-control form-control-sm form-control-solid mw-100 min-w-125px min-w-lg-150px min-w-xxl-200px ps-11" placeholder="Chercher dans la liste de courses" />
+                                                                </div>
+                                                                <a href="#" class="btn btn-sm btn-icon btn-color-primary btn-light btn-active-light-primary d-lg-none" data-bs-toggle="tooltip" data-bs-dismiss="click" data-bs-placement="top" title="Toggle inbox menu" id="kt_inbox_aside_toggle">
+                                                                    <i class="ki-duotone ki-burger-menu-2 fs-3 m-0">
+                                                                        <span class="path1"></span>
+                                                                        <span class="path2"></span>
+                                                                        <span class="path3"></span>
+                                                                        <span class="path4"></span>
+                                                                        <span class="path5"></span>
+                                                                        <span class="path6"></span>
+                                                                        <span class="path7"></span>
+                                                                        <span class="path8"></span>
+                                                                        <span class="path9"></span>
+                                                                        <span class="path10"></span>
+                                                                    </i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-body p-0">
+                                                            <table class="table table-hover table-row-dashed fs-6 gy-5 my-0" id="kt_inbox_listing">
+                                                                <thead class="d-none">
+                                                                    <tr>
+                                                                        <th>Checkbox</th>
+                                                                        <th>Actions</th>
+                                                                        <th>Author</th>
+                                                                        <th>Title</th>
+                                                                        <th>Date</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr v-for="(item, index) in filteredItems"  :key="index" @click="selectItem(item)">
+                                                                        <td class="ps-9">
+                                                                            <div class="form-check form-check-sm form-check-custom form-check-solid mt-3">
+                                                                                <input class="form-check-input" type="checkbox" value="1" />
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="w-150px w-md-175px">
+                                                                            <div class="text-gray-900 gap-1 pt-2">
+                                                                                <span class="fw-bold me-4">{{item.name}}</span>
+                                                                                <div v-if="shoppingList &&categoriesShoppingList &&  getCategory(item)" 	class="badge" :class="getCategory(item).color">{{getCategory(item).name}}</div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="text-gray-900 gap-1 pt-2">
+                                                                                <a href="apps/inbox/reply.html" class="text-gray-900">
+                                                                                    <span class="fw-semibold">{{item.recipeName}}</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="text-gray-900 gap-1 pt-2">
+                                                                                <a href="apps/inbox/reply.html" class="text-gray-900">
+                                                                                    <span class="fw-semibold">{{item.expirationDate}}</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="text-gray-900 gap-1 pt-2">
+                                                                                <span class="fw-semibold">{{item.bestBeforeDate}}</span>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="text-gray-900 gap-1 pt-2">
+                                                                                <a href="apps/inbox/reply.html" class="text-gray-900">
+                                                                                    <span class="fw-semibold">{{item.type}}</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="text-gray-900 gap-1 pt-2">
+                                                                                <a href="apps/inbox/reply.html" class="text-gray-900">
+                                                                                    <span class="fw-bold">{{item.quantity}}</span>
+                                                                                </a>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="w-130px text-end fs-7 pe-9">
+                                                                            <span class="fw-semibold">{{item.location}}</span>
+                                                                        </td>
+                                                                        
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <InventoryCard class="col-md-2" v-for="(item, index) in filteredItems"  :selectedIngredient="selectedIngredient" :item="item" :key="index" @click="selectItem(item)"/> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -51,7 +163,7 @@
                             </div>
                             <div class="flex-row-auto w-xl-450px" v-if="selectedIngredient">
 
-                               <InventoryForm v-if="selectedIngredient" :selectedIngredient="selectedIngredient"  @closeIngredientForm='handleCloseForm' />
+                               <InventoryForm v-if="selectedIngredient" :selectedIngredient="selectedIngredient" @submit="handleFormSubmit" @closeIngredientForm='handleCloseForm' />
                             </div>
                         </div>
                     </div>
@@ -65,13 +177,13 @@ import { defineComponent } from 'vue';
 import HeaderApp from "@/components/header/header.vue";
 import MenuAside from '@/components/menu/MenuAside.vue'
 import InventoryForm from '@/components/inventory/InventoryForm.vue'
-import InventoryCard from '@/components/inventory/InventoryCard.vue'
+// import InventoryCard from '@/components/inventory/InventoryCard.vue'
 import { mapGetters,mapActions } from 'vuex';
 
   export default defineComponent({
     name: 'InventoryList', 
     components: {
-        MenuAside,InventoryCard,
+        MenuAside,
         HeaderApp,InventoryForm
     },
     data() {
@@ -100,8 +212,12 @@ import { mapGetters,mapActions } from 'vuex';
             this.selectedCategory = categoryType
             this.filteredItems = this.inventory[categoryType];
         },
+        getCategory(item){
+			return this.inventoryCategories.find(category => category.id === item.category);
+		},
         async fetchCategoriesData() {
             await this.fetchInventoryCategories()
+            console.log(this.inventoryCategories)
         },
         async fetchInventoryData() {
             await this.fetchInventory()
@@ -120,6 +236,7 @@ import { mapGetters,mapActions } from 'vuex';
         },
         selectItem(item) {
             this.selectedIngredient = item;
+            console.log(item)
         },
         addItem() {
             this.newItem.id = Date.now().toString();
@@ -143,13 +260,16 @@ import { mapGetters,mapActions } from 'vuex';
   
   <style scoped>
   .full-width {
-    flex-grow: 1!important; /* Permet à l'élément de remplir l'espace disponible */
+    flex-grow: 1!important; 
   }
   .full-height-img {
-    height: 100%; /* Ajuste la hauteur de l'image pour remplir le conteneur */
-    width: 100%; /* Ajuste la largeur de l'image pour remplir le conteneur */
-    object-fit: cover; /* S'assure que l'image couvre toute la zone sans déformer son ratio */
-    border-radius: inherit; /* Hérite le border-radius de son parent direct */
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover; 
+    border-radius: inherit;
   }
+  .full-width-when-no-ingredient {
+    flex-grow: 1; 
+}
   </style>
   
