@@ -109,7 +109,6 @@
                                                                         <td class="w-150px w-md-175px">
                                                                             <div class="text-gray-900 gap-1 pt-2">
                                                                                 <span class="fw-bold me-4">{{item.name}}</span>
-                                                                                <div v-if="shoppingList &&categoriesShoppingList &&  getCategory(item)" 	class="badge" :class="getCategory(item).color">{{getCategory(item).name}}</div>
                                                                             </div>
                                                                         </td>
                                                                         <td>

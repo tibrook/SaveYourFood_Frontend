@@ -92,6 +92,8 @@ export default{
         }
     },
     setup() {
+        //eslint-disable-next-line
+        KTMenu.createInstances();
         const i18n = useI18n();
         const router = useRouter();
         const currentLanguage = ref(localStorage.getItem('language') || 'en');

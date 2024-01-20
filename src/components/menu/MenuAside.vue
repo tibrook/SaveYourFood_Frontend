@@ -2,7 +2,7 @@
     <div id="kt_aside" class="aside" data-kt-drawer="true" data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="auto" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_toggle">
         <div class="aside-logo flex-column-auto pt-10 pt-lg-20" id="kt_aside_logo">
             <a href="index.html">
-                <svg width="100px" height="125px" viewBox="0 0 1024 1280" xmlns="http://www.w3.org/2000/svg">
+                <svg width="100px" height="200px" viewBox="0 0 1024 2000" xmlns="http://www.w3.org/2000/svg">
              
                     <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)" fill="#2C294B" stroke="none">
                         <path d="M5080 8617 c-3 -3 -52 -7 -110 -10 -223 -12 -509 -95 -720 -208 -325
@@ -63,16 +63,12 @@
                         -948 142 -84 20 -149 40 -145 44 12 10 171 45 313 68 268 43 331 50 795 80
                         180 12 637 13 835 1z"/>
                     </g>
-                    
-                    <path id="arc1" d="M -1800,200 A 2100,550 0 0,1 924,1100" fill="none" stroke="none" />
-                    <text fill="#2C294B" font-family="sans-serif" font-size="80">
+                    <path id="arc1" d="M 212,200 A 550,550 0 0,1 812,200" fill="none" stroke="none" />
+                    <text fill="#2C294B" font-family="sans-serif" font-size="91" font-weight="bold">
                         <textPath xlink:href="#arc1" startOffset="50%" text-anchor="middle">
                             Save Your Food
                         </textPath>
                     </text>
-                    <!-- <text x="512" y="1250" font-family="sans-serif" font-size="80" text-anchor="middle" fill="#2C294B">
-                        Save Your Food
-                    </text> -->
                 </svg>
             </a>
         </div>
