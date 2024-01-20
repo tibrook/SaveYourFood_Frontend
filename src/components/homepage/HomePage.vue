@@ -18,7 +18,6 @@
 						</button>
 					</div>
 				</div>
-				<HeaderApp />
 				<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 					<div class=" container-xxl " id="kt_content_container">
 						<div class="row g-5 g-xl-10 mb-5 mb-xl-12">
@@ -85,7 +84,6 @@
 </template>
 
 <script>
-import HeaderApp from "@/components/header/header.vue";
 import MenuAside from '@/components/menu/MenuAside.vue';
 import { mapGetters,mapActions } from 'vuex';
 import ConsumeQuicklyWidget from "./ConsumeQuicklyWidget.vue"
@@ -96,7 +94,7 @@ export default {
   
 	name: 'HomePage',
 	components: {
-		HeaderApp,MenuAside,ConsumeQuicklyWidget, NextRecipeWidget,ShoppingListWidget,UserPreferencesWidget
+		MenuAside,ConsumeQuicklyWidget, NextRecipeWidget,ShoppingListWidget,UserPreferencesWidget
 	},
 	data(){
         return{

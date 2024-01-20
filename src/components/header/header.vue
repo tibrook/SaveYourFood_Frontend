@@ -3,7 +3,7 @@
     <div class="header-container container-xxl">
       <div class="page-title d-flex flex-column align-items-start justify-content-center flex-wrap me-lg-20 py-3 py-lg-0 me-3">
         <h1 class="d-flex flex-column text-gray-900 fw-bold my-1">
-          <span class="text-white fs-1">{{page}}</span>
+          <span class="text-white fs-1">{{pageTitle }}</span>
         </h1>
       </div>
       <div class="d-flex align-items-center flex-wrap">
@@ -77,8 +77,9 @@
   </div>
 </template>
 <script>
-import { useRouter } from 'vue-router';
+import { useRouter,useRoute } from 'vue-router';
 import { ref } from 'vue';
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n'; 
 import {  mapGetters, mapActions } from 'vuex';
 import NewIngredientModal from '@/components/header/newIngredientModal.vue';
@@ -104,7 +105,11 @@ export default{
             currentFlag.value = require(`@/assets/${flagImage}`);
             localStorage.setItem('language', lang);
         };
-        return { router, changeLanguage, currentFlag, currentLanguage };
+        const route = useRoute();
+        const pageTitle = computed(() => {
+          return route.meta.title || 'Default Page Title';
+        });
+        return { router, changeLanguage, currentFlag, currentLanguage,pageTitle };
     },
     data() {
         return {

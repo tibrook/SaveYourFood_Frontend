@@ -18,7 +18,6 @@
                         </button>
                     </div>
                 </div>
-                <HeaderApp :page="$t('Inventory_Main')" />
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content" >
                     <div class="container-xxl" id="kt_content_container">
                         <ul class="nav nav-pills d-flex justify-content-between nav-pills-custom gap-3 mb-6">
@@ -173,7 +172,6 @@
 </template>
   <script>
 import { defineComponent } from 'vue';
-import HeaderApp from "@/components/header/header.vue";
 import MenuAside from '@/components/menu/MenuAside.vue'
 import InventoryForm from '@/components/inventory/InventoryForm.vue'
 // import InventoryCard from '@/components/inventory/InventoryCard.vue'
@@ -183,7 +181,7 @@ import { mapGetters,mapActions } from 'vuex';
     name: 'InventoryList', 
     components: {
         MenuAside,
-        HeaderApp,InventoryForm
+        InventoryForm
     },
     data() {
         return {

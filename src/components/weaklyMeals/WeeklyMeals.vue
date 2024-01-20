@@ -3,7 +3,6 @@
         <div class="page d-flex flex-row flex-column-fluid">
             <MenuAside />
             <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
-                <HeaderApp :page="$t('Meals_Weekly')"/>
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
                     <div class="container-xxl full-height" id="kt_content_container">
                         <div class="card">
@@ -27,7 +26,6 @@
 .
 <script>
 import MenuAside from '@/components/menu/MenuAside.vue'
-import HeaderApp from "@/components/header/header.vue"
 import { mapActions, mapGetters } from 'vuex';
 
 export default {
@@ -65,7 +63,7 @@ export default {
         }
     },
     components:{
-        MenuAside, HeaderApp
+        MenuAside
     },
     mounted(){
         this.fetchWeeklyMeals().then(() => {

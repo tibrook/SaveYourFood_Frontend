@@ -3,7 +3,6 @@
         <div class="page d-flex flex-row flex-column-fluid">
             <MenuAside />
             <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
-                <HeaderApp :page="$t('ShoppingList_Main')"/>
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<div class="container-xxl" id="kt_content_container">
 							<div class="d-flex flex-column flex-lg-row">
@@ -158,7 +157,6 @@
 .
 <script>
 import MenuAside from '@/components/menu/MenuAside.vue'
-import HeaderApp from "@/components/header/header.vue"
 import { mapActions, mapGetters } from 'vuex';
 
 export default {
@@ -170,7 +168,7 @@ export default {
 		this.fetchCategoriesShoppingList()
 	},	
     components:{
-        MenuAside, HeaderApp
+        MenuAside
     },
 	methods:{
         ...mapActions(['fetchShoppingList', 'fetchCategoriesShoppingList']),

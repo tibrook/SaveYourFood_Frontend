@@ -4,7 +4,6 @@
              <MenuAside />
              <div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
                  <HeaderMobile />
-                 <HeaderApp :page="$t('Recipes_List')"/>
                  <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<div class="container-xxl" id="kt_content_container">
 							<div class="d-flex flex-column flex-xl-row">
@@ -59,7 +58,6 @@
  </template>
    <script>
  import { defineComponent } from 'vue';
- import HeaderApp from "@/components/header/header.vue";
  import MenuAside from '@/components/menu/MenuAside.vue'
  import RecipeForm from "@/components/recipes/RecipeForm.vue"
  import HeaderMobile from "@/components/header/HeaderMobile.vue"
@@ -70,7 +68,7 @@
      name: 'RecipesList', 
      components: {
          MenuAside,RecipeForm,
-         HeaderApp, RecipeCard,HeaderMobile
+         RecipeCard,HeaderMobile
      },
      data() {
          return {
