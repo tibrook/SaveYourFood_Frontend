@@ -27,21 +27,21 @@
                         <div class="d-flex flex-wrap mb-5">
                             <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3">
                                 <div class="fs-6 text-gray-800 fw-bold">{{ recipe.datePublication }}</div>
-                                <div class="fw-semibold text-gray-500">Date de publication</div>
+                                <div class="fw-semibold text-gray-500">{{$t('Common_PublicationDate')}}</div>
                             </div>
                             <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 mb-3">
                                 <div class="fs-6 text-gray-800 fw-bold">{{ recipe.preparationTime }}</div>
-                                <div class="fw-semibold text-gray-500">Préparation</div>
+                                <div class="fw-semibold text-gray-500">{{$t('Common_Preparation')}}</div>
                             </div>
                         </div>
                         <div class="d-flex flex-wrap mb-5">
                             <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-7 mb-3">
                                 <div class="fs-6 text-gray-800 fw-bold">{{ recipe.portions }}</div>
-                                <div class="fw-semibold text-gray-500">Nombre de portions</div>
+                                <div class="fw-semibold text-gray-500">{{$t('Common_PortionNumber')}}</div>
                             </div>
                             <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 mb-3">
                                 <div class="fs-6 text-gray-800 fw-bold">{{ recipe.cookingTime }}</div>
-                                <div class="fw-semibold text-gray-500">Temps de cuisson</div>
+                                <div class="fw-semibold text-gray-500">{{$t('Label_CookingTime')}}</div>
                             </div>
                         </div>
                     </div>

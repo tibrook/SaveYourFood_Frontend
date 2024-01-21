@@ -1,4 +1,12 @@
 {
+  "Common_Archived":"Archivés",
+  "Common_InProgress":"En cours",
+  "Common_NewElement":"Nouvel élément",
+  "Common_PublicationDate":"Date de publication",
+  "Common_Preparation":"Prépatation",
+  "Common_PortionNumber":"Nombre de portions",
+
+
   "SignIn_Title": "Connexion",
   "SignIn_Subtitle": "Vos campagnes sociales",
   "SignIn_WithGoogle": "Se connecter avec Google",

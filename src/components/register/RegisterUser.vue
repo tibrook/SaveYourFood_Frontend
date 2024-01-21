@@ -32,7 +32,6 @@
                           </div>
                       </div>
                      
-                      <!-- Prénom -->
                       <div class="form-outline ">
                         <input type="text"
                               class="form-control form-control-md"
@@ -45,7 +44,6 @@
                           </div>
                       </div>
                      
-                      <!-- Nom d'utilisateur -->
                       <div class="form-outline">
                         <input type="text"
                               class="form-control form-control-md"
@@ -57,7 +55,6 @@
                           </div>
                       </div>
                    
-                      <!-- Email Input -->
                       <div class="form-outline ">
                         <input type="email" 
                                 class="form-control form-control-md"
@@ -74,7 +71,6 @@
                           {{ emailError }}
                         </div>
                       </div>
-                      <!-- Password Input -->
                       <div class="form-outline -2 ">
                         <input 
                           type="password" 
@@ -98,12 +94,10 @@
                         </div>
                       </div>
   
-                      <!-- Display Error Message -->
                       <div v-if="registerError" class="error-message">
                         {{ registerError }}
                       </div>
-  
-                      <!-- Register Button -->
+                      
                       <div class="pt-1 d-flex justify-content-between align-items-center mb-3">
                           <a class="small text-muted" href="/login">{{$t('Auth_AlreadyHaveAccount')}}</a>
                         <button :disabled="v$.$invalid" type="submit" class="btn btn-primary btn-lg"

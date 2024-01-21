@@ -9,7 +9,7 @@
 								<div class="d-none d-lg-flex flex-column flex-lg-row-auto w-100 w-lg-275px" data-kt-drawer="true" data-kt-drawer-name="inbox-aside" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_inbox_aside_toggle">
 									<div class="card card-flush mb-0" data-kt-sticky="false" data-kt-sticky-name="inbox-aside-sticky" data-kt-sticky-offset="{default: false, xl: '100px'}" data-kt-sticky-width="{lg: '275px'}" data-kt-sticky-left="auto" data-kt-sticky-top="100px" data-kt-sticky-animation="false" data-kt-sticky-zindex="95">
 										<div class="card-body" >
-											<a href="apps/inbox/compose.html" class="btn btn-primary fw-bold w-100 mb-8">Nouvel élément</a>
+											<a href="apps/inbox/compose.html" class="btn btn-primary fw-bold w-100 mb-8">{{$t('Common_NewElement')}}</a>
 											<div class="menu menu-column menu-rounded menu-state-bg menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary mb-10">
 												<div class="menu-item mb-3">
 													<span class="menu-link active">
@@ -19,7 +19,7 @@
 																<span class="path2"></span>
 															</i>
 														</span>
-														<span class="menu-title fw-bold">En cours</span>
+														<span class="menu-title fw-bold">{{$t('Common_InProgress')}}</span>
 														<span class="badge badge-light-success">20</span>
 													</span>
 												</div>
@@ -31,7 +31,7 @@
 																<span class="path2"></span>
 															</i>
 														</span>
-														<span class="menu-title fw-bold">Archivés</span>
+														<span class="menu-title fw-bold">{{$t('Common_Archived')}}</span>
 													</span>
 												</div>
 											</div>
