@@ -5,6 +5,8 @@
   "Common_PublicationDate":"Date de publication",
   "Common_Preparation":"Prépatation",
   "Common_PortionNumber":"Nombre de portions",
+  "Common_Discard": "Annuler",
+  "Common_Save_Changes":"Sauvegarder les changements",
 
 
   "SignIn_Title": "Connexion",
@@ -100,6 +102,7 @@
   "Settings_EditPreferences": "Modifier mes préférences",
   "Settings_Preferences": "Préférences",
   "Settings_ProfileCompleation": "Complétion du profil",
+  "Settings_Food_Places":"Emplacements alimentaires",
 
   "Preferences_cuisineFavorite":"Favorite Cuisine",
   "Preferences_favoriteFoods":"Aliments préférés",

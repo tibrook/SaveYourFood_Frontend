@@ -5,17 +5,22 @@
     "Common_PublicationDate":"Publication Date",
     "Common_Preparation":"Prepatation",
     "Common_PortionNumber":"Portions Number",
+    "Common_Discard": "Discard",
+    "Common_Save_Changes":"Save Changes",
+    
     "SignIn_Title": "Sign In",
     "SignIn_Subtitle": "Your Social Campaigns",
     "SignIn_WithGoogle": "Sign in with Google",
     "SignIn_WithApple": "Sign in with Apple",
     "SignIn_OrWithEmail": "Or with email",
     "SignIn_Wait": "Please wait...",
+
     "Register_Title": "Register",
     "Register_Subtitle": "Join our community",
     "Register_WithGoogle": "Register with Google",
     "Register_WithApple": "Register with Apple",
     "Register_OrWithEmail": "Or with email",
+
     "Auth_ForgotPassword": "Forgot Password",
     "Auth_NoAccountPrompt": "Don't have an account?",
     "Auth_RegisterLink": "Register Here",
@@ -42,7 +47,6 @@
     "Recipes_AddNew": "Add Recipe",
     "Recipes_MyRecipes": "My Recipes",
     "Recipes_GeneratedRecipes": "Generated Recipes",
-
     "Recipes_Next": "Next recipes",
     "Recipes_Message": "Retrieve a complete list of recipes based on your ingredients.",
     "Recipes_IngredientList": "List all ingredients",
@@ -104,6 +108,7 @@
     "Settings_EditPreferences": "Edit Preferences",
     "Settings_Preferences": "Preferences",
     "Settings_ProfileCompleation": "Profile Completion",
+    "Settings_Food_Places":"Food Places",
 
     "Preferences_cuisineFavorite":"Favorite Cuisine",
     "Preferences_favoriteFoods":"Favorite Foods",

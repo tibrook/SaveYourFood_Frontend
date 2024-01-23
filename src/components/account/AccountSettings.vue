@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="row mb-6">
-                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Emplacements alimentaires</label>
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">{{$t('Settings_Food_Places')}}</label>
                     <div class="col-lg-8">
                         <div class="row">
                             <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Emplacements alimentaires" value="Frigidaire, placards, garage" />
@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="card-footer d-flex justify-content-end py-6 px-9">
-                <button type="reset" class="btn btn-light btn-active-light-primary me-2">Discard</button>
+                <button type="reset" class="btn btn-light btn-active-light-primary me-2">{{ $t('Common_Discard') }}</button>
                 <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">Save Changes</button>
             </div>
         </form>
