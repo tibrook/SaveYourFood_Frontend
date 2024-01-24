@@ -17,7 +17,7 @@
                     <form @submit.prevent="handleRegister" class="w-100">
                       <div class="d-flex align-items-center pb-1 pe- ps-4">
                         <img :src="imageLogoUrl" alt="Sample image" class="imgLogo me-2" style="border-radius: 1rem 0 0 1rem;">
-                        <h1 class="fw-bold mb-2 titlePage">SaveYourFood</h1>
+                        <h1 class="fw-bold mb-2 titlePage">Save Your Food</h1>
                       </div>
                       <h5 class="fw-normal pb-3" style="letter-spacing: 1px;">{{$t('Auth_RegisterNewAccount')}}</h5>
                       <div class="form-outline">

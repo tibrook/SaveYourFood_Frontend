@@ -1,5 +1,5 @@
 <template>
-  <div id="kt_header" class="header py-6 py-lg-0" data-kt-sticky="true" data-kt-sticky-name="header" data-kt-sticky-offset="{lg: '300px'}">
+  <div v-if="shouldDisplayHeader" id="kt_header" class="header py-6 py-lg-0" data-kt-sticky="true" data-kt-sticky-name="header" data-kt-sticky-offset="{lg: '300px'}">
     <div class="header-container container-xxl">
       <div class="page-title d-flex flex-column align-items-start justify-content-center flex-wrap me-lg-20 py-3 py-lg-0 me-3">
         <h1 class="d-flex flex-column text-gray-900 fw-bold my-1">
@@ -97,6 +97,7 @@ export default{
         KTMenu.createInstances();
         const i18n = useI18n();
         const router = useRouter();
+        const shouldDisplayHeader = computed(() => route.meta.header !== false);
         const currentLanguage = ref(localStorage.getItem('language') || 'en');
         const currentFlag = ref(require(`@/assets/media/flags/${currentLanguage.value === 'en' ? 'united-states.svg' : 'france.svg'}`));
         const changeLanguage = (lang) => {
@@ -109,7 +110,7 @@ export default{
         const pageTitle = computed(() => {
           return route.meta.title || 'Default Page Title';
         });
-        return { router, changeLanguage, currentFlag, currentLanguage,pageTitle };
+        return { router, changeLanguage, currentFlag, currentLanguage,pageTitle,shouldDisplayHeader };
     },
     data() {
         return {
