@@ -39,7 +39,7 @@
 									<div class="col-3">
 										<a class="card customCard flex-column justfiy-content-start align-items-start text-start w-100 text-gray-800 text-hover-primary p-10 bg-white  bgi-no-repeat" href="/inventory" style="background-position: right top; background-size: 30%; background-image: url(/assets/abstract-2.svg);">
 											<i class="ki-duotone ki-scroll fs-2tx mb-5 ms-n1 text-gray-500"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>												
-											<span class="fs-6 fw-semibold top-right-info">12 {{$t('common_Recipes')}}</span>
+											<span class="fs-6 fw-semibold top-right-info">12 {{$t('Common_Recipes')}}</span>
 											<span class="fs-4 fw-bold">
 												{{$t('Recipes_List')}}                
 											</span>

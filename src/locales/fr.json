@@ -7,7 +7,9 @@
   "Common_PortionNumber":"Nombre de portions",
   "Common_Discard": "Annuler",
   "Common_Save_Changes":"Sauvegarder les changements",
-
+  "Common_Elements":"Éléments",
+  "Common_Meal":"Plâts",
+  "Common_Recipes":"Recettes",
 
   "SignIn_Title": "Connexion",
   "SignIn_Subtitle": "Vos campagnes sociales",

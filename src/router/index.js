@@ -1,6 +1,7 @@
 import {createRouter, createWebHistory} from "vue-router";
 import UserLogin from "@/components/login/UserLogin.vue";
 import HomePage from "@/components/homepage/HomePage.vue";
+import {i18n} from "@/main.js";
 import RegisterUser from "@/components/register/RegisterUser.vue";
 import newIngredientModalVue from "@/components/header/newIngredientModal.vue";
 import store from "@/store";
@@ -9,7 +10,7 @@ const routes = [
         path: "/",
         name: "default",
         component: UserLogin,
-        meta: {header: true}
+        meta: {header: true, title: "Dashboard"}
     },
     {
         path: "/login",
@@ -38,7 +39,7 @@ const routes = [
     {
         path: "/inventory",
         name: "Inventory",
-        meta: {title: "Inventory Page", header: true},
+        meta: {title: "Inventory_Main", header: true},
         component: () => import("@/components/inventory/Inventory.vue")
     },
     {
@@ -72,6 +73,7 @@ const routes = [
     {
         path: "/shopping-list",
         name: "ShoppingList",
+        meta: {title: "ShoppingList_Main", header: true},
         component: () => import("@/components/shoppingList/ShoppingList.vue")
     }
 ];
@@ -87,9 +89,11 @@ router.beforeEach((to, from, next) => {
         next({path: "/home"});
     } else if (to.matched.some((record) => record.meta.requiresAuth) && !isAuthenticated) {
         next({name: "Login"});
-    } else {
-        next();
     }
+    if (to.meta.title) {
+        to.meta.title = i18n.global.t(to.meta.title);
+    }
+    next();
 });
 
 export default router;
